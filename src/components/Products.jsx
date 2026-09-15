@@ -9,9 +9,11 @@ import {
   Check, 
   ExternalLink,
   ChevronRight,
+  ChevronLeft,
   Sparkles,
   Info,
-  ArrowRight
+  ArrowRight,
+  Camera
 } from 'lucide-react';
 
 export const PRODUCTS_CATALOG = [
@@ -20,6 +22,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
     image: '/assets/images/esti-branded-box.jpg',
+    images: [
+      { src: '/assets/images/esti-branded-box.jpg', label: 'ESTI Branded Master Shipping Carton (RSC 0201)' },
+      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Telescopic Tray & Lid Box (FTD)' },
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy-Duty Appliance Upright Carton' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
     description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). Precision-engineered Regular Slotted Containers (RSC 0201) delivering maximum vertical compression resistance and stacking endurance.',
@@ -44,6 +51,13 @@ export const PRODUCTS_CATALOG = [
     title: 'Heavy-Duty Pallet Boxes & Bulk Containers',
     subtitle: 'Cost-Effective Heavy Timber Crate Replacement (Up to 1,500 kg)',
     image: '/assets/images/heavy-duty-pallet.jpg',
+    images: [
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Timber Replacement Pallet Box with Strapping' },
+      { src: '/assets/images/eco-pallet-box.jpg', label: 'Eco Paper Pallet Box with Integrated Runners' },
+      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom White Bulk Container on Runners' },
+      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Drop-Gate Fold-Down Front Loading Flap' },
+      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'Warehouse Staging Floor (2-Tier Stack Load)' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Timber Crate Replacement',
     description: 'Ultra-heavy-duty multi-wall corrugated containers engineered to replace expensive, heavy wooden boxes. Easily strapped to wooden or plastic pallets for safe domestic transit and international containerized shipping.',
@@ -62,76 +76,16 @@ export const PRODUCTS_CATALOG = [
     applications: 'Automotive engines, gearbox assemblies, pumps, forged components, heavy industrial machinery.'
   },
   {
-    id: 'un-certified-boxes',
-    title: 'UN 1266 Certified Hazardous Cargo Boxes',
-    subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
-    image: '/assets/images/un-certified-box.jpg',
-    category: 'UN Certified Boxes',
-    badge: 'UN 1266 / 4GV Certified',
-    description: 'Rigidly tested and officially certified UN packaging compliant with IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations for the domestic transit and international export of hazardous and flammable liquid products.',
-    specs: [
-      { label: 'Certification', value: 'UN 1266 Class 3 Flammable Liquids (Packaging Group II & III)' },
-      { label: 'Drop Test Standard', value: 'Certified drop tested from 1.2m to 1.8m per UN protocol' },
-      { label: 'Bursting Strength', value: 'Exceeds 24 kg/cm² hydraulic burst pressure' },
-      { label: 'Identification', value: 'Pre-printed UN specification marking, orientation arrows, diamond labels' }
-    ],
-    features: [
-      'Meets all international port clearance requirements without customs rejections',
-      'High Cobb sizing ensures zero delamination in high-humidity sea transits',
-      'Internal partition configurations for tin cans, bottles, and carboys',
-      'Supplied with certified compliance documentation for hazardous exports'
-    ],
-    applications: 'Perfumery products, industrial solvents, adhesives, agro-chemicals, paints, lubricants and oils.'
-  },
-  {
-    id: 'octagonal-bulk-bins',
-    title: 'Octagonal Jumbo Bulk Bins & Drum Cartons',
-    subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
-    image: '/assets/images/octagonal-bulk-bin.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Heavy Industrial Grade',
-    description: 'Heavy-duty 8-sided octagonal corrugated bulk bins featuring heavy top and bottom caps. Specially designed to resist extreme outward hydrostatic pressure exerted by dense loose granular materials.',
-    specs: [
-      { label: 'Design Geometry', value: '8-sided octagonal sleeve with locking top/bottom end caps' },
-      { label: 'Wall Structure', value: 'Reinforced 5-ply / 7-ply high-puncture resistant board' },
-      { label: 'Holding Capacity', value: '500 kg to 1,000 kg bulk filling capacity' },
-      { label: 'Stacking Height', value: 'Engineered for 2-high warehouse stacking when filled' }
-    ],
-    features: [
-      'Octagonal geometry distributes lateral bursting forces evenly across 8 corners',
-      'Replace steel or fiber drums with 100% recyclable paper alternatives',
-      'Quick single-person folding assembly on the production line',
-      'Custom printed warning symbols, batch barcodes, and corporate branding'
-    ],
-    applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
-  },
-  {
-    id: 'hsc-double-wall',
-    title: 'HSC Double Wall Boxes with Liner Bags',
-    subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
-    image: '/assets/images/hsc-double-wall.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Double Wall 5-Ply',
-    description: 'Heavy industrial Half-Slotted Containers (HSC 0200) engineered with open tops, matching deep telescopic corrugated lids, and integrated polyethylene liner bags for sanitary and contamination-free handling.',
-    specs: [
-      { label: 'Configuration', value: 'HSC bottom container with independent top tray cover' },
-      { label: 'Board Caliper', value: 'Heavy 5-ply double wall with moisture-resistant glue' },
-      { label: 'Liner Option', value: 'Food-grade or industrial polyethylene inner barrier bag' },
-      { label: 'Stitching', value: 'Heavy-gauge galvanized anti-rust wire stitching' }
-    ],
-    features: [
-      'Wide-open top allows rapid loading and automated hopper bulk filling',
-      'Telescopic lid provides airtight top seal against dust and transit debris',
-      'Exceptional corner stiffness withstands high dynamic road vibration',
-      'Liner bag prevents moisture ingress and keeps goods pristine'
-    ],
-    applications: 'Food processing, bulk confectionery, chemicals, frozen seafood, agricultural harvest, auto spare parts.'
-  },
-  {
     id: 'eco-pallet-box',
     title: 'Eco-Corrugated Paper Pallet Box with Lid',
     subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
     image: '/assets/images/eco-pallet-box.jpg',
+    images: [
+      { src: '/assets/images/eco-pallet-box.jpg', label: '100% Recyclable Paper Pallet Box with Integrated Runners' },
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Standard Strapped Heavy-Duty Pallet Box' },
+      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Bulk Container' },
+      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Drop-Gate Assembly Front Loading Flap' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Exempt / 100% Paper',
     description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
@@ -156,6 +110,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Integrated Pallet Base White Bulk Container',
     subtitle: 'Bleached Kraft Cleanroom & High-Value Cargo Bulk Bin',
     image: '/assets/images/white-bulk-pallet-container.jpg',
+    images: [
+      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Kraft Bulk Bin on Runners' },
+      { src: '/assets/images/eco-pallet-box.jpg', label: 'Eco-Corrugated Kraft Pallet Box with Cap' },
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Heavy-Duty Industrial Timber Replacement Crate' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Cleanroom & White Kraft',
     description: 'Premium white bleached kraft bulk packaging container fitted directly onto corrugated pallet runners with high-wall overlap cap. Provides an ultra-clean, dust-proof exterior ideal for sensitive pharmaceutical, food ingredient, and high-value export shipments.',
@@ -180,6 +139,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Drop-Gate Access Heavy-Duty Pallet Container',
     subtitle: 'Ergonomic Fold-Down Front Door for Assembly Line Loading',
     image: '/assets/images/drop-gate-pallet-box.jpg',
+    images: [
+      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Ergonomic Half-Height Drop Door for Assembly Picking' },
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Closed Sidewall Pallet Box Configuration' },
+      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'High-Density 2-Tier Warehouse Pallet Staging' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Ergonomic Front Access',
     description: 'Heavy-duty multi-wall pallet sleeve equipped with a pre-creased fold-down drop gate. Enables assembly workers and robotic arms to load or pick heavy machined components without bending deep over high container walls.',
@@ -204,6 +168,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Poly-Lined Bulk Chemical & Resin Container',
     subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
     image: '/assets/images/poly-lined-bulk-box.jpg',
+    images: [
+      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Box with Food/Chemical-Grade PE Bag' },
+      { src: '/assets/images/hsc-double-wall.jpg', label: 'Heavy Double-Wall HSC Outer Box' },
+      { src: '/assets/images/octagonal-bulk-bin.jpg', label: 'Octagonal High Outward Pressure Bulk Bin' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Hygroscopic & Chemical Barrier',
     description: 'Rugged corrugated bulk box integrated with a heavy-gauge internal polyethylene (PE) liner bag and telescopic lid. Engineered specifically to store and transport hygroscopic powders, resins, granular chemicals, and food-grade raw materials safely.',
@@ -228,6 +197,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Two-Piece Telescopic Lid Box (FTD)',
     subtitle: 'Full Telescoping Top & Bottom Heavy Carton with Dual-Wall Side Armor',
     image: '/assets/images/telescopic-lid-box.jpg',
+    images: [
+      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescoping Tray & Lid Box (FTD)' },
+      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Wire-Stitched Heavy Box with Telescopic Lid' },
+      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Box with Matching Top Cap' }
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Telescopic Rigid Setup',
     description: 'Two-piece rigid corrugated box comprising an open base tray and a full-depth telescoping lid (Full Telescopic Design - FTD). When closed, the overlapping sidewalls create double-wall armor on all four vertical faces, providing superior stacking and corner resistance.',
@@ -248,10 +222,95 @@ export const PRODUCTS_CATALOG = [
     applications: 'Heavy metal hardware, precision machine parts, automotive spares, electrical panels, high-end export goods.'
   },
   {
+    id: 'un-certified-boxes',
+    title: 'UN 1266 Certified Hazardous Cargo Boxes',
+    subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
+    image: '/assets/images/un-certified-box.jpg',
+    images: [
+      { src: '/assets/images/un-certified-box.jpg', label: 'UN 1266 Class 3 Dangerous Goods Hazmat Shipper' },
+      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Chemical & Moisture Barrier Poly-Lined Bulk Box' }
+    ],
+    category: 'UN Certified Boxes',
+    badge: 'UN 1266 / 4GV Certified',
+    description: 'Rigidly tested and officially certified UN packaging compliant with IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations for the domestic transit and international export of hazardous and flammable liquid products.',
+    specs: [
+      { label: 'Certification', value: 'UN 1266 Class 3 Flammable Liquids (Packaging Group II & III)' },
+      { label: 'Drop Test Standard', value: 'Certified drop tested from 1.2m to 1.8m per UN protocol' },
+      { label: 'Bursting Strength', value: 'Exceeds 24 kg/cm² hydraulic burst pressure' },
+      { label: 'Identification', value: 'Pre-printed UN specification marking, orientation arrows, diamond labels' }
+    ],
+    features: [
+      'Meets all international port clearance requirements without customs rejections',
+      'High Cobb sizing ensures zero delamination in high-humidity sea transits',
+      'Internal partition configurations for tin cans, bottles, and carboys',
+      'Supplied with certified compliance documentation for hazardous exports'
+    ],
+    applications: 'Perfumery products, industrial solvents, adhesives, agro-chemicals, paints, lubricants and oils.'
+  },
+  {
+    id: 'octagonal-bulk-bins',
+    title: 'Octagonal Jumbo Bulk Bins & Drum Cartons',
+    subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
+    image: '/assets/images/octagonal-bulk-bin.jpg',
+    images: [
+      { src: '/assets/images/octagonal-bulk-bin.jpg', label: '8-Sided Octagonal Bulk Granular Storage Bin' },
+      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Moisture Barrier Poly-Lined Bulk Container' },
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Heavy-Duty Pallet Crate Alternative' }
+    ],
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Heavy Industrial Grade',
+    description: 'Heavy-duty 8-sided octagonal corrugated bulk bins featuring heavy top and bottom caps. Specially designed to resist extreme outward hydrostatic pressure exerted by dense loose granular materials.',
+    specs: [
+      { label: 'Design Geometry', value: '8-sided octagonal sleeve with locking top/bottom end caps' },
+      { label: 'Wall Structure', value: 'Reinforced 5-ply / 7-ply high-puncture resistant board' },
+      { label: 'Holding Capacity', value: '500 kg to 1,000 kg bulk filling capacity' },
+      { label: 'Stacking Height', value: 'Engineered for 2-high warehouse stacking when filled' }
+    ],
+    features: [
+      'Octagonal geometry distributes lateral bursting forces evenly across 8 corners',
+      'Replace steel or fiber drums with 100% recyclable paper alternatives',
+      'Quick single-person folding assembly on the production line',
+      'Custom printed warning symbols, batch barcodes, and corporate branding'
+    ],
+    applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
+  },
+  {
+    id: 'hsc-double-wall',
+    title: 'HSC Double Wall Boxes with Liner Bags',
+    subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
+    image: '/assets/images/hsc-double-wall.jpg',
+    images: [
+      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Container (HSC 0200) with Matching Top Cap' },
+      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescopic Rigid Box (FTD)' },
+      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Chemical & Resin Box with Bag' }
+    ],
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Double Wall 5-Ply',
+    description: 'Heavy industrial Half-Slotted Containers (HSC 0200) engineered with open tops, matching deep telescopic corrugated lids, and integrated polyethylene liner bags for sanitary and contamination-free handling.',
+    specs: [
+      { label: 'Configuration', value: 'HSC bottom container with independent top tray cover' },
+      { label: 'Board Caliper', value: 'Heavy 5-ply double wall with moisture-resistant glue' },
+      { label: 'Liner Option', value: 'Food-grade or industrial polyethylene inner barrier bag' },
+      { label: 'Stitching', value: 'Heavy-gauge galvanized anti-rust wire stitching' }
+    ],
+    features: [
+      'Wide-open top allows rapid loading and automated hopper bulk filling',
+      'Telescopic lid provides airtight top seal against dust and transit debris',
+      'Exceptional corner stiffness withstands high dynamic road vibration',
+      'Liner bag prevents moisture ingress and keeps goods pristine'
+    ],
+    applications: 'Food processing, bulk confectionery, chemicals, frozen seafood, agricultural harvest, auto spare parts.'
+  },
+  {
     id: 'refrigerator-appliance-box',
     title: 'White Goods & Refrigerator Box',
     subtitle: 'Up to 1,700 mm Tall Heavy Appliance Packaging with Clamp-Safe Markings',
     image: '/assets/images/refrigerator-appliance-box.jpg',
+    images: [
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: '1700mm Refrigerator Box CAD Drawing, Clamp Zones & Views' },
+      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Authentic 2-Meter Tall Vertical Industrial Carton' },
+      { src: '/assets/images/mattress-furniture-box.jpg', label: 'Large-Format Flat-Pack Furniture Packaging' }
+    ],
     category: 'Custom & Large Format',
     badge: 'Appliance Grade',
     description: 'Heavy-duty corrugated upright carton engineered for large domestic refrigerators, commercial coolers, and washing appliances (up to 1,700 mm height). Designed with clamp-truck handling zones, ventilation handholds, and comprehensive ISO handling symbols.',
@@ -276,6 +335,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Large-Format 8ft × 6ft Mattress Box',
     subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
     image: '/assets/images/mattress-furniture-box.jpg',
+    images: [
+      { src: '/assets/images/mattress-furniture-box.jpg', label: '8ft × 6ft Mattress Box 3D Isometric & Orthographic Blueprint' },
+      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Wire-Stitched Heavy Carton Alternative' },
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Large Appliance Shipping Carton' }
+    ],
     category: 'Custom & Large Format',
     badge: 'Extra Large Format',
     description: 'Oversized flat-profile corrugated shipping carton manufactured to accommodate full 8 ft × 6 ft (96" × 72" × 10") king and queen size mattresses, flat-pack wooden furniture, and architectural sheet products without sagging.',
@@ -300,6 +364,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Reinforced Wire-Stitched Box with Cap',
     subtitle: 'High-Tensile Wire Stitching with Telescopic Lid & Custom OEM Branding',
     image: '/assets/images/honeywell-stitched-box.jpg',
+    images: [
+      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'High-Tensile Wire-Stitched Seams & Telescopic Cap' },
+      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Telescopic Box Structure' },
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy Industrial OEM Packaging' }
+    ],
     category: 'Custom & Large Format',
     badge: 'Wire-Stitched Heavy Armor',
     description: 'Heavy-duty industrial corrugated carton reinforced with anti-corrosive zinc-coated wire stitched corner joints and a matching top cap. Engineered for multinational OEMs requiring maximum seam burst strength under severe transport vibrations.',
@@ -324,6 +393,11 @@ export const PRODUCTS_CATALOG = [
     title: 'Extra-Tall Vertical Industrial Carton (2+ Meters)',
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
     image: '/assets/images/tall-industrial-carton-esti.jpg',
+    images: [
+      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Authentic ESTI Engineer with 2-Meter Tall Vertical Carton' },
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy Appliance Vertical Column Packaging' },
+      { src: '/assets/images/paper-core-tubes.jpg', label: 'Spiral Paper Core Industrial Tubes' }
+    ],
     category: 'Custom & Large Format',
     badge: '2-Meter Extra Tall',
     description: 'Custom-engineered extra-tall corrugated carton towering over 2 meters in height. Built with high-caliper vertical fluting to provide extraordinary column strength for long industrial components, roll goods, and vertical machinery assemblies without bowing.',
@@ -348,6 +422,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Precision Die-Cut Boxes & Ergonomic Trays',
     subtitle: 'Flatbed CNC Die-Cutting with Integrated Handholes & Interlocks',
     image: '/assets/images/die-cut-corrugated.jpg',
+    images: [
+      { src: '/assets/images/die-cut-corrugated.jpg', label: 'CNC Precision Die-Cut Self-Locking Box' },
+      { src: '/assets/images/custom-dividers.jpg', label: 'Custom Die-Cut Interlocking Partitions' }
+    ],
     category: 'Die-Cut & Partitions',
     badge: 'CNC Precision Die-Cut',
     description: 'Custom-cut corrugated packaging produced with steel-rule die tooling to sub-millimeter precision. Features integrated ergonomic carrying handles, self-locking fold tabs, and display-ready wrap designs.',
@@ -370,6 +448,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Custom Slotted Cell Dividers & Partition Grids',
     subtitle: 'Interlocking Corrugated Partitions for Precision Component Isolation',
     image: '/assets/images/custom-dividers.jpg',
+    images: [
+      { src: '/assets/images/custom-dividers.jpg', label: 'Interlocking Slotted Cell Partition Grids' },
+      { src: '/assets/images/bottle-partition-box.jpg', label: 'Full-Height Bottle Cushioning Shipper' }
+    ],
     category: 'Die-Cut & Partitions',
     badge: 'Zero-Scratch Protection',
     description: 'Engineered interlocking corrugated partition sets that create individual isolated cells inside master shipping cartons, ensuring zero product-to-product contact and maximum inner column stacking reinforcement.',
@@ -392,6 +474,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Bottle Partition Outer Cartons & Beverage Shippers',
     subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
     image: '/assets/images/bottle-partition-box.jpg',
+    images: [
+      { src: '/assets/images/bottle-partition-box.jpg', label: 'Zero-Breakage Full-Height Bottle Partition Carton' },
+      { src: '/assets/images/custom-dividers.jpg', label: 'Precision Interlocking Partitions' }
+    ],
     category: 'Die-Cut & Partitions',
     badge: 'Fragile Goods Defense',
     description: 'Heavy-duty master corrugated shippers fitted with full-height internal cell dividers specifically designed to cushion and protect glass bottles containing wine, spirits, agro-chemicals, and oils during transit.',
@@ -414,6 +500,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Honeycomb Sheets & Die-Cut Inserts',
     subtitle: 'High-Compression 100% Recyclable Paper Dunnage & Cushioning',
     image: '/assets/images/honeycomb-packaging.jpg',
+    images: [
+      { src: '/assets/images/honeycomb-packaging.jpg', label: 'High-Compression Hexagonal Honeycomb Sheets' },
+      { src: '/assets/images/angle-edge-boards.jpg', label: 'Rigid Corner Edge Protectors (V-Boards)' }
+    ],
     category: 'Honeycomb Packaging',
     badge: '100% Eco-Friendly',
     description: 'Hexagonal honeycomb paper core structures sandwiched between heavy kraft linerboards. Delivers extraordinary vertical load-bearing strength and shock absorption, serving as a sustainable alternative to EPS thermocol.',
@@ -436,6 +526,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Angle Boards & Edge Protectors (V-Boards)',
     subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
     image: '/assets/images/angle-edge-boards.jpg',
+    images: [
+      { src: '/assets/images/angle-edge-boards.jpg', label: 'Multi-Ply Laminated Kraft Edge Protectors' },
+      { src: '/assets/images/honeycomb-packaging.jpg', label: 'Surface Protection Honeycomb Paper Pads' }
+    ],
     category: 'Edge Protection',
     badge: 'Pallet Stability',
     description: 'Rigid, multi-ply compressed laminated kraft paper corner boards that protect carton edges from strap damage during tensioning and dramatically increase vertical box column stacking strength on export skids.',
@@ -458,6 +552,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Paper Core Tubes (Spiral Wound)',
     subtitle: 'Industrial High-Crush Cores for Film, Textiles, Paper & Wire Winding',
     image: '/assets/images/paper-core-tubes.jpg',
+    images: [
+      { src: '/assets/images/paper-core-tubes.jpg', label: 'High-Crush Spiral Wound Industrial Paper Cores' },
+      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Extra-Tall Industrial Profile Packaging' }
+    ],
     category: 'Paper Cores',
     badge: 'High Radial Strength',
     description: 'High-strength spiral wound paper cores manufactured using high-grade kraft board and specialized bonding adhesives, engineered for smooth high-speed rewinding and zero core collapse under heavy tension.',
@@ -480,6 +578,10 @@ export const PRODUCTS_CATALOG = [
     title: 'Self-Adhesive Printed Packaging Tapes',
     subtitle: 'Branded Multi-Color Corporate Logo Tapes & Tamper-Evident Security',
     image: '/assets/images/printed-tapes.jpg',
+    images: [
+      { src: '/assets/images/printed-tapes.jpg', label: 'Custom Multi-Color Logo Printed Packaging Tapes' },
+      { src: '/assets/images/esti-branded-box.jpg', label: 'Branded Carton Sealing Application' }
+    ],
     category: 'Packaging Accessories',
     badge: 'Custom Logo Branding',
     description: 'High-performance BOPP and reinforced Kraft packaging tapes featuring custom multi-color corporate logo printing, ensuring brand visibility and tamper-evident carton sealing throughout your supply chain.',
@@ -498,6 +600,152 @@ export const PRODUCTS_CATALOG = [
     applications: 'Carton box sealing, export shipping, e-commerce fulfillment, cold storage packaging, brand marketing.'
   }
 ];
+
+// Interactive Multi-Image Slider Component
+function ProductImageSlider({ product }) {
+  const images = product.images && product.images.length > 0 
+    ? product.images 
+    : [{ src: product.image, label: product.title }];
+
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  // Guard against index mismatch
+  const safeIdx = activeIdx < images.length ? activeIdx : 0;
+  const currentImg = images[safeIdx];
+  const currentSrc = typeof currentImg === 'string' ? currentImg : currentImg.src;
+  const currentLabel = typeof currentImg === 'string' ? product.title : currentImg.label;
+
+  const handlePrev = (e) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const handleNext = (e) => {
+    e.stopPropagation();
+    setActiveIdx((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <div className="flex flex-col space-y-2.5">
+      {/* Main Image Stage */}
+      <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-200 group select-none shadow-sm">
+        <img
+          src={currentSrc}
+          alt={currentLabel || product.title}
+          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+          loading="lazy"
+        />
+
+        {/* Top Product Badge */}
+        <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow pointer-events-none z-10">
+          {product.badge}
+        </div>
+
+        {/* Slide Counter Pill (visible when multiple images) */}
+        {images.length > 1 && (
+          <div className="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow flex items-center gap-1.5 z-10">
+            <Camera className="w-3.5 h-3.5 text-emerald-400" />
+            <span>{safeIdx + 1} / {images.length}</span>
+          </div>
+        )}
+
+        {/* Slide Caption Pill (bottom-left) */}
+        {currentLabel && (
+          <div className="absolute bottom-3 left-3 right-14 pointer-events-none z-10">
+            <span className="inline-block bg-slate-950/85 backdrop-blur-md text-emerald-300 text-[11px] font-medium px-2.5 py-1 rounded-md shadow max-w-full truncate border border-slate-800">
+              {currentLabel}
+            </span>
+          </div>
+        )}
+
+        {/* Left / Right Slide Arrow Buttons */}
+        {images.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={handlePrev}
+              aria-label="Previous slide"
+              className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-950/95 text-white flex items-center justify-center backdrop-blur-sm transition-all shadow-md hover:scale-110 opacity-80 group-hover:opacity-100 z-20 focus:outline-none"
+            >
+              <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
+            </button>
+            <button
+              type="button"
+              onClick={handleNext}
+              aria-label="Next slide"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-950/95 text-white flex items-center justify-center backdrop-blur-sm transition-all shadow-md hover:scale-110 opacity-80 group-hover:opacity-100 z-20 focus:outline-none"
+            >
+              <ChevronRight className="w-5 h-5 stroke-[2.5]" />
+            </button>
+          </>
+        )}
+
+        {/* Slide Indicator Dots */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 right-3 flex items-center gap-1 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={(e) => { e.stopPropagation(); setActiveIdx(i); }}
+                aria-label={`Go to slide ${i + 1}`}
+                className={`transition-all rounded-full ${
+                  i === safeIdx
+                    ? 'w-4 h-1.5 bg-emerald-400 shadow'
+                    : 'w-1.5 h-1.5 bg-white/60 hover:bg-white'
+                }`}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Multi-Image View Slides Option: Thumbnail Strip */}
+      {images.length > 1 && (
+        <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 scrollbar-thin">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 shrink-0">
+            Views ({images.length}):
+          </span>
+          {images.map((img, i) => {
+            const isSelected = i === safeIdx;
+            const imgSrc = typeof img === 'string' ? img : img.src;
+            const imgLabel = typeof img === 'string' ? `Slide ${i + 1}` : (img.label || `Slide ${i + 1}`);
+
+            return (
+              <button
+                key={i}
+                type="button"
+                onClick={() => setActiveIdx(i)}
+                title={imgLabel}
+                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 transition-all shrink-0 focus:outline-none ${
+                  isSelected
+                    ? 'border-emerald-600 ring-2 ring-emerald-500/40 scale-105 shadow-sm'
+                    : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-300'
+                }`}
+              >
+                <img
+                  src={imgSrc}
+                  alt={imgLabel}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                {isSelected && (
+                  <div className="absolute inset-0 bg-emerald-600/10 pointer-events-none"></div>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Custom Dimensions Footnote */}
+      <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1 pt-0.5">
+        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+        <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
+      </div>
+    </div>
+  );
+}
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -534,7 +782,7 @@ export default function Products() {
             Comprehensive <span className="text-emerald-700">Product Portfolio</span>
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg">
-            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications and direct factory contact.
+            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications, multi-image view slides, and direct factory contact.
           </p>
         </div>
 
@@ -560,6 +808,7 @@ export default function Products() {
         <div className="space-y-12">
           {filteredProducts.map((product) => {
             const isExpanded = expandedId === product.id;
+            const hasMultipleImages = product.images && product.images.length > 1;
 
             return (
               <div
@@ -569,33 +818,26 @@ export default function Products() {
                 {/* Product Header & Main Split Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8">
                   
-                  {/* Product Image Showcase (5 cols on lg) */}
-                  <div className="lg:col-span-5 flex flex-col space-y-3">
-                    <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-white border border-slate-200 group">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        loading="lazy"
-                      />
-                      <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow">
-                        {product.badge}
-                      </div>
-                    </div>
-
-                    <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1">
-                      <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-                      <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
-                    </div>
+                  {/* Product Image Showcase with Multi-Image View Slides (5 cols on lg) */}
+                  <div className="lg:col-span-5">
+                    <ProductImageSlider product={product} />
                   </div>
 
                   {/* Product Details & Engineering Specs (7 cols on lg) */}
                   <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
                     <div>
-                      {/* Category tag */}
-                      <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
-                        {product.category}
-                      </span>
+                      {/* Category Tag & Multi-View Pill */}
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                          {product.category}
+                        </span>
+                        {hasMultipleImages && (
+                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                            <Camera className="w-3 h-3" />
+                            <span>{product.images.length} Image Slides</span>
+                          </span>
+                        )}
+                      </div>
 
                       {/* Title */}
                       <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-display mt-1">
