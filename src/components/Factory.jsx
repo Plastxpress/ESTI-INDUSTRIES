@@ -108,30 +108,42 @@ export default function Factory() {
           </div>
 
           {/* Right: Manufacturing Photos (5 cols) */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-5 space-y-3.5">
             <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md">
               <img
                 src="/assets/images/controlled-moisture-corrugator.jpg"
                 alt="Controlled Moisture Corrugator Line"
-                className="w-full h-56 object-cover"
+                className="w-full h-52 object-cover"
                 loading="lazy"
               />
-              <div className="p-3.5 bg-slate-900 text-white text-xs font-semibold flex items-center justify-between">
+              <div className="p-3 bg-slate-900 text-white text-xs font-semibold flex items-center justify-between">
                 <span>Steam-Heated Corrugator Line</span>
                 <span className="text-emerald-400">Moisture Control</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
                 <img
                   src="/assets/images/double-wall-board.jpg"
                   alt="Double Wall Corrugated Board Broad Flute"
-                  className="w-full h-28 object-cover"
+                  className="w-full h-24 object-cover"
                   loading="lazy"
                 />
-                <div className="p-2 bg-white text-center text-[10px] font-bold text-slate-700">
-                  Double Wall Broad Flute
+                <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
+                  5-Ply Double Wall Flute
+                </div>
+              </div>
+
+              <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
+                <img
+                  src="/assets/images/corrugated-flute-stack.jpg"
+                  alt="High Compression Corrugated Board Stack"
+                  className="w-full h-24 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
+                  Precision Flute Sheets
                 </div>
               </div>
 
@@ -139,11 +151,23 @@ export default function Factory() {
                 <img
                   src="/assets/images/factory-warehouse-panoramic.jpg"
                   alt="High Capacity Converting & Storage Floor"
-                  className="w-full h-28 object-cover"
+                  className="w-full h-24 object-cover"
                   loading="lazy"
                 />
-                <div className="p-2 bg-white text-center text-[10px] font-bold text-slate-700">
+                <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
                   1,200 MT Converting Plant
+                </div>
+              </div>
+
+              <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
+                <img
+                  src="/assets/images/warehouse-pallet-stack.jpg"
+                  alt="Finished Palletized Heavy Cargo Staging Floor"
+                  className="w-full h-24 object-cover"
+                  loading="lazy"
+                />
+                <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
+                  Heavy Pallet Staging Floor
                 </div>
               </div>
             </div>
@@ -189,16 +213,29 @@ export default function Factory() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 bg-emerald-50 rounded-2xl p-6 border border-emerald-200 text-center space-y-3">
-              <div className="text-4xl sm:text-5xl font-black text-emerald-700 font-display">
-                -40%
+            <div className="lg:col-span-4 bg-emerald-50/70 rounded-2xl overflow-hidden border border-emerald-200 shadow-sm flex flex-col">
+              <div className="h-44 w-full overflow-hidden bg-white relative">
+                <img
+                  src="/assets/images/export-container.jpg"
+                  alt="Export Ready Container Shipping"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute top-2.5 right-2.5 bg-slate-900/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
+                  ISPM-15 / Sea Export
+                </div>
               </div>
-              <p className="text-sm font-bold text-slate-900">
-                Potential Total Cost Reduction
-              </p>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Access high-quality, export-grade packaging at significantly lower landed costs without compromising on safety or transit durability.
-              </p>
+              <div className="p-6 text-center space-y-2">
+                <div className="text-3xl sm:text-4xl font-black text-emerald-700 font-display">
+                  Up to -40%
+                </div>
+                <p className="text-xs font-bold text-slate-900">
+                  Potential Total Landed Cost Savings
+                </p>
+                <p className="text-[11px] text-slate-600 leading-relaxed">
+                  Access export-grade, heavy-duty cartons directly from India with Free Trade Agreement tariff benefits.
+                </p>
+              </div>
             </div>
 
           </div>

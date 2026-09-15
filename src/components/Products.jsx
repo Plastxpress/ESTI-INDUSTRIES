@@ -10,90 +10,454 @@ import {
   ExternalLink,
   ChevronRight,
   Sparkles,
-  Info
+  Info,
+  ArrowRight
 } from 'lucide-react';
 
 export const PRODUCTS_CATALOG = [
   {
     id: 'corrugated-boxes',
-    title: 'Corrugated Boxes & Heavy-Duty Cartons',
-    subtitle: 'Jumbo Boxes, Pallet Boxes & UN Certified Cartons',
+    title: 'Corrugated Boxes & Master Shipping Cartons',
+    subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
     image: '/assets/images/esti-branded-box.jpg',
-    secondaryImage: '/assets/images/heavy-duty-pallet.jpg',
-    category: 'Corrugated Boxes',
-    badge: 'Core Specialty (30+ Years)',
-    description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). We specialize in high-burst strength cartons, heavy-duty wooden crate replacements, and export container pallet boxes.',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Core Pedigree (Since 1995)',
+    description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). Precision-engineered Regular Slotted Containers (RSC 0201) delivering maximum vertical compression resistance and stacking endurance.',
     specs: [
       { label: 'Constructions', value: '3-Ply (Single Wall), 5-Ply (Double Wall), 7-Ply (Triple Wall)' },
       { label: 'Flute Profiles', value: 'A, B, C, E, and combination BC & AAA flutes' },
-      { label: 'Certifications', value: 'UN 1266 Flammable Liquid Certified (4GV), ISO 9001:2015' },
-      { label: 'Weight Capacity', value: 'Up to 1,500 kg static load / 800 kg dynamic payload' },
-      { label: 'Bursting Strength', value: '18 to 35+ kg/cm² (customized to client requirements)' },
-      { label: 'Box Styles', value: 'RSC (0201), HSC (0200) with lids, Die-cut wrap-arounds, Pallet bins' },
+      { label: 'Bursting Strength', value: '18 to 35+ kg/cm² (customized to client payload)' },
+      { label: 'Edge Crush Test', value: 'ECT 32 up to ECT 90+ heavy industrial grade' },
+      { label: 'Printing', value: 'High-definition 2-color flexographic computerized slotting' },
+      { label: 'Eco Profile', value: '100% Recyclable high-grade virgin & semi-chemical kraft' }
     ],
     features: [
-      'Engineered replacement for heavy, expensive wooden crates',
-      'High humidity and moisture-retention liners for sea export',
-      'Computerized slotting and 2-color high-definition flexo printing',
-      '100% Recyclable and eco-friendly sustainable paper kraft'
+      'Engineered for automated packing lines and manual rapid taping',
+      'High moisture-resistant kraft liners suitable for export sea cargo',
+      'Custom printing with brand logo, barcodes, and ISO handling symbols',
+      'Available in custom batch volumes with dedicated warehouse buffers'
     ],
-    applications: 'Automotive components, industrial machinery, chemicals & lubricants, FMCG, pharmaceutical exports, electronics.'
+    applications: 'FMCG, automotive components, electrical engineering, textiles, pharmaceuticals, e-commerce fulfillment.'
   },
   {
-    id: 'honeycomb',
+    id: 'heavy-duty-pallet',
+    title: 'Heavy-Duty Pallet Boxes & Bulk Containers',
+    subtitle: 'Cost-Effective Heavy Timber Crate Replacement (Up to 1,500 kg)',
+    image: '/assets/images/heavy-duty-pallet.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Timber Crate Replacement',
+    description: 'Ultra-heavy-duty multi-wall corrugated containers engineered to replace expensive, heavy wooden boxes. Easily strapped to wooden or plastic pallets for safe domestic transit and international containerized shipping.',
+    specs: [
+      { label: 'Load Capacity', value: 'Static load up to 1,500 kg / Dynamic payload up to 800 kg' },
+      { label: 'Wall Profile', value: 'Heavy 5-ply & 7-ply AAA/BC heavy-duty corrugated board' },
+      { label: 'Weight Reduction', value: 'Up to 50% lighter than traditional wooden crates' },
+      { label: 'Pallet Integration', value: 'Compatible with standard Euro (1200x800) and ISO (1200x1000) pallets' }
+    ],
+    features: [
+      'Eliminates ISPM-15 wooden fumigation certificates and border delays',
+      'Delivered flat-packed to save over 70% in inbound transport and storage space',
+      'Massive impact absorption reduces shock and vibration during forklift transit',
+      'Significantly lowers freight and handling costs for export consignments'
+    ],
+    applications: 'Automotive engines, gearbox assemblies, pumps, forged components, heavy industrial machinery.'
+  },
+  {
+    id: 'un-certified-boxes',
+    title: 'UN 1266 Certified Hazardous Cargo Boxes',
+    subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
+    image: '/assets/images/un-certified-box.jpg',
+    category: 'UN Certified Boxes',
+    badge: 'UN 1266 / 4GV Certified',
+    description: 'Rigidly tested and officially certified UN packaging compliant with IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations for the domestic transit and international export of hazardous and flammable liquid products.',
+    specs: [
+      { label: 'Certification', value: 'UN 1266 Class 3 Flammable Liquids (Packaging Group II & III)' },
+      { label: 'Drop Test Standard', value: 'Certified drop tested from 1.2m to 1.8m per UN protocol' },
+      { label: 'Bursting Strength', value: 'Exceeds 24 kg/cm² hydraulic burst pressure' },
+      { label: 'Identification', value: 'Pre-printed UN specification marking, orientation arrows, diamond labels' }
+    ],
+    features: [
+      'Meets all international port clearance requirements without customs rejections',
+      'High Cobb sizing ensures zero delamination in high-humidity sea transits',
+      'Internal partition configurations for tin cans, bottles, and carboys',
+      'Supplied with certified compliance documentation for hazardous exports'
+    ],
+    applications: 'Perfumery products, industrial solvents, adhesives, agro-chemicals, paints, lubricants and oils.'
+  },
+  {
+    id: 'octagonal-bulk-bins',
+    title: 'Octagonal Jumbo Bulk Bins & Drum Cartons',
+    subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
+    image: '/assets/images/octagonal-bulk-bin.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Heavy Industrial Grade',
+    description: 'Heavy-duty 8-sided octagonal corrugated bulk bins featuring heavy top and bottom caps. Specially designed to resist extreme outward hydrostatic pressure exerted by dense loose granular materials.',
+    specs: [
+      { label: 'Design Geometry', value: '8-sided octagonal sleeve with locking top/bottom end caps' },
+      { label: 'Wall Structure', value: 'Reinforced 5-ply / 7-ply high-puncture resistant board' },
+      { label: 'Holding Capacity', value: '500 kg to 1,000 kg bulk filling capacity' },
+      { label: 'Stacking Height', value: 'Engineered for 2-high warehouse stacking when filled' }
+    ],
+    features: [
+      'Octagonal geometry distributes lateral bursting forces evenly across 8 corners',
+      'Replace steel or fiber drums with 100% recyclable paper alternatives',
+      'Quick single-person folding assembly on the production line',
+      'Custom printed warning symbols, batch barcodes, and corporate branding'
+    ],
+    applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
+  },
+  {
+    id: 'hsc-double-wall',
+    title: 'HSC Double Wall Boxes with Liner Bags',
+    subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
+    image: '/assets/images/hsc-double-wall.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Double Wall 5-Ply',
+    description: 'Heavy industrial Half-Slotted Containers (HSC 0200) engineered with open tops, matching deep telescopic corrugated lids, and integrated polyethylene liner bags for sanitary and contamination-free handling.',
+    specs: [
+      { label: 'Configuration', value: 'HSC bottom container with independent top tray cover' },
+      { label: 'Board Caliper', value: 'Heavy 5-ply double wall with moisture-resistant glue' },
+      { label: 'Liner Option', value: 'Food-grade or industrial polyethylene inner barrier bag' },
+      { label: 'Stitching', value: 'Heavy-gauge galvanized anti-rust wire stitching' }
+    ],
+    features: [
+      'Wide-open top allows rapid loading and automated hopper bulk filling',
+      'Telescopic lid provides airtight top seal against dust and transit debris',
+      'Exceptional corner stiffness withstands high dynamic road vibration',
+      'Liner bag prevents moisture ingress and keeps goods pristine'
+    ],
+    applications: 'Food processing, bulk confectionery, chemicals, frozen seafood, agricultural harvest, auto spare parts.'
+  },
+  {
+    id: 'eco-pallet-box',
+    title: 'Eco-Corrugated Paper Pallet Box with Lid',
+    subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
+    image: '/assets/images/eco-pallet-box.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'ISPM-15 Exempt / 100% Paper',
+    description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
+    specs: [
+      { label: 'Payload Capacity', value: 'Static load up to 1,000 kg / Dynamic load up to 600 kg' },
+      { label: 'Pallet Base', value: 'Integrated heavy-gauge multi-layer corrugated runners' },
+      { label: 'Wall Profile', value: '7-Ply Heavy-Duty AAA Flute corrugated sleeve' },
+      { label: 'Forklift Access', value: 'Standard 4-way entry for forklifts & pallet jacks' },
+      { label: 'Export Status', value: '100% ISPM-15 exempt (zero heat treatment / fumigation required)' },
+      { label: 'Circularity', value: 'Fully repulpable and 100% biodegradable kraft' }
+    ],
+    features: [
+      'Integrated corrugated pallet feet remove the need for separate wooden or plastic pallets',
+      'Exempt from international wood packaging quarantine regulations for instant customs clearance',
+      'Delivered flat-pack or assembled for immediate hopper or conveyor loading',
+      'Significantly lowers tare weight, slashing overseas air and sea freight bills'
+    ],
+    applications: 'Automotive exports, industrial fittings, electrical switchgear, green logistics, pharmaceutical distribution.'
+  },
+  {
+    id: 'white-bulk-pallet-container',
+    title: 'Integrated Pallet Base White Bulk Container',
+    subtitle: 'Bleached Kraft Cleanroom & High-Value Cargo Bulk Bin',
+    image: '/assets/images/white-bulk-pallet-container.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Cleanroom & White Kraft',
+    description: 'Premium white bleached kraft bulk packaging container fitted directly onto corrugated pallet runners with high-wall overlap cap. Provides an ultra-clean, dust-proof exterior ideal for sensitive pharmaceutical, food ingredient, and high-value export shipments.',
+    specs: [
+      { label: 'Exterior Liner', value: 'High-brightness bleached white virgin kraft liner' },
+      { label: 'Base System', value: 'Mounted corrugated pallet blocks with 4-way fork entry' },
+      { label: 'Cap Closure', value: 'Heavy telescoping kraft lid for total top protection' },
+      { label: 'Bursting Strength', value: '26 to 32 kg/cm² hydraulic burst pressure' },
+      { label: 'Stacking Strength', value: 'Tested for 2-tier dynamic stack in ISO containers' },
+      { label: 'Moisture Defense', value: 'Internal water-resistant barrier sizing' }
+    ],
+    features: [
+      'Clean white exterior provides superior contrast for barcodes, labels, and corporate branding',
+      'Dust-free surface suitable for cleanroom environments and healthcare supply chains',
+      'High vertical column strength prevents sidewall bulging under heavy dense contents',
+      'Integrated runners allow direct pickup without transferring onto warehouse wooden skids'
+    ],
+    applications: 'Cleanroom electronics, bulk pharmaceutical intermediates, food ingredients, luxury consumer durables.'
+  },
+  {
+    id: 'drop-gate-pallet-box',
+    title: 'Drop-Gate Access Heavy-Duty Pallet Container',
+    subtitle: 'Ergonomic Fold-Down Front Door for Assembly Line Loading',
+    image: '/assets/images/drop-gate-pallet-box.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Ergonomic Front Access',
+    description: 'Heavy-duty multi-wall pallet sleeve equipped with a pre-creased fold-down drop gate. Enables assembly workers and robotic arms to load or pick heavy machined components without bending deep over high container walls.',
+    specs: [
+      { label: 'Wall Structure', value: 'Reinforced 5-Ply / 7-Ply heavy corrugated board' },
+      { label: 'Gate Feature', value: 'Half-height fold-down front flap with reinforced crease score' },
+      { label: 'Pallet Integration', value: 'Mounts on standard 1200x1000 and 1200x800 industrial pallets' },
+      { label: 'Load Rating', value: 'Payload capacity up to 1,200 kg with internal support' },
+      { label: 'Stitching / Joint', value: 'Galvanized heavy wire stitching along vertical corners' },
+      { label: 'Stacking', value: 'Compatible with standard corrugated top cap for multi-level stacking' }
+    ],
+    features: [
+      'Ergonomic drop door eliminates operator strain during progressive part extraction',
+      'Ideal for active assembly line feeding in automotive and machinery plants',
+      'Folds completely flat when empty for reverse logistics space optimization',
+      'Can be fitted with internal cellular dividers or VCI anti-corrosion barrier bags'
+    ],
+    applications: 'Automotive assembly lines, CNC machined castings, forgings, stamping parts, motor assemblies.'
+  },
+  {
+    id: 'poly-lined-bulk-box',
+    title: 'Poly-Lined Bulk Chemical & Resin Container',
+    subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
+    image: '/assets/images/poly-lined-bulk-box.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Hygroscopic & Chemical Barrier',
+    description: 'Rugged corrugated bulk box integrated with a heavy-gauge internal polyethylene (PE) liner bag and telescopic lid. Engineered specifically to store and transport hygroscopic powders, resins, granular chemicals, and food-grade raw materials safely.',
+    specs: [
+      { label: 'Liner Material', value: 'Heavy-gauge virgin LDPE / HDPE liner (food-grade certified)' },
+      { label: 'Wall Rating', value: 'Heavy 5-ply double wall or 7-ply triple wall corrugated' },
+      { label: 'Capacity', value: '500 kg to 1,000 kg bulk filling capacity' },
+      { label: 'Sealing Method', value: 'Heat-sealable or twist-tie bag closure with top corrugated cap' },
+      { label: 'Moisture Barrier', value: 'Near-zero moisture vapor transmission rate (MVTR)' },
+      { label: 'Corner Reinforcement', value: 'Continuous heavy wire stitched corner seams' }
+    ],
+    features: [
+      'Internal liner prevents product contamination, dusting, and atmospheric moisture absorption',
+      'Eliminates the cost, return logistics, and cleaning overhead of steel drums or intermediate bulk containers',
+      'Square footprint utilizes 100% of shipping container floor space without drum void gaps',
+      'Compatible with top automated filling funnels and bottom vacuum probe discharge'
+    ],
+    applications: 'Plastic polymers & masterbatches, rubber chemicals, specialty powders, agricultural fertilizers, bulk food spices.'
+  },
+  {
+    id: 'telescopic-lid-box',
+    title: 'Two-Piece Telescopic Lid Box (FTD)',
+    subtitle: 'Full Telescoping Top & Bottom Heavy Carton with Dual-Wall Side Armor',
+    image: '/assets/images/telescopic-lid-box.jpg',
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'Telescopic Rigid Setup',
+    description: 'Two-piece rigid corrugated box comprising an open base tray and a full-depth telescoping lid (Full Telescopic Design - FTD). When closed, the overlapping sidewalls create double-wall armor on all four vertical faces, providing superior stacking and corner resistance.',
+    specs: [
+      { label: 'FEFCO Style', value: 'FEFCO 0300 / 0301 Two-Piece Full Telescopic Design' },
+      { label: 'Board Caliper', value: 'Available in 3-Ply single wall & 5-Ply double wall kraft' },
+      { label: 'Side Reinforcement', value: 'Overlapping lids create 2x sidewall strength against crushing' },
+      { label: 'Edge Crush Test', value: 'ECT 44 to ECT 60+ heavy compression rating' },
+      { label: 'Closure', value: 'Friction-fit lid with strap or tape securing options' },
+      { label: 'Printing', value: 'Custom 2-color flexographic print with edge alignment marks' }
+    ],
+    features: [
+      'Full telescoping cover provides dual-wall perimeter strength against heavy top loads',
+      'Effortless opening and inspection without cutting or destroying the outer container',
+      'Dust-proof fit keeps internal machinery components and precision goods pristine',
+      'Exceptional resistance to vertical corner bulging and pallet overhang compression'
+    ],
+    applications: 'Heavy metal hardware, precision machine parts, automotive spares, electrical panels, high-end export goods.'
+  },
+  {
+    id: 'refrigerator-appliance-box',
+    title: 'White Goods & Refrigerator Box',
+    subtitle: 'Up to 1,700 mm Tall Heavy Appliance Packaging with Clamp-Safe Markings',
+    image: '/assets/images/refrigerator-appliance-box.jpg',
+    category: 'Custom & Large Format',
+    badge: 'Appliance Grade',
+    description: 'Heavy-duty corrugated upright carton engineered for large domestic refrigerators, commercial coolers, and washing appliances (up to 1,700 mm height). Designed with clamp-truck handling zones, ventilation handholds, and comprehensive ISO handling symbols.',
+    specs: [
+      { label: 'Standard Dimensions', value: '1700 mm (67") H × 700 mm (27.5") W × 650 mm (25.5") D' },
+      { label: 'Caliper & Flute', value: 'Heavy 5-ply BC Flute / 7-ply AAA Flute high-compression board' },
+      { label: 'Clamp Rating', value: 'Reinforced lower sidewall zone for hydraulic forklift clamp handling' },
+      { label: 'Ergonomics', value: 'Die-cut oval handholds rated for 75+ kg manual lifting' },
+      { label: 'Markings', value: 'Standardized clamp zones, center-of-gravity, and upright symbols' },
+      { label: 'BCT Strength', value: 'Box Compression Test engineered for 3-high vertical warehouse stacking' }
+    ],
+    features: [
+      'High vertical column strength prevents buckling under heavy top loads in high-bay warehouses',
+      'Clamp-safe indicator zones guide forklift operators to prevent side compression denting',
+      'Built-in handholds make domestic distribution and home delivery effortless and safe',
+      'Multi-panel flexographic printing displays corporate brand, energy star labels, and specs'
+    ],
+    applications: 'Refrigerators, commercial bottle coolers, washing machines, HVAC air conditioning units, water heaters.'
+  },
+  {
+    id: 'mattress-furniture-box',
+    title: 'Large-Format 8ft × 6ft Mattress Box',
+    subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
+    image: '/assets/images/mattress-furniture-box.jpg',
+    category: 'Custom & Large Format',
+    badge: 'Extra Large Format',
+    description: 'Oversized flat-profile corrugated shipping carton manufactured to accommodate full 8 ft × 6 ft (96" × 72" × 10") king and queen size mattresses, flat-pack wooden furniture, and architectural sheet products without sagging.',
+    specs: [
+      { label: 'Dimensions', value: '8 ft (96") Length × 6 ft (72") Width × 10" Height' },
+      { label: 'Board Spec', value: 'High-puncture resistant 5-ply double wall corrugated board' },
+      { label: 'Box Style', value: 'Large-format five-panel folder (FPF) or telescope tray system' },
+      { label: 'Surface Printing', value: 'Large-bed flexographic branding with dimension & orientation marks' },
+      { label: 'Corner Defense', value: 'Folded edge flaps shield vulnerable mattress corners from dragging' },
+      { label: 'Customization', value: 'Customizable length up to 10 ft for bespoke furniture lines' }
+    ],
+    features: [
+      'Manufactured on extra-wide converting machinery capable of handling 3.5-meter board blanks',
+      'Prevents soiling, scuffing, puncture, and moisture damage during e-commerce doorstep delivery',
+      'Reinforced perimeter tape lines ensure box stays rigid during two-person manual handling',
+      'Can be supplied with edge protector angle boards for maximum perimeter stiffness'
+    ],
+    applications: 'Mattress manufacturers, flat-pack furniture, solar panels, large display panels, architectural doors.'
+  },
+  {
+    id: 'honeywell-stitched-box',
+    title: 'Reinforced Wire-Stitched Box with Cap',
+    subtitle: 'High-Tensile Wire Stitching with Telescopic Lid & Custom OEM Branding',
+    image: '/assets/images/honeywell-stitched-box.jpg',
+    category: 'Custom & Large Format',
+    badge: 'Wire-Stitched Heavy Armor',
+    description: 'Heavy-duty industrial corrugated carton reinforced with anti-corrosive zinc-coated wire stitched corner joints and a matching top cap. Engineered for multinational OEMs requiring maximum seam burst strength under severe transport vibrations.',
+    specs: [
+      { label: 'Joint Technology', value: 'Continuous heavy-gauge galvanized wire stitched seams' },
+      { label: 'Board Type', value: '5-Ply heavy double wall (BC Flute) with virgin kraft liners' },
+      { label: 'Closure System', value: 'Drop-over telescoping corrugated cap with friction interlock' },
+      { label: 'Branding', value: 'Custom 2-color OEM logo printing with international handling icons' },
+      { label: 'Bursting Strength', value: '24 to 30 kg/cm² seam burst retention' },
+      { label: 'Quality Standard', value: '100% compliant with global OEM packaging audit specifications' }
+    ],
+    features: [
+      'Wire-stitched seams will not pop open even in extreme desert heat or freezing transit conditions',
+      'Heavy telescoping cap allows swift unboxing and re-inspection at factory receiving docks',
+      'Pre-printed with ISO handling warnings (Fragile, This Way Up, Keep Dry, Max Stacking)',
+      'Tested to withstand rigorous drop and incline impact shock tests'
+    ],
+    applications: 'OEM electronics, industrial automation equipment, aerospace sub-assemblies, heavy instrumentation.'
+  },
+  {
+    id: 'tall-industrial-carton-esti',
+    title: 'Extra-Tall Vertical Industrial Carton (2+ Meters)',
+    subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
+    image: '/assets/images/tall-industrial-carton-esti.jpg',
+    category: 'Custom & Large Format',
+    badge: '2-Meter Extra Tall',
+    description: 'Custom-engineered extra-tall corrugated carton towering over 2 meters in height. Built with high-caliper vertical fluting to provide extraordinary column strength for long industrial components, roll goods, and vertical machinery assemblies without bowing.',
+    specs: [
+      { label: 'Height Range', value: 'Over 2,000 mm (2 meters / 6.5+ feet) vertical height' },
+      { label: 'Flute Orientation', value: 'Vertical machine-direction fluting for extreme axial load' },
+      { label: 'Board Structure', value: 'High-ECT 5-ply / 7-ply heavy corrugated kraft' },
+      { label: 'End Closure', value: 'Top and bottom full-overlap flaps or independent locking end caps' },
+      { label: 'Tear Resistance', value: 'High puncture resistance against sharp internal metal edges' },
+      { label: 'Manufacture', value: 'Produced in-house at ESTI Packaging facility' }
+    ],
+    features: [
+      'Authentic ESTI production capability solving the common B2B challenge of packaging extra-tall cargo',
+      'Eliminates expensive custom wooden crating for long components and structural extrusions',
+      'Superior vertical column stiffness prevents folding or bending during crane or forklift slinging',
+      'Delivered flat-packed to maximize customer storage density prior to pack-out'
+    ],
+    applications: 'Industrial drive shafts, aluminum & steel extrusions, roll fabrics, architectural trim, precision hydraulic rams.'
+  },
+  {
+    id: 'die-cut-boxes',
+    title: 'Precision Die-Cut Boxes & Ergonomic Trays',
+    subtitle: 'Flatbed CNC Die-Cutting with Integrated Handholes & Interlocks',
+    image: '/assets/images/die-cut-corrugated.jpg',
+    category: 'Die-Cut & Partitions',
+    badge: 'CNC Precision Die-Cut',
+    description: 'Custom-cut corrugated packaging produced with steel-rule die tooling to sub-millimeter precision. Features integrated ergonomic carrying handles, self-locking fold tabs, and display-ready wrap designs.',
+    specs: [
+      { label: 'Cutting Process', value: 'High-speed flatbed & rotary CNC automated die-cutting' },
+      { label: 'Dimensional Tolerance', value: '±0.5 mm precision CAD cutting accuracy' },
+      { label: 'Locking Types', value: 'Snap-lock bottom (1-2-3), crash-lock, self-tuck mailer style' },
+      { label: 'Handle Options', value: 'Oval handholes, ventilation slits, tear-strip perforations' }
+    ],
+    features: [
+      'Self-assembling structures eliminate adhesive tape for faster packing',
+      'Punched carrying handles facilitate easy warehouse and consumer handling',
+      'Smooth, burr-free edges ensure safe handling without paper cuts',
+      'Optimized sheet layouts maximize board utilization and lower unit costs'
+    ],
+    applications: 'E-commerce subscription boxes, fruits & vegetables, retail shelf-ready packs, hardware tools, electronic appliances.'
+  },
+  {
+    id: 'custom-dividers',
+    title: 'Custom Slotted Cell Dividers & Partition Grids',
+    subtitle: 'Interlocking Corrugated Partitions for Precision Component Isolation',
+    image: '/assets/images/custom-dividers.jpg',
+    category: 'Die-Cut & Partitions',
+    badge: 'Zero-Scratch Protection',
+    description: 'Engineered interlocking corrugated partition sets that create individual isolated cells inside master shipping cartons, ensuring zero product-to-product contact and maximum inner column stacking reinforcement.',
+    specs: [
+      { label: 'Cell Arrangements', value: '2x2, 3x4, 4x6 up to 48-cell custom matrix configurations' },
+      { label: 'Board Options', value: '3-ply micro-flute (E-flute) or heavy B-flute corrugated' },
+      { label: 'Assembly', value: 'Pre-assembled collapsible sets or flat-slot knocked down' },
+      { label: 'Surface Contact', value: 'Anti-scuff virgin kraft liner prevents component abrasion' }
+    ],
+    features: [
+      'Separates delicate finished components to eliminate scratches and denting',
+      'Vertical partition walls add up to 40% additional box top-to-bottom crush strength',
+      'Folds flat for compact storage and pops open instantly for packing lines',
+      '100% recyclable alternative to non-biodegradable molded plastic trays'
+    ],
+    applications: 'Automotive lighting, machine sensors, cosmetic jars, electrical relays, turned metal components.'
+  },
+  {
+    id: 'bottle-partition-boxes',
+    title: 'Bottle Partition Outer Cartons & Beverage Shippers',
+    subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
+    image: '/assets/images/bottle-partition-box.jpg',
+    category: 'Die-Cut & Partitions',
+    badge: 'Fragile Goods Defense',
+    description: 'Heavy-duty master corrugated shippers fitted with full-height internal cell dividers specifically designed to cushion and protect glass bottles containing wine, spirits, agro-chemicals, and oils during transit.',
+    specs: [
+      { label: 'Bottle Capacities', value: '6-bottle, 12-bottle, and 24-bottle standard carton layouts' },
+      { label: 'Cushioning Height', value: 'Full-height partition walls cradle bottle neck and shoulder' },
+      { label: 'Drop Resistance', value: 'Engineered to survive multi-angle conveyor drop impacts' },
+      { label: 'Outer Box', value: 'High-puncture resistant 5-ply double wall master carton' }
+    ],
+    features: [
+      'Eliminates bottle-to-bottle clinking and accidental glass fracture',
+      'Absorptive corrugated liners contain localized leaks if primary seals breach',
+      'Stackable up to 5 tiers high in palletized warehousing without side bulge',
+      'Custom printed graphics for premium liquor and chemical branding'
+    ],
+    applications: 'Wines, craft beers, edible oils, pharmaceutical syrups, laboratory reagents, agrochemical bottles.'
+  },
+  {
+    id: 'honeycomb-packaging',
     title: 'Honeycomb Sheets & Die-Cut Inserts',
-    subtitle: 'High-Compression Dunnage & Surface Defense Solutions',
+    subtitle: 'High-Compression 100% Recyclable Paper Dunnage & Cushioning',
     image: '/assets/images/honeycomb-packaging.jpg',
-    secondaryImage: '/assets/images/custom-dividers.jpg',
     category: 'Honeycomb Packaging',
     badge: '100% Eco-Friendly',
-    description: '100% recyclable kraft paper honeycomb structures providing extraordinary vertical compression resistance, shock absorption, and surface protection. Engineered for high-load durability.',
+    description: 'Hexagonal honeycomb paper core structures sandwiched between heavy kraft linerboards. Delivers extraordinary vertical load-bearing strength and shock absorption, serving as a sustainable alternative to EPS thermocol.',
     specs: [
       { label: 'Cell Diameters', value: '10 mm, 15 mm, 20 mm, and 25 mm cell geometry' },
       { label: 'Thickness Range', value: '10 mm up to 100 mm continuous thickness' },
-      { label: 'Format Options', value: 'Flat sheets, die-cut panels, interlocking pads, bottle trays' },
-      { label: 'Compression', value: 'High load-bearing capacity (up to 40+ metric tons/m²)' },
-      { label: 'Weight Savings', value: 'Up to 60% lighter than solid timber or fiberboard' },
-      { label: 'Material', value: '100% Recycled Virgin & Semi-Chemical Kraft Paper' }
+      { label: 'Compression Strength', value: 'Up to 40+ metric tons/m² uniform surface load' },
+      { label: 'Weight Advantage', value: 'Up to 60% lighter than solid timber or fiberboard' }
     ],
     features: [
-      'Custom CNC die-cut cavities for glass bottles and delicate parts',
-      'Zero-abrasion surface contact prevents scratching of finished goods',
-      'Approved for export air freight and ocean container dunnage',
-      'Completely biodegradable and environmentally sustainable'
+      'Zero-abrasion paper surface prevents damage to delicate painted surfaces',
+      'Approved for global export air freight and ocean container dunnage',
+      '100% biodegradable and compliant with global plastic ban mandates',
+      'Custom die-cut cavity shapes engineered for glass, solar, and electronics'
     ],
-    applications: 'Wine & liquor bottles, solar panels, automotive glass, electrical motors, furniture buffer pads.'
+    applications: 'Solar panels, automotive glass, electrical motors, furniture buffer pads, export cargo dunnage.'
   },
   {
     id: 'angle-boards',
     title: 'Angle Boards & Edge Protectors (V-Boards)',
-    subtitle: 'Structural Corner Reinforcement & Pallet Strapping Defense',
+    subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
     image: '/assets/images/angle-edge-boards.jpg',
-    secondaryImage: '/assets/images/export-container.jpg',
     category: 'Edge Protection',
     badge: 'Pallet Stability',
-    description: 'Rigid, multi-ply compressed laminated kraft paper corner boards that protect products from strap damage during tensioning and significantly increase vertical box column stacking strength on pallets.',
+    description: 'Rigid, multi-ply compressed laminated kraft paper corner boards that protect carton edges from strap damage during tensioning and dramatically increase vertical box column stacking strength on export skids.',
     specs: [
       { label: 'Leg Dimensions', value: '25 x 25 mm up to 100 x 100 mm (Equal & Unequal wings)' },
       { label: 'Caliper / Thickness', value: '2.0 mm to 8.0 mm heavy-duty multi-ply kraft' },
-      { label: 'Lengths', value: 'Cut to exact customer dimensions up to 3,000 mm' },
-      { label: 'Finish Options', value: 'Natural Brown Kraft, White coated, Moisture-barrier film' },
-      { label: 'Types', value: 'Standard Rigid V-Boards, Wrap-around notched for circular rolls' }
+      { label: 'Lengths', value: 'Cut to customer dimensions from 100 mm up to 3,000 mm' },
+      { label: 'Finishes', value: 'Natural Brown Kraft, White coated, Water-resistant film' }
     ],
     features: [
-      'Prevents steel and plastic strapping tension from crushing carton edges',
-      'Increases warehouse pallet stacking height by up to 2-3 extra tiers',
+      'Prevents steel and polyester strapping tension from cutting into cartons',
+      'Increases warehouse pallet stacking height by up to 2-3 extra tiers safely',
       'Distributes load tension uniformly across the entire pallet perimeter',
-      '100% recyclable alternative to plastic or metal corner protectors'
+      '100% recyclable alternative to plastic or metal corner guards'
     ],
-    applications: 'Palletized export goods, paper ream skids, white goods appliances, sheet metal coils, ceramic tiles.'
+    applications: 'Palletized export goods, paper ream skids, appliances, sheet metal coils, ceramic tile boxes.'
   },
   {
-    id: 'paper-cores',
+    id: 'paper-core-tubes',
     title: 'Paper Core Tubes (Spiral Wound)',
-    subtitle: 'Industrial Cores for Winding, Storage & Transportation',
+    subtitle: 'Industrial High-Crush Cores for Film, Textiles, Paper & Wire Winding',
     image: '/assets/images/paper-core-tubes.jpg',
-    secondaryImage: '/assets/images/factory-warehouse-panoramic.jpg',
     category: 'Paper Cores',
     badge: 'High Radial Strength',
     description: 'High-strength spiral wound paper cores manufactured using high-grade kraft board and specialized bonding adhesives, engineered for smooth high-speed rewinding and zero core collapse under heavy tension.',
@@ -101,7 +465,6 @@ export const PRODUCTS_CATALOG = [
       { label: 'Inner Diameter (ID)', value: '25 mm to 300 mm (1 inch to 12 inches standard)' },
       { label: 'Wall Thickness', value: '1.5 mm to 18.0 mm heavy radial wall' },
       { label: 'Lengths', value: 'Manufactured to custom lengths from 50 mm up to 4,000 mm' },
-      { label: 'Surface Finish', value: 'Ultra-smooth outer ply, burr-free perpendicular cuts' },
       { label: 'Adhesive Grade', value: 'High-tack moisture-resistant bonding resins' }
     ],
     features: [
@@ -114,19 +477,17 @@ export const PRODUCTS_CATALOG = [
   },
   {
     id: 'printed-tapes',
-    title: 'Self-Adhesive Printed Tapes',
-    subtitle: 'Branded Packaging Tapes & Anti-Tamper Security',
+    title: 'Self-Adhesive Printed Packaging Tapes',
+    subtitle: 'Branded Multi-Color Corporate Logo Tapes & Tamper-Evident Security',
     image: '/assets/images/printed-tapes.jpg',
-    secondaryImage: '/assets/images/un-certified-box.jpg',
     category: 'Packaging Accessories',
-    badge: 'Custom Branding',
+    badge: 'Custom Logo Branding',
     description: 'High-performance BOPP and reinforced Kraft packaging tapes featuring custom multi-color corporate logo printing, ensuring brand visibility and tamper-evident carton sealing throughout your supply chain.',
     specs: [
       { label: 'Tape Widths', value: '24 mm, 36 mm, 48 mm, and 72 mm standard widths' },
       { label: 'Roll Lengths', value: '65 m, 100 m hand rolls up to 1000 m machine rolls' },
       { label: 'Adhesive Type', value: 'Pressure-sensitive water-based acrylic / Hot melt rubber' },
-      { label: 'Print Capabilities', value: 'Up to 3-color rotogravure / flexo custom logo printing' },
-      { label: 'Film Caliper', value: '40 to 65 microns high-tensile backing film' }
+      { label: 'Print Capabilities', value: 'Up to 3-color rotogravure / flexo custom logo printing' }
     ],
     features: [
       'High-shear tack ensures permanent bond to all kraft and recycled carton surfaces',
@@ -142,7 +503,17 @@ export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [expandedId, setExpandedId] = useState(PRODUCTS_CATALOG[0].id);
 
-  const categories = ['All', 'Corrugated Boxes', 'Honeycomb Packaging', 'Edge Protection', 'Paper Cores', 'Packaging Accessories'];
+  const categories = [
+    'All',
+    'Corrugated & Pallet Boxes',
+    'Custom & Large Format',
+    'UN Certified Boxes',
+    'Die-Cut & Partitions',
+    'Honeycomb Packaging',
+    'Edge Protection',
+    'Paper Cores',
+    'Packaging Accessories'
+  ];
 
   const filteredProducts = activeCategory === 'All'
     ? PRODUCTS_CATALOG
@@ -167,7 +538,7 @@ export default function Products() {
           </p>
         </div>
 
-        {/* Minimalist Filter Tabs */}
+        {/* Category Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((cat) => (
             <button
@@ -185,7 +556,7 @@ export default function Products() {
           ))}
         </div>
 
-        {/* Detailed Product List (Jayaraj Fortune inspired comprehensive display) */}
+        {/* Detailed Product List */}
         <div className="space-y-12">
           {filteredProducts.map((product) => {
             const isExpanded = expandedId === product.id;
@@ -212,21 +583,10 @@ export default function Products() {
                       </div>
                     </div>
 
-                    {/* Secondary thumbnail if available */}
-                    {product.secondaryImage && (
-                      <div className="flex items-center gap-3">
-                        <div className="h-16 w-24 rounded-lg overflow-hidden border border-slate-200 shrink-0 bg-white">
-                          <img
-                            src={product.secondaryImage}
-                            alt="Alternative view"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <div className="text-xs text-slate-500">
-                          <span className="font-semibold text-slate-700">Custom Dimensions:</span> Manufactured to exact client drawings & blueprints.
-                        </div>
-                      </div>
-                    )}
+                    <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
+                    </div>
                   </div>
 
                   {/* Product Details & Engineering Specs (7 cols on lg) */}
@@ -238,80 +598,113 @@ export default function Products() {
                       </span>
 
                       {/* Title */}
-                      <h3 className="text-2xl sm:text-3xl font-black text-slate-900 font-display mt-1">
+                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-display mt-1">
                         {product.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-semibold text-slate-500 mt-0.5">
+
+                      {/* Subtitle */}
+                      <p className="text-xs sm:text-sm font-semibold text-slate-600 mt-0.5">
                         {product.subtitle}
                       </p>
 
                       {/* Description */}
-                      <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+                      <p className="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
                         {product.description}
                       </p>
 
-                      {/* Quick Highlight Points */}
-                      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {product.features.map((feat, fIdx) => (
-                          <div key={fIdx} className="flex items-start gap-2 text-xs text-slate-700">
-                            <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                            <span>{feat}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Technical Specification Table */}
-                    <div className="mt-4 pt-4 border-t border-slate-200">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 flex items-center gap-1.5">
-                          <Info className="w-3.5 h-3.5 text-emerald-600" />
-                          Technical Specifications & Parameters
-                        </h4>
-                      </div>
-
-                      <div className="bg-white rounded-xl border border-slate-200 overflow-hidden divide-y divide-slate-100 text-xs">
-                        {product.specs.map((s, sIdx) => (
-                          <div key={sIdx} className="grid grid-cols-12 px-3.5 py-2 hover:bg-slate-50">
-                            <span className="col-span-4 font-bold text-slate-600">{s.label}:</span>
-                            <span className="col-span-8 font-medium text-slate-800">{s.value}</span>
+                      {/* Key Engineering Specs Grid */}
+                      <div className="mt-4 pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                        {product.specs.slice(0, 4).map((spec, idx) => (
+                          <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80">
+                            <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">
+                              {spec.label}
+                            </span>
+                            <span className="font-bold text-slate-800 mt-0.5 block">
+                              {spec.value}
+                            </span>
                           </div>
                         ))}
                       </div>
 
-                      {/* Applications Note */}
-                      <div className="mt-3 text-xs text-slate-600">
-                        <strong className="text-slate-800">Ideal Applications:</strong> {product.applications}
-                      </div>
+                      {/* Collapsible Details: Full Specs, Features & Applications */}
+                      {isExpanded && (
+                        <div className="mt-4 pt-4 border-t border-slate-200 space-y-4 animate-fadeIn">
+                          
+                          {/* Remaining Specs */}
+                          {product.specs.length > 4 && (
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                              {product.specs.slice(4).map((spec, idx) => (
+                                <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80">
+                                  <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">
+                                    {spec.label}
+                                  </span>
+                                  <span className="font-bold text-slate-800 mt-0.5 block">
+                                    {spec.value}
+                                  </span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {/* Key Features Bullet List */}
+                          <div>
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
+                              Engineering Advantages & Highlights
+                            </h4>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                              {product.features.map((feat, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                                  <span>{feat}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+
+                          {/* Applications */}
+                          <div className="p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-600">
+                            <strong className="text-slate-900 font-semibold">Recommended Sectors: </strong>
+                            {product.applications}
+                          </div>
+
+                        </div>
+                      )}
                     </div>
 
-                    {/* Direct Contact Bar (Phone, WhatsApp, Email - No Database!) */}
-                    <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center gap-3">
-                      <a
-                        href="tel:+919833182733"
-                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-sm transition-colors"
+                    {/* Bottom Action Strip */}
+                    <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                      
+                      {/* Expand / Collapse Button */}
+                      <button
+                        type="button"
+                        onClick={() => setExpandedId(isExpanded ? null : product.id)}
+                        className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 focus:outline-none"
                       >
-                        <Phone className="w-3.5 h-3.5" />
-                        <span>Call for Specs: (+91) 983 318 2733</span>
-                      </a>
+                        <span>{isExpanded ? 'Show Less Details' : 'View Full Specifications'}</span>
+                        <ChevronRight className={`w-4 h-4 transform transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                      </button>
 
-                      <a
-                        href={`https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20am%20inquiring%20about%20your%20${encodeURIComponent(product.title)}.`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-white hover:bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-300 transition-colors"
-                      >
-                        <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
-                        <span>WhatsApp Inquire</span>
-                      </a>
+                      {/* Direct Contact Buttons */}
+                      <div className="flex items-center gap-2">
+                        <a
+                          href={`https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(product.title)}.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200 transition-colors"
+                        >
+                          <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
+                          <span>WhatsApp</span>
+                        </a>
 
-                      <a
-                        href={`mailto:sunil@estipackaging.com?subject=Inquiry%20regarding%20${encodeURIComponent(product.title)}&body=Hello%20ESTI%20Packaging,%0A%0AI%20would%20like%20to%20receive%20pricing%20and%20specifications%20for:%0AProduct:%20${encodeURIComponent(product.title)}%0A%0AMy%20requirements:%0A- Quantity:%0A- Target Dimensions:%0A- Delivery Location:%0A%0AThank%20you.`}
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition-colors"
-                      >
-                        <Mail className="w-3.5 h-3.5 text-slate-500" />
-                        <span>Email Direct Inquiry</span>
-                      </a>
+                        <a
+                          href="tel:+919833182733"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-sm transition-colors"
+                        >
+                          <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                          <span>Call Factory</span>
+                        </a>
+                      </div>
+
                     </div>
 
                   </div>
@@ -320,36 +713,6 @@ export default function Products() {
               </div>
             );
           })}
-        </div>
-
-        {/* Direct Technical Consultation Callout Box */}
-        <div className="mt-14 p-8 rounded-2xl bg-slate-900 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div>
-            <span className="text-xs uppercase font-bold tracking-wider text-emerald-400">Custom Engineering Desk</span>
-            <h3 className="text-xl sm:text-2xl font-bold font-display text-white mt-1">
-              Need a Custom Size, Flute Combination or UN Hazmat Spec?
-            </h3>
-            <p className="text-xs sm:text-sm text-slate-300 mt-1 max-w-2xl">
-              We engineer custom corrugated flutes, honeycomb dunnage, and edge protectors to your CAD blueprints. Speak directly with our senior packaging engineer.
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <a
-              href="tel:+919833182733"
-              className="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm transition-colors flex items-center gap-2"
-            >
-              <Phone className="w-4 h-4" />
-              <span>(+91) 983 318 2733</span>
-            </a>
-            <a
-              href="mailto:sunil@estipackaging.com?subject=Custom%20Packaging%20Specification%20Request"
-              className="px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs sm:text-sm border border-slate-700 transition-colors flex items-center gap-2"
-            >
-              <Mail className="w-4 h-4" />
-              <span>sunil@estipackaging.com</span>
-            </a>
-          </div>
         </div>
 
       </div>
