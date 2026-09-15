@@ -25,9 +25,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
     image: '/assets/images/esti-branded-box.jpg',
     images: [
-      { src: '/assets/images/esti-branded-box.jpg', label: 'ESTI Branded Master Shipping Carton (RSC 0201)' },
-      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Telescopic Tray & Lid Box (FTD)' },
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy-Duty Appliance Upright Carton' }
+      { src: '/assets/images/esti-branded-box.jpg', label: 'ESTI Branded Master Shipping Carton (RSC 0201)' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
@@ -54,11 +52,8 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Cost-Effective Heavy Timber Crate Replacement (Up to 1,500 kg)',
     image: '/assets/images/heavy-duty-pallet.jpg',
     images: [
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Timber Replacement Pallet Box with Strapping' },
-      { src: '/assets/images/eco-pallet-box.jpg', label: 'Eco Paper Pallet Box with Integrated Runners' },
-      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom White Bulk Container on Runners' },
-      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Drop-Gate Fold-Down Front Loading Flap' },
-      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'Warehouse Staging Floor (2-Tier Stack Load)' }
+      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Single Unit Strapped Heavy-Duty Pallet Box' },
+      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'Heavy Pallet Boxes Staged 2-High on Warehouse Floor' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Timber Crate Replacement',
@@ -83,10 +78,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
     image: '/assets/images/eco-pallet-box.jpg',
     images: [
-      { src: '/assets/images/eco-pallet-box.jpg', label: '100% Recyclable Paper Pallet Box with Integrated Runners' },
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Standard Strapped Heavy-Duty Pallet Box' },
-      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Bulk Container' },
-      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Drop-Gate Assembly Front Loading Flap' }
+      { src: '/assets/images/eco-pallet-box.jpg', label: '100% Recyclable Paper Pallet Box with Integrated Runners & Lid' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Exempt / 100% Paper',
@@ -113,9 +105,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Bleached Kraft Cleanroom & High-Value Cargo Bulk Bin',
     image: '/assets/images/white-bulk-pallet-container.jpg',
     images: [
-      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Kraft Bulk Bin on Runners' },
-      { src: '/assets/images/eco-pallet-box.jpg', label: 'Eco-Corrugated Kraft Pallet Box with Cap' },
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Heavy-Duty Industrial Timber Replacement Crate' }
+      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Kraft Bulk Bin with Corrugated Runners & Lid' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Cleanroom & White Kraft',
@@ -142,9 +132,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Ergonomic Fold-Down Front Door for Assembly Line Loading',
     image: '/assets/images/drop-gate-pallet-box.jpg',
     images: [
-      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Ergonomic Half-Height Drop Door for Assembly Picking' },
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Closed Sidewall Pallet Box Configuration' },
-      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'High-Density 2-Tier Warehouse Pallet Staging' }
+      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Ergonomic Half-Height Fold-Down Front Loading Door' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Ergonomic Front Access',
@@ -171,9 +159,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
     image: '/assets/images/poly-lined-bulk-box.jpg',
     images: [
-      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Box with Food/Chemical-Grade PE Bag' },
-      { src: '/assets/images/hsc-double-wall.jpg', label: 'Heavy Double-Wall HSC Outer Box' },
-      { src: '/assets/images/octagonal-bulk-bin.jpg', label: 'Octagonal High Outward Pressure Bulk Bin' }
+      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Box with Heavy-Gauge Polyethylene Liner Bag' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Hygroscopic & Chemical Barrier',
@@ -200,9 +186,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Full Telescoping Top & Bottom Heavy Carton with Dual-Wall Side Armor',
     image: '/assets/images/telescopic-lid-box.jpg',
     images: [
-      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescoping Tray & Lid Box (FTD)' },
-      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Wire-Stitched Heavy Box with Telescopic Lid' },
-      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Box with Matching Top Cap' }
+      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescoping Tray & Lid Box (FTD)' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Telescopic Rigid Setup',
@@ -229,8 +213,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
     image: '/assets/images/un-certified-box.jpg',
     images: [
-      { src: '/assets/images/un-certified-box.jpg', label: 'UN 1266 Class 3 Dangerous Goods Hazmat Shipper' },
-      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Chemical & Moisture Barrier Poly-Lined Bulk Box' }
+      { src: '/assets/images/un-certified-box.jpg', label: 'UN 1266 Certified Class 3 Flammable Liquids Hazmat Shipper' }
     ],
     category: 'UN Certified Boxes',
     badge: 'UN 1266 / 4GV Certified',
@@ -255,9 +238,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
     image: '/assets/images/octagonal-bulk-bin.jpg',
     images: [
-      { src: '/assets/images/octagonal-bulk-bin.jpg', label: '8-Sided Octagonal Bulk Granular Storage Bin' },
-      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Moisture Barrier Poly-Lined Bulk Container' },
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Heavy-Duty Pallet Crate Alternative' }
+      { src: '/assets/images/octagonal-bulk-bin.jpg', label: '8-Sided Octagonal Bulk Granular Storage Bin' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Heavy Industrial Grade',
@@ -282,9 +263,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
     image: '/assets/images/hsc-double-wall.jpg',
     images: [
-      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Container (HSC 0200) with Matching Top Cap' },
-      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescopic Rigid Box (FTD)' },
-      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Chemical & Resin Box with Bag' }
+      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Container (HSC 0200) with Matching Top Cap' }
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Double Wall 5-Ply',
@@ -307,11 +286,11 @@ export const PRODUCTS_CATALOG = [
     id: 'refrigerator-appliance-box',
     title: 'White Goods & Refrigerator Box',
     subtitle: 'Up to 1,700 mm Tall Heavy Appliance Packaging with Clamp-Safe Markings',
-    image: '/assets/images/refrigerator-appliance-box.jpg',
+    image: '/assets/images/refrigerator-isometric.jpg',
     images: [
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: '1700mm Refrigerator Box CAD Drawing, Clamp Zones & Views' },
-      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Authentic 2-Meter Tall Vertical Industrial Carton' },
-      { src: '/assets/images/mattress-furniture-box.jpg', label: 'Large-Format Flat-Pack Furniture Packaging' }
+      { src: '/assets/images/refrigerator-isometric.jpg', label: '3D Perspective Isometric View (1700 × 700 × 650 mm)' },
+      { src: '/assets/images/refrigerator-technical-views.jpg', label: 'Orthographic Engineering Views (Front, Sides & Back)' },
+      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Complete Refrigerator Packaging Specification Sheet' }
     ],
     category: 'Custom & Large Format',
     badge: 'Appliance Grade',
@@ -336,11 +315,11 @@ export const PRODUCTS_CATALOG = [
     id: 'mattress-furniture-box',
     title: 'Large-Format 8ft × 6ft Mattress Box',
     subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
-    image: '/assets/images/mattress-furniture-box.jpg',
+    image: '/assets/images/mattress-isometric.jpg',
     images: [
-      { src: '/assets/images/mattress-furniture-box.jpg', label: '8ft × 6ft Mattress Box 3D Isometric & Orthographic Blueprint' },
-      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Wire-Stitched Heavy Carton Alternative' },
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Large Appliance Shipping Carton' }
+      { src: '/assets/images/mattress-isometric.jpg', label: '3D Isometric Perspective View (8ft × 6ft × 10")' },
+      { src: '/assets/images/mattress-technical-views.jpg', label: 'Front & Side Orthographic Elevation Views' },
+      { src: '/assets/images/mattress-furniture-box.jpg', label: 'Complete Mattress Packaging Specification Sheet' }
     ],
     category: 'Custom & Large Format',
     badge: 'Extra Large Format',
@@ -367,9 +346,8 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'High-Tensile Wire Stitching with Telescopic Lid & Custom OEM Branding',
     image: '/assets/images/honeywell-stitched-box.jpg',
     images: [
-      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'High-Tensile Wire-Stitched Seams & Telescopic Cap' },
-      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Telescopic Box Structure' },
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy Industrial OEM Packaging' }
+      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Full Box with Telescopic Cap & OEM Branding' },
+      { src: '/assets/images/honeywell-stitched-corner.jpg', label: 'High-Tensile Galvanized Wire-Stitched Seam Detail' }
     ],
     category: 'Custom & Large Format',
     badge: 'Wire-Stitched Heavy Armor',
@@ -396,9 +374,8 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
     image: '/assets/images/tall-industrial-carton-esti.jpg',
     images: [
-      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Authentic ESTI Engineer with 2-Meter Tall Vertical Carton' },
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Heavy Appliance Vertical Column Packaging' },
-      { src: '/assets/images/paper-core-tubes.jpg', label: 'Spiral Paper Core Industrial Tubes' }
+      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Full 2-Meter Vertical Assembly with ESTI Engineer' },
+      { src: '/assets/images/tall-carton-top-detail.jpg', label: 'Top Flute & Closure Flap Construction Detail' }
     ],
     category: 'Custom & Large Format',
     badge: '2-Meter Extra Tall',
@@ -425,8 +402,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Flatbed CNC Die-Cutting with Integrated Handholes & Interlocks',
     image: '/assets/images/die-cut-corrugated.jpg',
     images: [
-      { src: '/assets/images/die-cut-corrugated.jpg', label: 'CNC Precision Die-Cut Self-Locking Box' },
-      { src: '/assets/images/custom-dividers.jpg', label: 'Custom Die-Cut Interlocking Partitions' }
+      { src: '/assets/images/die-cut-corrugated.jpg', label: 'CNC Automated Precision Die-Cut Self-Locking Carton' }
     ],
     category: 'Die-Cut & Partitions',
     badge: 'CNC Precision Die-Cut',
@@ -451,8 +427,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Interlocking Corrugated Partitions for Precision Component Isolation',
     image: '/assets/images/custom-dividers.jpg',
     images: [
-      { src: '/assets/images/custom-dividers.jpg', label: 'Interlocking Slotted Cell Partition Grids' },
-      { src: '/assets/images/bottle-partition-box.jpg', label: 'Full-Height Bottle Cushioning Shipper' }
+      { src: '/assets/images/custom-dividers.jpg', label: 'Interlocking Slotted Cell Partition Grids' }
     ],
     category: 'Die-Cut & Partitions',
     badge: 'Zero-Scratch Protection',
@@ -477,8 +452,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
     image: '/assets/images/bottle-partition-box.jpg',
     images: [
-      { src: '/assets/images/bottle-partition-box.jpg', label: 'Zero-Breakage Full-Height Bottle Partition Carton' },
-      { src: '/assets/images/custom-dividers.jpg', label: 'Precision Interlocking Partitions' }
+      { src: '/assets/images/bottle-partition-box.jpg', label: 'Zero-Breakage Full-Height Bottle Partition Carton' }
     ],
     category: 'Die-Cut & Partitions',
     badge: 'Fragile Goods Defense',
@@ -503,8 +477,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'High-Compression 100% Recyclable Paper Dunnage & Cushioning',
     image: '/assets/images/honeycomb-packaging.jpg',
     images: [
-      { src: '/assets/images/honeycomb-packaging.jpg', label: 'High-Compression Hexagonal Honeycomb Sheets' },
-      { src: '/assets/images/angle-edge-boards.jpg', label: 'Rigid Corner Edge Protectors (V-Boards)' }
+      { src: '/assets/images/honeycomb-packaging.jpg', label: 'High-Compression Hexagonal Honeycomb Sheets' }
     ],
     category: 'Honeycomb Packaging',
     badge: '100% Eco-Friendly',
@@ -529,8 +502,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
     image: '/assets/images/angle-edge-boards.jpg',
     images: [
-      { src: '/assets/images/angle-edge-boards.jpg', label: 'Multi-Ply Laminated Kraft Edge Protectors' },
-      { src: '/assets/images/honeycomb-packaging.jpg', label: 'Surface Protection Honeycomb Paper Pads' }
+      { src: '/assets/images/angle-edge-boards.jpg', label: 'Multi-Ply Laminated Kraft Edge Protectors (V-Boards)' }
     ],
     category: 'Edge Protection',
     badge: 'Pallet Stability',
@@ -555,8 +527,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Industrial High-Crush Cores for Film, Textiles, Paper & Wire Winding',
     image: '/assets/images/paper-core-tubes.jpg',
     images: [
-      { src: '/assets/images/paper-core-tubes.jpg', label: 'High-Crush Spiral Wound Industrial Paper Cores' },
-      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Extra-Tall Industrial Profile Packaging' }
+      { src: '/assets/images/paper-core-tubes.jpg', label: 'High-Crush Spiral Wound Industrial Paper Cores' }
     ],
     category: 'Paper Cores',
     badge: 'High Radial Strength',
@@ -581,8 +552,7 @@ export const PRODUCTS_CATALOG = [
     subtitle: 'Branded Multi-Color Corporate Logo Tapes & Tamper-Evident Security',
     image: '/assets/images/printed-tapes.jpg',
     images: [
-      { src: '/assets/images/printed-tapes.jpg', label: 'Custom Multi-Color Logo Printed Packaging Tapes' },
-      { src: '/assets/images/esti-branded-box.jpg', label: 'Branded Carton Sealing Application' }
+      { src: '/assets/images/printed-tapes.jpg', label: 'Custom Multi-Color Logo Printed Packaging Tapes' }
     ],
     category: 'Packaging Accessories',
     badge: 'Custom Logo Branding',
@@ -603,20 +573,31 @@ export const PRODUCTS_CATALOG = [
   }
 ];
 
-// Interactive Multi-Image Slider Component with Full Image Visibility & Lightbox
+// Interactive Multi-Image Slider Component with Strict Product-Specific Data Binding
 function ProductImageSlider({ product }) {
-  const images = product.images && product.images.length > 0 
-    ? product.images 
-    : [{ src: product.image, label: product.title }];
+  // STRICT DATA BINDING: ONLY loop over product.images for this exact product
+  const rawImages = (product.images && product.images.length > 0)
+    ? product.images
+    : [product.image];
+
+  const images = rawImages.map((img) => {
+    if (typeof img === 'string') {
+      return { src: img, label: product.title };
+    }
+    return {
+      src: img.src || product.image,
+      label: img.label || product.title
+    };
+  });
 
   const [activeIdx, setActiveIdx] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  // Guard against index mismatch
+  // Ensure index is strictly within range for this product
   const safeIdx = activeIdx < images.length ? activeIdx : 0;
   const currentImg = images[safeIdx];
-  const currentSrc = typeof currentImg === 'string' ? currentImg : currentImg.src;
-  const currentLabel = typeof currentImg === 'string' ? product.title : currentImg.label;
+  const currentSrc = currentImg.src;
+  const currentLabel = currentImg.label;
 
   const handlePrev = (e) => {
     e.stopPropagation();
@@ -630,10 +611,10 @@ function ProductImageSlider({ product }) {
 
   return (
     <div className="flex flex-col space-y-2.5">
-      {/* Main Image Stage - Full Height & Object-Contain for 100% Visibility */}
+      {/* Main Image Stage - Full Height & Object-Contain for 100% Uncropped Visibility */}
       <div 
         onClick={() => setIsLightboxOpen(true)}
-        className="relative h-80 sm:h-96 md:h-[420px] w-full rounded-xl overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 border border-slate-200 group select-none shadow-sm flex items-center justify-center p-2 sm:p-3 cursor-zoom-in"
+        className="relative h-80 sm:h-96 md:h-[420px] w-full rounded-xl overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 border border-slate-200 group select-none shadow-sm flex items-center justify-center p-2 sm:p-4 cursor-zoom-in"
         title="Click to view full image in high resolution"
       >
         {/* Soft Ambient Backdrop */}
@@ -657,7 +638,7 @@ function ProductImageSlider({ product }) {
           {product.badge}
         </div>
 
-        {/* Top Right Action Strip: Lightbox Zoom Button & Slide Counter */}
+        {/* Top Right Action Strip: Lightbox Zoom Button & Slide Counter (only if multiple images) */}
         <div className="absolute top-3 right-3 flex items-center gap-1.5 z-20">
           {images.length > 1 && (
             <div className="bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg shadow flex items-center gap-1.5 pointer-events-none">
@@ -685,7 +666,7 @@ function ProductImageSlider({ product }) {
           </div>
         )}
 
-        {/* Left / Right Slide Arrow Buttons */}
+        {/* Left / Right Slide Arrow Buttons (ONLY if multiple photos exist for this product) */}
         {images.length > 1 && (
           <>
             <button
@@ -707,7 +688,7 @@ function ProductImageSlider({ product }) {
           </>
         )}
 
-        {/* Slide Indicator Dots */}
+        {/* Slide Indicator Dots (ONLY if multiple photos exist for this product) */}
         {images.length > 1 && (
           <div className="absolute bottom-2 right-3 flex items-center gap-1 z-20">
             {images.map((_, i) => (
@@ -727,16 +708,16 @@ function ProductImageSlider({ product }) {
         )}
       </div>
 
-      {/* Multi-Image View Slides Option: Thumbnail Strip */}
+      {/* Multi-Image View Slides Option: Thumbnail Strip (ONLY if multiple photos exist for this product) */}
       {images.length > 1 && (
         <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 scrollbar-thin">
           <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 shrink-0">
-            Views ({images.length}):
+            Angles ({images.length}):
           </span>
           {images.map((img, i) => {
             const isSelected = i === safeIdx;
-            const imgSrc = typeof img === 'string' ? img : img.src;
-            const imgLabel = typeof img === 'string' ? `Slide ${i + 1}` : (img.label || `Slide ${i + 1}`);
+            const imgSrc = img.src;
+            const imgLabel = img.label || `Angle ${i + 1}`;
 
             return (
               <button
@@ -799,7 +780,7 @@ function ProductImageSlider({ product }) {
                 className="max-w-full max-h-[72vh] object-contain rounded-lg"
               />
 
-              {/* Prev / Next Buttons in Modal */}
+              {/* Prev / Next Buttons in Modal (ONLY if multiple images exist for this product) */}
               {images.length > 1 && (
                 <>
                   <button
@@ -829,7 +810,7 @@ function ProductImageSlider({ product }) {
               </p>
               {currentLabel && (
                 <p className="text-xs sm:text-sm text-emerald-400 mt-0.5">
-                  {currentLabel} ({safeIdx + 1} of {images.length})
+                  {currentLabel} {images.length > 1 ? `(${safeIdx + 1} of ${images.length})` : ''}
                 </p>
               )}
             </div>
@@ -875,7 +856,7 @@ export default function Products() {
             Comprehensive <span className="text-emerald-700">Product Portfolio</span>
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg">
-            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications, multi-image view slides, and direct factory contact.
+            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications and direct factory contact.
           </p>
         </div>
 
@@ -911,7 +892,7 @@ export default function Products() {
                 {/* Product Header & Main Split Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8">
                   
-                  {/* Product Image Showcase with Multi-Image View Slides (5 cols on lg) */}
+                  {/* Product Image Showcase with Strict Product-Specific Data Binding (5 cols on lg) */}
                   <div className="lg:col-span-5">
                     <ProductImageSlider product={product} />
                   </div>
@@ -919,7 +900,7 @@ export default function Products() {
                   {/* Product Details & Engineering Specs (7 cols on lg) */}
                   <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
                     <div>
-                      {/* Category Tag & Multi-View Pill */}
+                      {/* Category Tag & Multi-Angle Badge */}
                       <div className="flex flex-wrap items-center gap-2">
                         <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
                           {product.category}
@@ -927,7 +908,7 @@ export default function Products() {
                         {hasMultipleImages && (
                           <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                             <Camera className="w-3 h-3" />
-                            <span>{product.images.length} Image Slides</span>
+                            <span>{product.images.length} Angles</span>
                           </span>
                         )}
                       </div>
