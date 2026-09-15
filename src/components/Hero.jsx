@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Phone, ArrowDown, CheckCircle2, MessageSquare, Award, Leaf, Zap, Factory, Sparkles } from 'lucide-react';
+import { ShieldCheck, Phone, ArrowDown, CheckCircle2, MessageSquare, Award, Leaf, Zap, Factory } from 'lucide-react';
 
 export default function Hero() {
   const scrollTo = (id) => {
@@ -49,21 +49,6 @@ export default function Hero() {
               Sustainable Packaging
             </span>
           </h1>
-
-          {/* Signature Slogan Tagline */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-900/85 backdrop-blur-md text-white shadow-md border border-emerald-500/40">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            <p className="text-xs sm:text-sm font-bold tracking-wide text-emerald-300">
-              Engineered for strength. Designed for performance. Built for your industry.
-            </p>
-          </div>
-
-          {/* Sub-headline from PDF */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-slate-700/80 shadow-md max-w-3xl text-left">
-            <p className="text-base sm:text-lg font-bold text-white leading-snug">
-              Honeycomb, Angle Boards, Paper Cores, Corrugated Boxes – <span className="text-emerald-400 font-semibold">Much Lower Cost, Custom Sizes, and Flutes & Strengths</span>
-            </p>
-          </div>
 
           {/* Body Copy from PDF */}
           <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl text-left">
