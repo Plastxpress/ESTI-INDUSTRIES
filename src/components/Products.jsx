@@ -13,7 +13,9 @@ import {
   Sparkles,
   Info,
   ArrowRight,
-  Camera
+  Camera,
+  Maximize2,
+  X
 } from 'lucide-react';
 
 export const PRODUCTS_CATALOG = [
@@ -601,13 +603,14 @@ export const PRODUCTS_CATALOG = [
   }
 ];
 
-// Interactive Multi-Image Slider Component
+// Interactive Multi-Image Slider Component with Full Image Visibility & Lightbox
 function ProductImageSlider({ product }) {
   const images = product.images && product.images.length > 0 
     ? product.images 
     : [{ src: product.image, label: product.title }];
 
   const [activeIdx, setActiveIdx] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   // Guard against index mismatch
   const safeIdx = activeIdx < images.length ? activeIdx : 0;
@@ -627,32 +630,56 @@ function ProductImageSlider({ product }) {
 
   return (
     <div className="flex flex-col space-y-2.5">
-      {/* Main Image Stage */}
-      <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-900 border border-slate-200 group select-none shadow-sm">
+      {/* Main Image Stage - Full Height & Object-Contain for 100% Visibility */}
+      <div 
+        onClick={() => setIsLightboxOpen(true)}
+        className="relative h-80 sm:h-96 md:h-[420px] w-full rounded-xl overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 border border-slate-200 group select-none shadow-sm flex items-center justify-center p-2 sm:p-3 cursor-zoom-in"
+        title="Click to view full image in high resolution"
+      >
+        {/* Soft Ambient Backdrop */}
+        <img
+          src={currentSrc}
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-15 scale-125 pointer-events-none"
+        />
+
+        {/* 100% Full Uncropped Foreground Image */}
         <img
           src={currentSrc}
           alt={currentLabel || product.title}
-          className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+          className="relative max-h-full max-w-full w-auto h-auto object-contain transition-all duration-300 group-hover:scale-[1.02] drop-shadow-md z-10"
           loading="lazy"
         />
 
         {/* Top Product Badge */}
-        <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow pointer-events-none z-10">
+        <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow pointer-events-none z-20">
           {product.badge}
         </div>
 
-        {/* Slide Counter Pill (visible when multiple images) */}
-        {images.length > 1 && (
-          <div className="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-md shadow flex items-center gap-1.5 z-10">
-            <Camera className="w-3.5 h-3.5 text-emerald-400" />
-            <span>{safeIdx + 1} / {images.length}</span>
-          </div>
-        )}
+        {/* Top Right Action Strip: Lightbox Zoom Button & Slide Counter */}
+        <div className="absolute top-3 right-3 flex items-center gap-1.5 z-20">
+          {images.length > 1 && (
+            <div className="bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg shadow flex items-center gap-1.5 pointer-events-none">
+              <Camera className="w-3.5 h-3.5 text-emerald-400" />
+              <span>{safeIdx + 1} / {images.length}</span>
+            </div>
+          )}
+
+          <button
+            type="button"
+            onClick={(e) => { e.stopPropagation(); setIsLightboxOpen(true); }}
+            title="Expand full screen"
+            className="w-8 h-8 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-emerald-700 flex items-center justify-center shadow-md border border-slate-200 transition-all focus:outline-none"
+          >
+            <Maximize2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
 
         {/* Slide Caption Pill (bottom-left) */}
         {currentLabel && (
-          <div className="absolute bottom-3 left-3 right-14 pointer-events-none z-10">
-            <span className="inline-block bg-slate-950/85 backdrop-blur-md text-emerald-300 text-[11px] font-medium px-2.5 py-1 rounded-md shadow max-w-full truncate border border-slate-800">
+          <div className="absolute bottom-3 left-3 right-14 pointer-events-none z-20">
+            <span className="inline-block bg-slate-900/90 backdrop-blur-md text-emerald-300 text-[11px] font-medium px-2.5 py-1 rounded-md shadow max-w-full truncate border border-slate-800">
               {currentLabel}
             </span>
           </div>
@@ -682,7 +709,7 @@ function ProductImageSlider({ product }) {
 
         {/* Slide Indicator Dots */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 right-3 flex items-center gap-1 z-10">
+          <div className="absolute bottom-2 right-3 flex items-center gap-1 z-20">
             {images.map((_, i) => (
               <button
                 key={i}
@@ -691,8 +718,8 @@ function ProductImageSlider({ product }) {
                 aria-label={`Go to slide ${i + 1}`}
                 className={`transition-all rounded-full ${
                   i === safeIdx
-                    ? 'w-4 h-1.5 bg-emerald-400 shadow'
-                    : 'w-1.5 h-1.5 bg-white/60 hover:bg-white'
+                    ? 'w-4 h-1.5 bg-emerald-500 shadow'
+                    : 'w-1.5 h-1.5 bg-slate-400/60 hover:bg-slate-600'
                 }`}
               />
             ))}
@@ -717,7 +744,7 @@ function ProductImageSlider({ product }) {
                 type="button"
                 onClick={() => setActiveIdx(i)}
                 title={imgLabel}
-                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 transition-all shrink-0 focus:outline-none ${
+                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 bg-white transition-all shrink-0 focus:outline-none ${
                   isSelected
                     ? 'border-emerald-600 ring-2 ring-emerald-500/40 scale-105 shadow-sm'
                     : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-300'
@@ -726,7 +753,7 @@ function ProductImageSlider({ product }) {
                 <img
                   src={imgSrc}
                   alt={imgLabel}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-0.5"
                   loading="lazy"
                 />
                 {isSelected && (
@@ -743,6 +770,72 @@ function ProductImageSlider({ product }) {
         <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
         <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
       </div>
+
+      {/* Fullscreen Lightbox Modal */}
+      {isLightboxOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fadeIn"
+          onClick={() => setIsLightboxOpen(false)}
+        >
+          <div 
+            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={() => setIsLightboxOpen(false)}
+              className="absolute -top-11 right-0 w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center transition-all focus:outline-none"
+              aria-label="Close full view"
+            >
+              <X className="w-5 h-5 stroke-[2.5]" />
+            </button>
+
+            {/* Modal Image Display Stage */}
+            <div className="relative w-full max-h-[78vh] flex items-center justify-center bg-white rounded-2xl p-4 sm:p-6 shadow-2xl overflow-hidden">
+              <img
+                src={currentSrc}
+                alt={currentLabel || product.title}
+                className="max-w-full max-h-[72vh] object-contain rounded-lg"
+              />
+
+              {/* Prev / Next Buttons in Modal */}
+              {images.length > 1 && (
+                <>
+                  <button
+                    type="button"
+                    onClick={handlePrev}
+                    aria-label="Previous slide"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg transition-all focus:outline-none"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleNext}
+                    aria-label="Next slide"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg transition-all focus:outline-none"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
+              )}
+            </div>
+
+            {/* Modal Footer Caption */}
+            <div className="mt-3 text-center text-white">
+              <p className="font-bold text-sm sm:text-base">
+                {product.title}
+              </p>
+              {currentLabel && (
+                <p className="text-xs sm:text-sm text-emerald-400 mt-0.5">
+                  {currentLabel} ({safeIdx + 1} of {images.length})
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
