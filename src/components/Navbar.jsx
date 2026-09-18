@@ -15,6 +15,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Products', href: '#products' },
+    { name: 'Packaging with Purpose', href: '#purpose' },
     { name: 'Industries', href: '#industries' },
     { name: 'Factory & Specs', href: '#factory' },
     { name: 'Contact Us', href: '#contact' },
@@ -96,14 +97,16 @@ export default function Navbar() {
               }}
               className="flex items-center gap-3 group focus:outline-none"
             >
-              <div className="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white shadow-sm group-hover:bg-emerald-700 transition-colors">
-                <Layers className="w-6 h-6 stroke-[2.2]" />
-              </div>
+              <img 
+                src="/assets/images/esti-logo-emblem.png" 
+                alt="ESTI Packaging Logo" 
+                className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm"
+              />
               <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 font-display flex items-center gap-1">
-                  ESTI <span className="text-emerald-600">PACKAGING</span>
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-[#0a1240] font-display flex items-center gap-1 leading-none">
+                  ESTI <span className="text-blue-700">PACKAGING</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold -mt-0.5">
+                <span className="text-[10px] uppercase tracking-[0.28em] text-slate-500 font-extrabold mt-1">
                   I N D U S T R Y
                 </span>
               </div>

@@ -3,19 +3,11 @@ import {
   Box, 
   Layers, 
   ShieldCheck, 
-  Phone, 
   MessageSquare, 
   Mail, 
   Check, 
-  ExternalLink,
-  ChevronRight,
-  ChevronLeft,
-  Sparkles,
-  Info,
-  ArrowRight,
-  Camera,
-  Maximize2,
-  X
+  ChevronRight, 
+  Sparkles 
 } from 'lucide-react';
 
 export const PRODUCTS_CATALOG = [
@@ -23,10 +15,7 @@ export const PRODUCTS_CATALOG = [
     id: 'corrugated-boxes',
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
-    image: '/assets/images/esti-branded-box.jpg',
-    images: [
-      { src: '/assets/images/esti-branded-box.jpg', label: 'ESTI Branded Master Shipping Carton (RSC 0201)' }
-    ],
+    image: '/assets/images/corrugated-box-primary.jpg',
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
     description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). Precision-engineered Regular Slotted Containers (RSC 0201) delivering maximum vertical compression resistance and stacking endurance.',
@@ -50,11 +39,7 @@ export const PRODUCTS_CATALOG = [
     id: 'heavy-duty-pallet',
     title: 'Heavy-Duty Pallet Boxes & Bulk Containers',
     subtitle: 'Cost-Effective Heavy Timber Crate Replacement (Up to 1,500 kg)',
-    image: '/assets/images/heavy-duty-pallet.jpg',
-    images: [
-      { src: '/assets/images/heavy-duty-pallet.jpg', label: 'Single Unit Strapped Heavy-Duty Pallet Box' },
-      { src: '/assets/images/warehouse-pallet-stack.jpg', label: 'Heavy Pallet Boxes Staged 2-High on Warehouse Floor' }
-    ],
+    image: '/assets/images/ssdn-heavy-duty-pallet.jpg',
     category: 'Corrugated & Pallet Boxes',
     badge: 'Timber Crate Replacement',
     description: 'Ultra-heavy-duty multi-wall corrugated containers engineered to replace expensive, heavy wooden boxes. Easily strapped to wooden or plastic pallets for safe domestic transit and international containerized shipping.',
@@ -77,9 +62,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Eco-Corrugated Paper Pallet Box with Lid',
     subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
     image: '/assets/images/eco-pallet-box.jpg',
-    images: [
-      { src: '/assets/images/eco-pallet-box.jpg', label: '100% Recyclable Paper Pallet Box with Integrated Runners & Lid' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Exempt / 100% Paper',
     description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
@@ -104,9 +86,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Integrated Pallet Base White Bulk Container',
     subtitle: 'Bleached Kraft Cleanroom & High-Value Cargo Bulk Bin',
     image: '/assets/images/white-bulk-pallet-container.jpg',
-    images: [
-      { src: '/assets/images/white-bulk-pallet-container.jpg', label: 'Cleanroom Bleached White Kraft Bulk Bin with Corrugated Runners & Lid' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Cleanroom & White Kraft',
     description: 'Premium white bleached kraft bulk packaging container fitted directly onto corrugated pallet runners with high-wall overlap cap. Provides an ultra-clean, dust-proof exterior ideal for sensitive pharmaceutical, food ingredient, and high-value export shipments.',
@@ -131,9 +110,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Drop-Gate Access Heavy-Duty Pallet Container',
     subtitle: 'Ergonomic Fold-Down Front Door for Assembly Line Loading',
     image: '/assets/images/drop-gate-pallet-box.jpg',
-    images: [
-      { src: '/assets/images/drop-gate-pallet-box.jpg', label: 'Ergonomic Half-Height Fold-Down Front Loading Door' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Ergonomic Front Access',
     description: 'Heavy-duty multi-wall pallet sleeve equipped with a pre-creased fold-down drop gate. Enables assembly workers and robotic arms to load or pick heavy machined components without bending deep over high container walls.',
@@ -158,9 +134,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Poly-Lined Bulk Chemical & Resin Container',
     subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
     image: '/assets/images/poly-lined-bulk-box.jpg',
-    images: [
-      { src: '/assets/images/poly-lined-bulk-box.jpg', label: 'Poly-Lined Bulk Box with Heavy-Gauge Polyethylene Liner Bag' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Hygroscopic & Chemical Barrier',
     description: 'Rugged corrugated bulk box integrated with a heavy-gauge internal polyethylene (PE) liner bag and telescopic lid. Engineered specifically to store and transport hygroscopic powders, resins, granular chemicals, and food-grade raw materials safely.',
@@ -185,9 +158,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Two-Piece Telescopic Lid Box (FTD)',
     subtitle: 'Full Telescoping Top & Bottom Heavy Carton with Dual-Wall Side Armor',
     image: '/assets/images/telescopic-lid-box.jpg',
-    images: [
-      { src: '/assets/images/telescopic-lid-box.jpg', label: 'Two-Piece Full Telescoping Tray & Lid Box (FTD)' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Telescopic Rigid Setup',
     description: 'Two-piece rigid corrugated box comprising an open base tray and a full-depth telescoping lid (Full Telescopic Design - FTD). When closed, the overlapping sidewalls create double-wall armor on all four vertical faces, providing superior stacking and corner resistance.',
@@ -212,9 +182,6 @@ export const PRODUCTS_CATALOG = [
     title: 'UN 1266 Certified Hazardous Cargo Boxes',
     subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
     image: '/assets/images/un-certified-box.jpg',
-    images: [
-      { src: '/assets/images/un-certified-box.jpg', label: 'UN 1266 Certified Class 3 Flammable Liquids Hazmat Shipper' }
-    ],
     category: 'UN Certified Boxes',
     badge: 'UN 1266 / 4GV Certified',
     description: 'Rigidly tested and officially certified UN packaging compliant with IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations for the domestic transit and international export of hazardous and flammable liquid products.',
@@ -237,9 +204,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Octagonal Jumbo Bulk Bins & Drum Cartons',
     subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
     image: '/assets/images/octagonal-bulk-bin.jpg',
-    images: [
-      { src: '/assets/images/octagonal-bulk-bin.jpg', label: '8-Sided Octagonal Bulk Granular Storage Bin' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Heavy Industrial Grade',
     description: 'Heavy-duty 8-sided octagonal corrugated bulk bins featuring heavy top and bottom caps. Specially designed to resist extreme outward hydrostatic pressure exerted by dense loose granular materials.',
@@ -262,9 +226,6 @@ export const PRODUCTS_CATALOG = [
     title: 'HSC Double Wall Boxes with Liner Bags',
     subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
     image: '/assets/images/hsc-double-wall.jpg',
-    images: [
-      { src: '/assets/images/hsc-double-wall.jpg', label: 'Half-Slotted Container (HSC 0200) with Matching Top Cap' }
-    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Double Wall 5-Ply',
     description: 'Heavy industrial Half-Slotted Containers (HSC 0200) engineered with open tops, matching deep telescopic corrugated lids, and integrated polyethylene liner bags for sanitary and contamination-free handling.',
@@ -286,12 +247,7 @@ export const PRODUCTS_CATALOG = [
     id: 'refrigerator-appliance-box',
     title: 'White Goods & Refrigerator Box',
     subtitle: 'Up to 1,700 mm Tall Heavy Appliance Packaging with Clamp-Safe Markings',
-    image: '/assets/images/refrigerator-isometric.jpg',
-    images: [
-      { src: '/assets/images/refrigerator-isometric.jpg', label: '3D Perspective Isometric View (1700 × 700 × 650 mm)' },
-      { src: '/assets/images/refrigerator-technical-views.jpg', label: 'Orthographic Engineering Views (Front, Sides & Back)' },
-      { src: '/assets/images/refrigerator-appliance-box.jpg', label: 'Complete Refrigerator Packaging Specification Sheet' }
-    ],
+    image: '/assets/images/refrigerator-appliance-box.jpg',
     category: 'Custom & Large Format',
     badge: 'Appliance Grade',
     description: 'Heavy-duty corrugated upright carton engineered for large domestic refrigerators, commercial coolers, and washing appliances (up to 1,700 mm height). Designed with clamp-truck handling zones, ventilation handholds, and comprehensive ISO handling symbols.',
@@ -315,12 +271,7 @@ export const PRODUCTS_CATALOG = [
     id: 'mattress-furniture-box',
     title: 'Large-Format 8ft × 6ft Mattress Box',
     subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
-    image: '/assets/images/mattress-isometric.jpg',
-    images: [
-      { src: '/assets/images/mattress-isometric.jpg', label: '3D Isometric Perspective View (8ft × 6ft × 10")' },
-      { src: '/assets/images/mattress-technical-views.jpg', label: 'Front & Side Orthographic Elevation Views' },
-      { src: '/assets/images/mattress-furniture-box.jpg', label: 'Complete Mattress Packaging Specification Sheet' }
-    ],
+    image: '/assets/images/mattress-furniture-box.jpg',
     category: 'Custom & Large Format',
     badge: 'Extra Large Format',
     description: 'Oversized flat-profile corrugated shipping carton manufactured to accommodate full 8 ft × 6 ft (96" × 72" × 10") king and queen size mattresses, flat-pack wooden furniture, and architectural sheet products without sagging.',
@@ -345,10 +296,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Reinforced Wire-Stitched Box with Cap',
     subtitle: 'High-Tensile Wire Stitching with Telescopic Lid & Custom OEM Branding',
     image: '/assets/images/honeywell-stitched-box.jpg',
-    images: [
-      { src: '/assets/images/honeywell-stitched-box.jpg', label: 'Full Box with Telescopic Cap & OEM Branding' },
-      { src: '/assets/images/honeywell-stitched-corner.jpg', label: 'High-Tensile Galvanized Wire-Stitched Seam Detail' }
-    ],
     category: 'Custom & Large Format',
     badge: 'Wire-Stitched Heavy Armor',
     description: 'Heavy-duty industrial corrugated carton reinforced with anti-corrosive zinc-coated wire stitched corner joints and a matching top cap. Engineered for multinational OEMs requiring maximum seam burst strength under severe transport vibrations.',
@@ -373,10 +320,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Extra-Tall Vertical Industrial Carton (2+ Meters)',
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
     image: '/assets/images/tall-industrial-carton-esti.jpg',
-    images: [
-      { src: '/assets/images/tall-industrial-carton-esti.jpg', label: 'Full 2-Meter Vertical Assembly with ESTI Engineer' },
-      { src: '/assets/images/tall-carton-top-detail.jpg', label: 'Top Flute & Closure Flap Construction Detail' }
-    ],
     category: 'Custom & Large Format',
     badge: '2-Meter Extra Tall',
     description: 'Custom-engineered extra-tall corrugated carton towering over 2 meters in height. Built with high-caliper vertical fluting to provide extraordinary column strength for long industrial components, roll goods, and vertical machinery assemblies without bowing.',
@@ -401,9 +344,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Precision Die-Cut Boxes & Ergonomic Trays',
     subtitle: 'Flatbed CNC Die-Cutting with Integrated Handholes & Interlocks',
     image: '/assets/images/die-cut-corrugated.jpg',
-    images: [
-      { src: '/assets/images/die-cut-corrugated.jpg', label: 'CNC Automated Precision Die-Cut Self-Locking Carton' }
-    ],
     category: 'Die-Cut & Partitions',
     badge: 'CNC Precision Die-Cut',
     description: 'Custom-cut corrugated packaging produced with steel-rule die tooling to sub-millimeter precision. Features integrated ergonomic carrying handles, self-locking fold tabs, and display-ready wrap designs.',
@@ -426,9 +366,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Custom Slotted Cell Dividers & Partition Grids',
     subtitle: 'Interlocking Corrugated Partitions for Precision Component Isolation',
     image: '/assets/images/custom-dividers.jpg',
-    images: [
-      { src: '/assets/images/custom-dividers.jpg', label: 'Interlocking Slotted Cell Partition Grids' }
-    ],
     category: 'Die-Cut & Partitions',
     badge: 'Zero-Scratch Protection',
     description: 'Engineered interlocking corrugated partition sets that create individual isolated cells inside master shipping cartons, ensuring zero product-to-product contact and maximum inner column stacking reinforcement.',
@@ -451,9 +388,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Bottle Partition Outer Cartons & Beverage Shippers',
     subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
     image: '/assets/images/bottle-partition-box.jpg',
-    images: [
-      { src: '/assets/images/bottle-partition-box.jpg', label: 'Zero-Breakage Full-Height Bottle Partition Carton' }
-    ],
     category: 'Die-Cut & Partitions',
     badge: 'Fragile Goods Defense',
     description: 'Heavy-duty master corrugated shippers fitted with full-height internal cell dividers specifically designed to cushion and protect glass bottles containing wine, spirits, agro-chemicals, and oils during transit.',
@@ -476,9 +410,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Honeycomb Sheets & Die-Cut Inserts',
     subtitle: 'High-Compression 100% Recyclable Paper Dunnage & Cushioning',
     image: '/assets/images/honeycomb-packaging.jpg',
-    images: [
-      { src: '/assets/images/honeycomb-packaging.jpg', label: 'High-Compression Hexagonal Honeycomb Sheets' }
-    ],
     category: 'Honeycomb Packaging',
     badge: '100% Eco-Friendly',
     description: 'Hexagonal honeycomb paper core structures sandwiched between heavy kraft linerboards. Delivers extraordinary vertical load-bearing strength and shock absorption, serving as a sustainable alternative to EPS thermocol.',
@@ -501,9 +432,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Angle Boards & Edge Protectors (V-Boards)',
     subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
     image: '/assets/images/angle-edge-boards.jpg',
-    images: [
-      { src: '/assets/images/angle-edge-boards.jpg', label: 'Multi-Ply Laminated Kraft Edge Protectors (V-Boards)' }
-    ],
     category: 'Edge Protection',
     badge: 'Pallet Stability',
     description: 'Rigid, multi-ply compressed laminated kraft paper corner boards that protect carton edges from strap damage during tensioning and dramatically increase vertical box column stacking strength on export skids.',
@@ -526,9 +454,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Paper Core Tubes (Spiral Wound)',
     subtitle: 'Industrial High-Crush Cores for Film, Textiles, Paper & Wire Winding',
     image: '/assets/images/paper-core-tubes.jpg',
-    images: [
-      { src: '/assets/images/paper-core-tubes.jpg', label: 'High-Crush Spiral Wound Industrial Paper Cores' }
-    ],
     category: 'Paper Cores',
     badge: 'High Radial Strength',
     description: 'High-strength spiral wound paper cores manufactured using high-grade kraft board and specialized bonding adhesives, engineered for smooth high-speed rewinding and zero core collapse under heavy tension.',
@@ -551,9 +476,6 @@ export const PRODUCTS_CATALOG = [
     title: 'Self-Adhesive Printed Packaging Tapes',
     subtitle: 'Branded Multi-Color Corporate Logo Tapes & Tamper-Evident Security',
     image: '/assets/images/printed-tapes.jpg',
-    images: [
-      { src: '/assets/images/printed-tapes.jpg', label: 'Custom Multi-Color Logo Printed Packaging Tapes' }
-    ],
     category: 'Packaging Accessories',
     badge: 'Custom Logo Branding',
     description: 'High-performance BOPP and reinforced Kraft packaging tapes featuring custom multi-color corporate logo printing, ensuring brand visibility and tamper-evident carton sealing throughout your supply chain.',
@@ -573,253 +495,6 @@ export const PRODUCTS_CATALOG = [
   }
 ];
 
-// Interactive Multi-Image Slider Component with Strict Product-Specific Data Binding
-function ProductImageSlider({ product }) {
-  // STRICT DATA BINDING: ONLY loop over product.images for this exact product
-  const rawImages = (product.images && product.images.length > 0)
-    ? product.images
-    : [product.image];
-
-  const images = rawImages.map((img) => {
-    if (typeof img === 'string') {
-      return { src: img, label: product.title };
-    }
-    return {
-      src: img.src || product.image,
-      label: img.label || product.title
-    };
-  });
-
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-
-  // Ensure index is strictly within range for this product
-  const safeIdx = activeIdx < images.length ? activeIdx : 0;
-  const currentImg = images[safeIdx];
-  const currentSrc = currentImg.src;
-  const currentLabel = currentImg.label;
-
-  const handlePrev = (e) => {
-    e.stopPropagation();
-    setActiveIdx((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const handleNext = (e) => {
-    e.stopPropagation();
-    setActiveIdx((prev) => (prev + 1) % images.length);
-  };
-
-  return (
-    <div className="flex flex-col space-y-2.5">
-      {/* Main Image Stage - Full Height & Object-Contain for 100% Uncropped Visibility */}
-      <div 
-        onClick={() => setIsLightboxOpen(true)}
-        className="relative h-80 sm:h-96 md:h-[420px] w-full rounded-xl overflow-hidden bg-gradient-to-b from-slate-100 via-white to-slate-100 border border-slate-200 group select-none shadow-sm flex items-center justify-center p-2 sm:p-4 cursor-zoom-in"
-        title="Click to view full image in high resolution"
-      >
-        {/* Soft Ambient Backdrop */}
-        <img
-          src={currentSrc}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover blur-2xl opacity-15 scale-125 pointer-events-none"
-        />
-
-        {/* 100% Full Uncropped Foreground Image */}
-        <img
-          src={currentSrc}
-          alt={currentLabel || product.title}
-          className="relative max-h-full max-w-full w-auto h-auto object-contain transition-all duration-300 group-hover:scale-[1.02] drop-shadow-md z-10"
-          loading="lazy"
-        />
-
-        {/* Top Product Badge */}
-        <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow pointer-events-none z-20">
-          {product.badge}
-        </div>
-
-        {/* Top Right Action Strip: Lightbox Zoom Button & Slide Counter (only if multiple images) */}
-        <div className="absolute top-3 right-3 flex items-center gap-1.5 z-20">
-          {images.length > 1 && (
-            <div className="bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg shadow flex items-center gap-1.5 pointer-events-none">
-              <Camera className="w-3.5 h-3.5 text-emerald-400" />
-              <span>{safeIdx + 1} / {images.length}</span>
-            </div>
-          )}
-
-          <button
-            type="button"
-            onClick={(e) => { e.stopPropagation(); setIsLightboxOpen(true); }}
-            title="Expand full screen"
-            className="w-8 h-8 rounded-lg bg-white/90 hover:bg-white text-slate-700 hover:text-emerald-700 flex items-center justify-center shadow-md border border-slate-200 transition-all focus:outline-none"
-          >
-            <Maximize2 className="w-3.5 h-3.5" />
-          </button>
-        </div>
-
-        {/* Slide Caption Pill (bottom-left) */}
-        {currentLabel && (
-          <div className="absolute bottom-3 left-3 right-14 pointer-events-none z-20">
-            <span className="inline-block bg-slate-900/90 backdrop-blur-md text-emerald-300 text-[11px] font-medium px-2.5 py-1 rounded-md shadow max-w-full truncate border border-slate-800">
-              {currentLabel}
-            </span>
-          </div>
-        )}
-
-        {/* Left / Right Slide Arrow Buttons (ONLY if multiple photos exist for this product) */}
-        {images.length > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={handlePrev}
-              aria-label="Previous slide"
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-950/95 text-white flex items-center justify-center backdrop-blur-sm transition-all shadow-md hover:scale-110 opacity-80 group-hover:opacity-100 z-20 focus:outline-none"
-            >
-              <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
-            </button>
-            <button
-              type="button"
-              onClick={handleNext}
-              aria-label="Next slide"
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-slate-950/70 hover:bg-slate-950/95 text-white flex items-center justify-center backdrop-blur-sm transition-all shadow-md hover:scale-110 opacity-80 group-hover:opacity-100 z-20 focus:outline-none"
-            >
-              <ChevronRight className="w-5 h-5 stroke-[2.5]" />
-            </button>
-          </>
-        )}
-
-        {/* Slide Indicator Dots (ONLY if multiple photos exist for this product) */}
-        {images.length > 1 && (
-          <div className="absolute bottom-2 right-3 flex items-center gap-1 z-20">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={(e) => { e.stopPropagation(); setActiveIdx(i); }}
-                aria-label={`Go to slide ${i + 1}`}
-                className={`transition-all rounded-full ${
-                  i === safeIdx
-                    ? 'w-4 h-1.5 bg-emerald-500 shadow'
-                    : 'w-1.5 h-1.5 bg-slate-400/60 hover:bg-slate-600'
-                }`}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-
-      {/* Multi-Image View Slides Option: Thumbnail Strip (ONLY if multiple photos exist for this product) */}
-      {images.length > 1 && (
-        <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-0.5 scrollbar-thin">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 shrink-0">
-            Angles ({images.length}):
-          </span>
-          {images.map((img, i) => {
-            const isSelected = i === safeIdx;
-            const imgSrc = img.src;
-            const imgLabel = img.label || `Angle ${i + 1}`;
-
-            return (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setActiveIdx(i)}
-                title={imgLabel}
-                className={`relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden border-2 bg-white transition-all shrink-0 focus:outline-none ${
-                  isSelected
-                    ? 'border-emerald-600 ring-2 ring-emerald-500/40 scale-105 shadow-sm'
-                    : 'border-slate-200 opacity-60 hover:opacity-100 hover:border-slate-300'
-                }`}
-              >
-                <img
-                  src={imgSrc}
-                  alt={imgLabel}
-                  className="w-full h-full object-contain p-0.5"
-                  loading="lazy"
-                />
-                {isSelected && (
-                  <div className="absolute inset-0 bg-emerald-600/10 pointer-events-none"></div>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      {/* Custom Dimensions Footnote */}
-      <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1 pt-0.5">
-        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
-        <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
-      </div>
-
-      {/* Fullscreen Lightbox Modal */}
-      {isLightboxOpen && (
-        <div 
-          className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-fadeIn"
-          onClick={() => setIsLightboxOpen(false)}
-        >
-          <div 
-            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              type="button"
-              onClick={() => setIsLightboxOpen(false)}
-              className="absolute -top-11 right-0 w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center transition-all focus:outline-none"
-              aria-label="Close full view"
-            >
-              <X className="w-5 h-5 stroke-[2.5]" />
-            </button>
-
-            {/* Modal Image Display Stage */}
-            <div className="relative w-full max-h-[78vh] flex items-center justify-center bg-white rounded-2xl p-4 sm:p-6 shadow-2xl overflow-hidden">
-              <img
-                src={currentSrc}
-                alt={currentLabel || product.title}
-                className="max-w-full max-h-[72vh] object-contain rounded-lg"
-              />
-
-              {/* Prev / Next Buttons in Modal (ONLY if multiple images exist for this product) */}
-              {images.length > 1 && (
-                <>
-                  <button
-                    type="button"
-                    onClick={handlePrev}
-                    aria-label="Previous slide"
-                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg transition-all focus:outline-none"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-                  <button
-                    type="button"
-                    onClick={handleNext}
-                    aria-label="Next slide"
-                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center shadow-lg transition-all focus:outline-none"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </>
-              )}
-            </div>
-
-            {/* Modal Footer Caption */}
-            <div className="mt-3 text-center text-white">
-              <p className="font-bold text-sm sm:text-base">
-                {product.title}
-              </p>
-              {currentLabel && (
-                <p className="text-xs sm:text-sm text-emerald-400 mt-0.5">
-                  {currentLabel} {images.length > 1 ? `(${safeIdx + 1} of ${images.length})` : ''}
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
 
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -842,32 +517,32 @@ export default function Products() {
     : PRODUCTS_CATALOG.filter(item => item.category === activeCategory);
 
   return (
-    <section id="products" className="py-20 md:py-28 bg-white border-b border-slate-200 relative">
+    <section id="products" className="py-20 md:py-28 bg-white border-b border-slate-200 relative font-sans">
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold font-sans uppercase tracking-wider mb-3">
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Industrial Product Catalog</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-sans">
             Comprehensive <span className="text-emerald-700">Product Portfolio</span>
           </h2>
-          <p className="mt-3 text-slate-600 text-base sm:text-lg">
-            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications and direct factory contact.
+          <p className="mt-3 text-slate-600 text-base sm:text-lg font-sans">
+            Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications and direct contact.
           </p>
         </div>
 
         {/* Category Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12 font-sans">
           {categories.map((cat) => (
             <button
               key={cat}
               type="button"
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all duration-150 ${
+              className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold font-sans transition-all duration-150 ${
                 activeCategory === cat
                   ? 'bg-emerald-700 text-white shadow-sm'
                   : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
@@ -882,60 +557,70 @@ export default function Products() {
         <div className="space-y-12">
           {filteredProducts.map((product) => {
             const isExpanded = expandedId === product.id;
-            const hasMultipleImages = product.images && product.images.length > 1;
+            
 
             return (
               <div
                 key={product.id}
-                className="bg-slate-50/70 border border-slate-200 rounded-2xl overflow-hidden hover:border-emerald-300 transition-all shadow-sm hover:shadow-md"
+                className="bg-slate-50/70 border border-slate-200 rounded-2xl overflow-hidden hover:border-emerald-300 transition-all shadow-sm hover:shadow-md font-sans"
               >
                 {/* Product Header & Main Split Layout */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 p-6 sm:p-8">
                   
-                  {/* Product Image Showcase with Strict Product-Specific Data Binding (5 cols on lg) */}
-                  <div className="lg:col-span-5">
-                    <ProductImageSlider product={product} />
+                  {/* Product Image Showcase (5 cols on lg) */}
+                  <div className="lg:col-span-5 flex flex-col space-y-3 font-sans">
+                    <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-200 group flex items-center justify-center p-3">
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                        loading="lazy"
+                      />
+                      <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow">
+                        {product.badge}
+                      </div>
+                    </div>
+
+                    <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1 font-sans">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                      <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
+                    </div>
                   </div>
 
                   {/* Product Details & Engineering Specs (7 cols on lg) */}
-                  <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
+                  <div className="lg:col-span-7 flex flex-col justify-between space-y-4 font-sans">
                     <div>
                       {/* Category Tag & Multi-Angle Badge */}
-                      <div className="flex flex-wrap items-center gap-2">
-                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                      <div className="flex flex-wrap items-center gap-2 font-sans">
+                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 font-sans">
                           {product.category}
                         </span>
-                        {hasMultipleImages && (
-                          <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                            <Camera className="w-3 h-3" />
-                            <span>{product.images.length} Angles</span>
-                          </span>
-                        )}
+                        
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-display mt-1">
+                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-sans mt-1">
                         {product.title}
                       </h3>
 
                       {/* Subtitle */}
-                      <p className="text-xs sm:text-sm font-semibold text-slate-600 mt-0.5">
+                      <p className="text-xs sm:text-sm font-semibold font-sans text-slate-600 mt-0.5">
                         {product.subtitle}
                       </p>
 
                       {/* Description */}
-                      <p className="text-xs sm:text-sm text-slate-600 mt-3 leading-relaxed">
+                      <p className="text-xs sm:text-sm font-sans text-slate-600 mt-3 leading-relaxed">
                         {product.description}
                       </p>
 
                       {/* Key Engineering Specs Grid */}
-                      <div className="mt-4 pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                      <div className="mt-4 pt-4 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-sans">
                         {product.specs.slice(0, 4).map((spec, idx) => (
-                          <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80">
-                            <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">
+                          <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80 font-sans">
+                            <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold font-sans block">
                               {spec.label}
                             </span>
-                            <span className="font-bold text-slate-800 mt-0.5 block">
+                            <span className="font-bold text-slate-800 font-sans mt-0.5 block">
                               {spec.value}
                             </span>
                           </div>
@@ -944,17 +629,17 @@ export default function Products() {
 
                       {/* Collapsible Details: Full Specs, Features & Applications */}
                       {isExpanded && (
-                        <div className="mt-4 pt-4 border-t border-slate-200 space-y-4 animate-fadeIn">
+                        <div className="mt-4 pt-4 border-t border-slate-200 space-y-4 animate-fadeIn font-sans">
                           
                           {/* Remaining Specs */}
                           {product.specs.length > 4 && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-sans">
                               {product.specs.slice(4).map((spec, idx) => (
-                                <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80">
-                                  <span className="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">
+                                <div key={idx} className="bg-white p-2.5 rounded-lg border border-slate-200/80 font-sans">
+                                  <span className="text-[11px] text-slate-500 uppercase tracking-wider font-semibold font-sans block">
                                     {spec.label}
                                   </span>
-                                  <span className="font-bold text-slate-800 mt-0.5 block">
+                                  <span className="font-bold text-slate-800 font-sans mt-0.5 block">
                                     {spec.value}
                                   </span>
                                 </div>
@@ -963,24 +648,24 @@ export default function Products() {
                           )}
 
                           {/* Key Features Bullet List */}
-                          <div>
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 mb-2">
+                          <div className="font-sans">
+                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-800 font-sans mb-2">
                               Engineering Advantages & Highlights
                             </h4>
-                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-600">
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-sans text-slate-600">
                               {product.features.map((feat, idx) => (
-                                <li key={idx} className="flex items-start gap-2">
+                                <li key={idx} className="flex items-start gap-2 font-sans">
                                   <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                                  <span>{feat}</span>
+                                  <span className="font-sans">{feat}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
 
                           {/* Applications */}
-                          <div className="p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-600">
-                            <strong className="text-slate-900 font-semibold">Recommended Sectors: </strong>
-                            {product.applications}
+                          <div className="p-3 bg-white rounded-xl border border-slate-200 text-xs font-sans text-slate-600">
+                            <strong className="text-slate-900 font-semibold font-sans">Recommended Sectors: </strong>
+                            <span className="font-sans">{product.applications}</span>
                           </div>
 
                         </div>
@@ -988,36 +673,39 @@ export default function Products() {
                     </div>
 
                     {/* Bottom Action Strip */}
-                    <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                    <div className="pt-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3 font-sans">
                       
                       {/* Expand / Collapse Button */}
                       <button
                         type="button"
                         onClick={() => setExpandedId(isExpanded ? null : product.id)}
-                        className="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-1 focus:outline-none"
+                        className="text-xs font-bold font-sans text-emerald-700 hover:text-emerald-800 flex items-center gap-1 focus:outline-none"
                       >
                         <span>{isExpanded ? 'Show Less Details' : 'View Full Specifications'}</span>
                         <ChevronRight className={`w-4 h-4 transform transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
                       </button>
 
                       {/* Direct Contact Buttons */}
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 font-sans">
                         <a
                           href={`https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20would%20like%20to%20inquire%20about%20${encodeURIComponent(product.title)}.`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold border border-emerald-200 transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold font-sans border border-emerald-200 transition-colors"
                         >
                           <MessageSquare className="w-3.5 h-3.5 text-emerald-600" />
                           <span>WhatsApp</span>
                         </a>
 
                         <a
-                          href="tel:+919833182733"
-                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold shadow-sm transition-colors"
+                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=esteepack@gmail.com&su=${encodeURIComponent(`Inquiry: ${product.title} - ESTI Packaging`)}&body=${encodeURIComponent(`Hello ESTI Packaging Team,\n\nI am interested in learning more about ${product.title}.\n\nPlease provide:\n- Technical Specifications\n- Pricing & Minimum Order Quantity (MOQ)\n- Delivery Timeline\n\nThank you.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-sans shadow-sm transition-colors"
+                          title="Open in Gmail"
                         >
-                          <Phone className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Call Factory</span>
+                          <Mail className="w-3.5 h-3.5 text-emerald-400" />
+                          <span>Email Us</span>
                         </a>
                       </div>
 

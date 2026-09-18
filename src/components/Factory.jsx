@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+import BoardSpec from './BoardSpec';
+import DieLine from './DieLine';
 import { 
   Factory as FactoryIcon, 
   Settings, 
@@ -11,10 +13,14 @@ import {
   HeartHandshake,
   Award,
   Layers,
-  FlaskConical
+  FlaskConical,
+  Maximize2,
+  X,
+  VolumeX
 } from 'lucide-react';
 
 export default function Factory() {
+  const [isFullscreenOpen, setIsFullscreenOpen] = useState(false);
   const machineryHighlights = [
     {
       title: 'Imported 5-Ply Board Plant (2200 mm)',
@@ -107,18 +113,60 @@ export default function Factory() {
             </div>
           </div>
 
-          {/* Right: Manufacturing Photos (5 cols) */}
+          {/* Right: Manufacturing Video Player & Process Photos (5 cols) */}
           <div className="lg:col-span-5 space-y-3.5">
-            <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-md">
-              <img
-                src="/assets/images/controlled-moisture-corrugator.jpg"
-                alt="Controlled Moisture Corrugator Line"
-                className="w-full h-52 object-cover"
-                loading="lazy"
+            {/* Live Autoplaying Manufacturing Video */}
+            <div 
+              className="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-lg group cursor-pointer"
+              onClick={() => setIsFullscreenOpen(true)}
+              title="Click to watch manufacturing video in full screen"
+            >
+              <video
+                src="/assets/videos/factory-manufacturing.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-56 sm:h-64 object-cover opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
               />
-              <div className="p-3 bg-slate-900 text-white text-xs font-semibold flex items-center justify-between">
-                <span>Steam-Heated Corrugator Line</span>
-                <span className="text-emerald-400">Moisture Control</span>
+
+              {/* Gradient Scrim for crisp text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-slate-950/40 pointer-events-none" />
+
+              {/* Top Bar: Live Factory Badge & Muted Indicator */}
+              <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-600/90 text-white text-[11px] font-bold shadow-sm backdrop-blur-sm">
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  <span>Factory Floor in Action</span>
+                </div>
+                <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-900/80 text-slate-300 text-[10px] font-medium backdrop-blur-sm">
+                  <VolumeX className="w-3 h-3 text-slate-400" />
+                  <span>No Sound</span>
+                </div>
+              </div>
+
+              {/* Bottom Bar: Action Description & Fullscreen Expand Trigger */}
+              <div className="absolute bottom-0 inset-x-0 p-3.5 flex items-center justify-between text-white pointer-events-none">
+                <div>
+                  <h4 className="text-xs sm:text-sm font-bold tracking-tight text-white">
+                    Automated Corrugator & Box Line
+                  </h4>
+                  <p className="text-[11px] text-emerald-300 font-medium mt-0.5">
+                    Click to watch full screen
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsFullscreenOpen(true);
+                  }}
+                  className="pointer-events-auto p-2 rounded-xl bg-white/20 hover:bg-white/30 text-white backdrop-blur-md transition-all group-hover:scale-110 shadow-md"
+                  aria-label="Watch fullscreen"
+                  title="Expand to Fullscreen"
+                >
+                  <Maximize2 className="w-4 h-4" />
+                </button>
               </div>
             </div>
 
@@ -173,6 +221,14 @@ export default function Factory() {
             </div>
           </div>
 
+        </div>
+
+        {/* Technical Specs: Board Build-up & Die-Line Engineering */}
+        <div className="border-t border-slate-200 mt-16 pt-8 mb-20">
+          <BoardSpec />
+          <div className="mx-auto max-w-6xl px-6">
+            <DieLine />
+          </div>
         </div>
 
         {/* Export Capability & Value Proposition Box (from Page 10 of PDF) */}
@@ -278,6 +334,57 @@ export default function Factory() {
         </div>
 
       </div>
+
+      {/* Fullscreen Video Modal */}
+      {isFullscreenOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-lg flex items-center justify-center p-4 sm:p-6 animate-fadeIn font-sans"
+          onClick={() => setIsFullscreenOpen(false)}
+        >
+          <div 
+            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header Bar */}
+            <div className="w-full flex items-center justify-between text-white pb-3 px-1">
+              <div className="flex items-center gap-2">
+                <FactoryIcon className="w-4 h-4 text-emerald-400" />
+                <span className="text-xs sm:text-sm md:text-base font-bold">
+                  ESTI Packaging — Manufacturing Line Operations
+                </span>
+                <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">
+                  Without Sound
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsFullscreenOpen(false)}
+                className="w-9 h-9 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center transition-all focus:outline-none"
+                aria-label="Close fullscreen video"
+              >
+                <X className="w-5 h-5 stroke-[2.5]" />
+              </button>
+            </div>
+
+            {/* High-Resolution Video Player Stage */}
+            <div className="relative w-full rounded-2xl overflow-hidden bg-black shadow-2xl border border-slate-800 flex items-center justify-center">
+              <video
+                src="/assets/videos/factory-manufacturing.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                className="w-full max-h-[76vh] object-contain mx-auto"
+              />
+            </div>
+
+            <p className="text-xs text-slate-400 mt-2.5 text-center">
+              Live manufacturing footage: High-speed corrugating line converting multi-ply kraft paperboard into heavy-duty boxes.
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

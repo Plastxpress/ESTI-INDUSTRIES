@@ -7,6 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        ink: '#0a1240',
+        'ink-soft': '#1b2557',
+        ultra: '#1128ac',
+        'ultra-lift': '#2b46d8',
+        mist: '#eef1f6',
+        'mist-deep': '#e2e7f0',
+        rule: '#d7dce6',
+        'kraft-deep': '#a97f4f',
         brand: {
           50: '#f0fdf4',
           100: '#dcfce7',
@@ -18,6 +26,8 @@ export default {
           900: '#14532d',
         },
         kraft: {
+          DEFAULT: '#c4a176',
+          deep: '#a97f4f',
           50: '#fdfbf7',
           100: '#f7f1e6',
           200: '#ede1cd',
@@ -28,6 +38,7 @@ export default {
           900: '#64442a',
         },
         slate: {
+          DEFAULT: '#5f6a83',
           850: '#151f32',
           950: '#090d16',
         }

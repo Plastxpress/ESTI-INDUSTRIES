@@ -15,14 +15,18 @@ export default function Footer() {
           {/* Brand & Overview */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white shadow-sm">
-                <Layers className="w-6 h-6 stroke-[2.2]" />
+              <div className="w-11 h-11 rounded-xl bg-white p-1.5 shadow-sm flex items-center justify-center shrink-0">
+                <img 
+                  src="/assets/images/esti-logo-emblem.png" 
+                  alt="ESTI Packaging Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div className="flex flex-col">
-                <span className="text-xl font-black text-white font-display">
-                  ESTI <span className="text-emerald-500">PACKAGING</span>
+                <span className="text-xl font-black text-white font-display flex items-center gap-1 leading-none">
+                  ESTI <span className="text-blue-400">PACKAGING</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold -mt-0.5">
+                <span className="text-[10px] uppercase tracking-[0.28em] text-slate-400 font-extrabold mt-1">
                   I N D U S T R Y
                 </span>
               </div>
@@ -122,6 +126,17 @@ export default function Footer() {
                 <Phone className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a href="tel:+919833182733" className="hover:text-emerald-400 font-semibold transition-colors">
                   (+91) 983 318 2733
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
+                <a 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=esteepack@gmail.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-emerald-400 transition-colors break-all"
+                >
+                  esteepack@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

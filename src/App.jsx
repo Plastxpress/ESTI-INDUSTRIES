@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ClientTicker from './components/ClientTicker';
 import Products from './components/Products';
+import PackagingWithPurpose from './components/PackagingWithPurpose';
 import IndustriesSection from './components/IndustriesSection';
 import Factory from './components/Factory';
 import Contact from './components/Contact';
@@ -24,6 +25,9 @@ export default function App() {
 
         {/* 3. Product Portfolio with Details (Directly after Hero & Ticker!) */}
         <Products />
+
+        {/* 3.5 Packaging with Purpose (Directly below Products!) */}
+        <PackagingWithPurpose />
 
         {/* 4. Packaging Solutions Built for Every Industry & 16 Verticals */}
         <IndustriesSection />
