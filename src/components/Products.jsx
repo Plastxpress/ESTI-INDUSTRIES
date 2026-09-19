@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Box, 
   Layers, 
@@ -7,7 +7,12 @@ import {
   Mail, 
   Check, 
   ChevronRight, 
-  Sparkles 
+  ChevronLeft,
+  Sparkles,
+  ZoomIn,
+  ZoomOut,
+  X,
+  RotateCcw
 } from 'lucide-react';
 
 export const PRODUCTS_CATALOG = [
@@ -15,7 +20,7 @@ export const PRODUCTS_CATALOG = [
     id: 'corrugated-boxes',
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
-    image: '/assets/images/corrugated-box-primary.jpg',
+    image: '/assets/images/corrugated-3-5-7-ply-boxes.jpg',
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
     description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). Precision-engineered Regular Slotted Containers (RSC 0201) delivering maximum vertical compression resistance and stacking endurance.',
@@ -82,54 +87,6 @@ export const PRODUCTS_CATALOG = [
     applications: 'Automotive exports, industrial fittings, electrical switchgear, green logistics, pharmaceutical distribution.'
   },
   {
-    id: 'white-bulk-pallet-container',
-    title: 'Integrated Pallet Base White Bulk Container',
-    subtitle: 'Bleached Kraft Cleanroom & High-Value Cargo Bulk Bin',
-    image: '/assets/images/white-bulk-pallet-container.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Cleanroom & White Kraft',
-    description: 'Premium white bleached kraft bulk packaging container fitted directly onto corrugated pallet runners with high-wall overlap cap. Provides an ultra-clean, dust-proof exterior ideal for sensitive pharmaceutical, food ingredient, and high-value export shipments.',
-    specs: [
-      { label: 'Exterior Liner', value: 'High-brightness bleached white virgin kraft liner' },
-      { label: 'Base System', value: 'Mounted corrugated pallet blocks with 4-way fork entry' },
-      { label: 'Cap Closure', value: 'Heavy telescoping kraft lid for total top protection' },
-      { label: 'Bursting Strength', value: '26 to 32 kg/cm² hydraulic burst pressure' },
-      { label: 'Stacking Strength', value: 'Tested for 2-tier dynamic stack in ISO containers' },
-      { label: 'Moisture Defense', value: 'Internal water-resistant barrier sizing' }
-    ],
-    features: [
-      'Clean white exterior provides superior contrast for barcodes, labels, and corporate branding',
-      'Dust-free surface suitable for cleanroom environments and healthcare supply chains',
-      'High vertical column strength prevents sidewall bulging under heavy dense contents',
-      'Integrated runners allow direct pickup without transferring onto warehouse wooden skids'
-    ],
-    applications: 'Cleanroom electronics, bulk pharmaceutical intermediates, food ingredients, luxury consumer durables.'
-  },
-  {
-    id: 'drop-gate-pallet-box',
-    title: 'Drop-Gate Access Heavy-Duty Pallet Container',
-    subtitle: 'Ergonomic Fold-Down Front Door for Assembly Line Loading',
-    image: '/assets/images/drop-gate-pallet-box.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Ergonomic Front Access',
-    description: 'Heavy-duty multi-wall pallet sleeve equipped with a pre-creased fold-down drop gate. Enables assembly workers and robotic arms to load or pick heavy machined components without bending deep over high container walls.',
-    specs: [
-      { label: 'Wall Structure', value: 'Reinforced 5-Ply / 7-Ply heavy corrugated board' },
-      { label: 'Gate Feature', value: 'Half-height fold-down front flap with reinforced crease score' },
-      { label: 'Pallet Integration', value: 'Mounts on standard 1200x1000 and 1200x800 industrial pallets' },
-      { label: 'Load Rating', value: 'Payload capacity up to 1,200 kg with internal support' },
-      { label: 'Stitching / Joint', value: 'Galvanized heavy wire stitching along vertical corners' },
-      { label: 'Stacking', value: 'Compatible with standard corrugated top cap for multi-level stacking' }
-    ],
-    features: [
-      'Ergonomic drop door eliminates operator strain during progressive part extraction',
-      'Ideal for active assembly line feeding in automotive and machinery plants',
-      'Folds completely flat when empty for reverse logistics space optimization',
-      'Can be fitted with internal cellular dividers or VCI anti-corrosion barrier bags'
-    ],
-    applications: 'Automotive assembly lines, CNC machined castings, forgings, stamping parts, motor assemblies.'
-  },
-  {
     id: 'poly-lined-bulk-box',
     title: 'Poly-Lined Bulk Chemical & Resin Container',
     subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
@@ -152,30 +109,6 @@ export const PRODUCTS_CATALOG = [
       'Compatible with top automated filling funnels and bottom vacuum probe discharge'
     ],
     applications: 'Plastic polymers & masterbatches, rubber chemicals, specialty powders, agricultural fertilizers, bulk food spices.'
-  },
-  {
-    id: 'telescopic-lid-box',
-    title: 'Two-Piece Telescopic Lid Box (FTD)',
-    subtitle: 'Full Telescoping Top & Bottom Heavy Carton with Dual-Wall Side Armor',
-    image: '/assets/images/telescopic-lid-box.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Telescopic Rigid Setup',
-    description: 'Two-piece rigid corrugated box comprising an open base tray and a full-depth telescoping lid (Full Telescopic Design - FTD). When closed, the overlapping sidewalls create double-wall armor on all four vertical faces, providing superior stacking and corner resistance.',
-    specs: [
-      { label: 'FEFCO Style', value: 'FEFCO 0300 / 0301 Two-Piece Full Telescopic Design' },
-      { label: 'Board Caliper', value: 'Available in 3-Ply single wall & 5-Ply double wall kraft' },
-      { label: 'Side Reinforcement', value: 'Overlapping lids create 2x sidewall strength against crushing' },
-      { label: 'Edge Crush Test', value: 'ECT 44 to ECT 60+ heavy compression rating' },
-      { label: 'Closure', value: 'Friction-fit lid with strap or tape securing options' },
-      { label: 'Printing', value: 'Custom 2-color flexographic print with edge alignment marks' }
-    ],
-    features: [
-      'Full telescoping cover provides dual-wall perimeter strength against heavy top loads',
-      'Effortless opening and inspection without cutting or destroying the outer container',
-      'Dust-proof fit keeps internal machinery components and precision goods pristine',
-      'Exceptional resistance to vertical corner bulging and pallet overhang compression'
-    ],
-    applications: 'Heavy metal hardware, precision machine parts, automotive spares, electrical panels, high-end export goods.'
   },
   {
     id: 'un-certified-boxes',
@@ -220,28 +153,6 @@ export const PRODUCTS_CATALOG = [
       'Custom printed warning symbols, batch barcodes, and corporate branding'
     ],
     applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
-  },
-  {
-    id: 'hsc-double-wall',
-    title: 'HSC Double Wall Boxes with Liner Bags',
-    subtitle: 'Half-Slotted Containers with Telescopic Lids & Moisture Defense',
-    image: '/assets/images/hsc-double-wall.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Double Wall 5-Ply',
-    description: 'Heavy industrial Half-Slotted Containers (HSC 0200) engineered with open tops, matching deep telescopic corrugated lids, and integrated polyethylene liner bags for sanitary and contamination-free handling.',
-    specs: [
-      { label: 'Configuration', value: 'HSC bottom container with independent top tray cover' },
-      { label: 'Board Caliper', value: 'Heavy 5-ply double wall with moisture-resistant glue' },
-      { label: 'Liner Option', value: 'Food-grade or industrial polyethylene inner barrier bag' },
-      { label: 'Stitching', value: 'Heavy-gauge galvanized anti-rust wire stitching' }
-    ],
-    features: [
-      'Wide-open top allows rapid loading and automated hopper bulk filling',
-      'Telescopic lid provides airtight top seal against dust and transit debris',
-      'Exceptional corner stiffness withstands high dynamic road vibration',
-      'Liner bag prevents moisture ingress and keeps goods pristine'
-    ],
-    applications: 'Food processing, bulk confectionery, chemicals, frozen seafood, agricultural harvest, auto spare parts.'
   },
   {
     id: 'refrigerator-appliance-box',
@@ -406,28 +317,6 @@ export const PRODUCTS_CATALOG = [
     applications: 'Wines, craft beers, edible oils, pharmaceutical syrups, laboratory reagents, agrochemical bottles.'
   },
   {
-    id: 'honeycomb-packaging',
-    title: 'Honeycomb Sheets & Die-Cut Inserts',
-    subtitle: 'High-Compression 100% Recyclable Paper Dunnage & Cushioning',
-    image: '/assets/images/honeycomb-packaging.jpg',
-    category: 'Honeycomb Packaging',
-    badge: '100% Eco-Friendly',
-    description: 'Hexagonal honeycomb paper core structures sandwiched between heavy kraft linerboards. Delivers extraordinary vertical load-bearing strength and shock absorption, serving as a sustainable alternative to EPS thermocol.',
-    specs: [
-      { label: 'Cell Diameters', value: '10 mm, 15 mm, 20 mm, and 25 mm cell geometry' },
-      { label: 'Thickness Range', value: '10 mm up to 100 mm continuous thickness' },
-      { label: 'Compression Strength', value: 'Up to 40+ metric tons/m² uniform surface load' },
-      { label: 'Weight Advantage', value: 'Up to 60% lighter than solid timber or fiberboard' }
-    ],
-    features: [
-      'Zero-abrasion paper surface prevents damage to delicate painted surfaces',
-      'Approved for global export air freight and ocean container dunnage',
-      '100% biodegradable and compliant with global plastic ban mandates',
-      'Custom die-cut cavity shapes engineered for glass, solar, and electronics'
-    ],
-    applications: 'Solar panels, automotive glass, electrical motors, furniture buffer pads, export cargo dunnage.'
-  },
-  {
     id: 'angle-boards',
     title: 'Angle Boards & Edge Protectors (V-Boards)',
     subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
@@ -448,28 +337,6 @@ export const PRODUCTS_CATALOG = [
       '100% recyclable alternative to plastic or metal corner guards'
     ],
     applications: 'Palletized export goods, paper ream skids, appliances, sheet metal coils, ceramic tile boxes.'
-  },
-  {
-    id: 'paper-core-tubes',
-    title: 'Paper Core Tubes (Spiral Wound)',
-    subtitle: 'Industrial High-Crush Cores for Film, Textiles, Paper & Wire Winding',
-    image: '/assets/images/paper-core-tubes.jpg',
-    category: 'Paper Cores',
-    badge: 'High Radial Strength',
-    description: 'High-strength spiral wound paper cores manufactured using high-grade kraft board and specialized bonding adhesives, engineered for smooth high-speed rewinding and zero core collapse under heavy tension.',
-    specs: [
-      { label: 'Inner Diameter (ID)', value: '25 mm to 300 mm (1 inch to 12 inches standard)' },
-      { label: 'Wall Thickness', value: '1.5 mm to 18.0 mm heavy radial wall' },
-      { label: 'Lengths', value: 'Manufactured to custom lengths from 50 mm up to 4,000 mm' },
-      { label: 'Adhesive Grade', value: 'High-tack moisture-resistant bonding resins' }
-    ],
-    features: [
-      'High radial crush resistance prevents deformation during mechanical clamping',
-      'Precision dimensional tolerances for automated high-speed winding machinery',
-      'Custom printing with client logo or batch coding inside or outside the core',
-      'Eco-friendly and fully recyclable'
-    ],
-    applications: 'Flexible packaging film (BOPP/PET), textile fabric rolls, paper mills, adhesive tapes, industrial wire.'
   },
   {
     id: 'printed-tapes',
@@ -499,6 +366,93 @@ export const PRODUCTS_CATALOG = [
 export default function Products() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [expandedId, setExpandedId] = useState(PRODUCTS_CATALOG[0].id);
+  const [zoomProduct, setZoomProduct] = useState(null);
+  const [zoomScale, setZoomScale] = useState(1);
+  const [transformOrigin, setTransformOrigin] = useState('center center');
+
+  const handleMouseMove = (e) => {
+    if (zoomScale <= 1) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setTransformOrigin(`${x.toFixed(1)}% ${y.toFixed(1)}%`);
+  };
+
+  const handleImageClick = (e) => {
+    e.stopPropagation();
+    if (zoomScale === 1) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      setTransformOrigin(`${x.toFixed(1)}% ${y.toFixed(1)}%`);
+      setZoomScale(2);
+    } else {
+      setZoomScale(1);
+      setTransformOrigin('center center');
+    }
+  };
+
+  const handleZoomIn = (e) => {
+    e.stopPropagation();
+    setZoomScale(prev => Math.min(Number((prev + 0.5).toFixed(1)), 3));
+  };
+
+  const handleZoomOut = (e) => {
+    e.stopPropagation();
+    setZoomScale(prev => {
+      const next = Math.max(Number((prev - 0.5).toFixed(1)), 1);
+      if (next === 1) setTransformOrigin('center center');
+      return next;
+    });
+  };
+
+  const handleResetZoom = (e) => {
+    e.stopPropagation();
+    setZoomScale(1);
+    setTransformOrigin('center center');
+  };
+
+  const handlePrevProduct = (e) => {
+    e?.stopPropagation();
+    if (!zoomProduct) return;
+    const currentIndex = PRODUCTS_CATALOG.findIndex(p => p.id === zoomProduct.id);
+    const prevIndex = (currentIndex - 1 + PRODUCTS_CATALOG.length) % PRODUCTS_CATALOG.length;
+    setZoomProduct(PRODUCTS_CATALOG[prevIndex]);
+    setZoomScale(1);
+    setTransformOrigin('center center');
+  };
+
+  const handleNextProduct = (e) => {
+    e?.stopPropagation();
+    if (!zoomProduct) return;
+    const currentIndex = PRODUCTS_CATALOG.findIndex(p => p.id === zoomProduct.id);
+    const nextIndex = (currentIndex + 1) % PRODUCTS_CATALOG.length;
+    setZoomProduct(PRODUCTS_CATALOG[nextIndex]);
+    setZoomScale(1);
+    setTransformOrigin('center center');
+  };
+
+  useEffect(() => {
+    if (!zoomProduct) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setZoomProduct(null);
+      } else if (e.key === 'ArrowLeft') {
+        handlePrevProduct();
+      } else if (e.key === 'ArrowRight') {
+        handleNextProduct();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'unset';
+    };
+  }, [zoomProduct]);
 
   const categories = [
     'All',
@@ -506,9 +460,7 @@ export default function Products() {
     'Custom & Large Format',
     'UN Certified Boxes',
     'Die-Cut & Partitions',
-    'Honeycomb Packaging',
     'Edge Protection',
-    'Paper Cores',
     'Packaging Accessories'
   ];
 
@@ -569,7 +521,25 @@ export default function Products() {
                   
                   {/* Product Image Showcase (5 cols on lg) */}
                   <div className="lg:col-span-5 flex flex-col space-y-3 font-sans">
-                    <div className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-200 group flex items-center justify-center p-3">
+                    <div 
+                      className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-200 group flex items-center justify-center p-3 cursor-zoom-in hover:border-emerald-400 transition-colors"
+                      onClick={() => {
+                        setZoomProduct(product);
+                        setZoomScale(1);
+                        setTransformOrigin('center center');
+                      }}
+                      title="Click to zoom and view details in high resolution"
+                      role="button"
+                      tabIndex={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setZoomProduct(product);
+                          setZoomScale(1);
+                          setTransformOrigin('center center');
+                        }
+                      }}
+                    >
                       <img
                         src={product.image}
                         alt={product.title}
@@ -578,6 +548,12 @@ export default function Products() {
                       />
                       <div className="absolute top-3 left-3 bg-slate-900/90 text-white text-[11px] font-bold px-2.5 py-1 rounded-md shadow">
                         {product.badge}
+                      </div>
+
+                      {/* Floating Zoom Indicator on Hover */}
+                      <div className="absolute bottom-3 right-3 bg-slate-900/85 group-hover:bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center gap-1.5 shadow-md pointer-events-none transform translate-y-1 group-hover:translate-y-0">
+                        <ZoomIn className="w-3.5 h-3.5 text-emerald-400" />
+                        <span>Click to Zoom</span>
                       </div>
                     </div>
 
@@ -720,6 +696,165 @@ export default function Products() {
         </div>
 
       </div>
+
+      {/* High-Resolution Interactive Product Image Zoom Modal */}
+      {zoomProduct && (
+        <div 
+          className="fixed inset-0 z-50 bg-slate-950/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-6 animate-fadeIn select-none font-sans"
+          onClick={() => setZoomProduct(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${zoomProduct.title} Zoom View`}
+        >
+          {/* Top Bar: Title, Badge & Zoom Controls */}
+          <div 
+            className="w-full max-w-7xl mx-auto flex items-center justify-between gap-4 pb-3 border-b border-slate-800 text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2.5 min-w-0">
+              <span className="text-xs font-bold px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 border border-emerald-800 shrink-0">
+                {zoomProduct.badge}
+              </span>
+              <div className="min-w-0">
+                <h3 className="text-sm sm:text-base font-bold text-white truncate">
+                  {zoomProduct.title}
+                </h3>
+                <p className="text-xs text-slate-400 hidden sm:block truncate">
+                  {zoomProduct.subtitle}
+                </p>
+              </div>
+            </div>
+
+            {/* Zoom Tool Buttons */}
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="hidden sm:flex items-center gap-1 bg-slate-900 border border-slate-700/80 rounded-xl p-1 text-slate-200">
+                <button
+                  type="button"
+                  onClick={handleZoomOut}
+                  disabled={zoomScale <= 1}
+                  className="p-1.5 rounded-lg hover:bg-slate-800 disabled:opacity-30 transition-colors focus:outline-none"
+                  title="Zoom Out (-)"
+                  aria-label="Zoom Out"
+                >
+                  <ZoomOut className="w-4 h-4" />
+                </button>
+                <span className="text-xs font-mono font-bold px-1.5 min-w-[42px] text-center text-emerald-400">
+                  {Math.round(zoomScale * 100)}%
+                </span>
+                <button
+                  type="button"
+                  onClick={handleZoomIn}
+                  disabled={zoomScale >= 3}
+                  className="p-1.5 rounded-lg hover:bg-slate-800 disabled:opacity-30 transition-colors focus:outline-none"
+                  title="Zoom In (+)"
+                  aria-label="Zoom In"
+                >
+                  <ZoomIn className="w-4 h-4" />
+                </button>
+                {zoomScale > 1 && (
+                  <button
+                    type="button"
+                    onClick={handleResetZoom}
+                    className="p-1.5 rounded-lg hover:bg-slate-800 text-slate-400 hover:text-white transition-colors focus:outline-none"
+                    title="Reset Zoom (100%)"
+                    aria-label="Reset Zoom"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5" />
+                  </button>
+                )}
+              </div>
+
+              {/* Close Button */}
+              <button
+                type="button"
+                onClick={() => setZoomProduct(null)}
+                className="w-9 h-9 rounded-xl bg-slate-800 hover:bg-rose-600 text-white flex items-center justify-center transition-all focus:outline-none"
+                aria-label="Close image zoom"
+                title="Close (Esc)"
+              >
+                <X className="w-5 h-5 stroke-[2.5]" />
+              </button>
+            </div>
+          </div>
+
+          {/* Central Image Viewing Stage */}
+          <div 
+            className="relative flex-1 w-full max-w-7xl mx-auto flex items-center justify-center overflow-hidden my-3"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Prev Navigation Arrow */}
+            <button
+              type="button"
+              onClick={handlePrevProduct}
+              className="absolute left-2 sm:left-4 z-20 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg border border-slate-700 hover:border-emerald-500 transition-all focus:outline-none hover:scale-110"
+              title="Previous Product (Left Arrow)"
+              aria-label="Previous Product"
+            >
+              <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
+            </button>
+
+            {/* Next Navigation Arrow */}
+            <button
+              type="button"
+              onClick={handleNextProduct}
+              className="absolute right-2 sm:right-4 z-20 w-11 h-11 rounded-full bg-slate-900/80 hover:bg-emerald-600 text-white flex items-center justify-center shadow-lg border border-slate-700 hover:border-emerald-500 transition-all focus:outline-none hover:scale-110"
+              title="Next Product (Right Arrow)"
+              aria-label="Next Product"
+            >
+              <ChevronRight className="w-6 h-6 stroke-[2.5]" />
+            </button>
+
+            {/* Zoomable Image Container */}
+            <div 
+              className={`relative max-w-full max-h-[76vh] flex items-center justify-center overflow-hidden transition-all duration-200 ${
+                zoomScale > 1 ? 'cursor-zoom-out' : 'cursor-zoom-in'
+              }`}
+              onClick={handleImageClick}
+              onMouseMove={handleMouseMove}
+              title={zoomScale > 1 ? 'Click to zoom out (or move cursor to pan)' : 'Click to zoom in 2x (or move cursor to pan)'}
+            >
+              <img
+                src={zoomProduct.image}
+                alt={zoomProduct.title}
+                style={{
+                  transform: `scale(${zoomScale})`,
+                  transformOrigin: transformOrigin,
+                  transition: zoomScale === 1 ? 'transform 0.3s ease-out' : 'transform 0.1s ease-out'
+                }}
+                className="max-h-[74vh] max-w-[88vw] object-contain rounded-xl drop-shadow-2xl select-none"
+                draggable={false}
+              />
+            </div>
+          </div>
+
+          {/* Bottom Bar: Instructions & Quick Inquiry */}
+          <div 
+            className="w-full max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800 text-xs text-slate-400"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2">
+              <span className="hidden sm:inline font-medium">
+                Tip: Click image or use +/- to zoom. Hover and move cursor to pan across details. Press Esc to exit.
+              </span>
+              <span className="sm:hidden font-medium">
+                Tap image to toggle 2x zoom.
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <a
+                href={`https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20am%20interested%20in%20${encodeURIComponent(zoomProduct.title)}.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold transition-colors"
+              >
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>Inquire on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

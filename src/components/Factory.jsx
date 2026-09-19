@@ -269,18 +269,7 @@ export default function Factory() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 bg-emerald-50/70 rounded-2xl overflow-hidden border border-emerald-200 shadow-sm flex flex-col">
-              <div className="h-44 w-full overflow-hidden bg-white relative">
-                <img
-                  src="/assets/images/export-container.jpg"
-                  alt="Export Ready Container Shipping"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute top-2.5 right-2.5 bg-slate-900/90 text-white text-[10px] font-bold px-2 py-0.5 rounded">
-                  ISPM-15 / Sea Export
-                </div>
-              </div>
+            <div className="lg:col-span-4 bg-emerald-50/70 rounded-2xl overflow-hidden border border-emerald-200 shadow-sm flex flex-col justify-between">
               <div className="p-6 text-center space-y-2">
                 <div className="text-3xl sm:text-4xl font-black text-emerald-700 font-display">
                   Up to -40%
@@ -291,6 +280,20 @@ export default function Factory() {
                 <p className="text-[11px] text-slate-600 leading-relaxed">
                   Access export-grade, heavy-duty cartons directly from India with Free Trade Agreement tariff benefits.
                 </p>
+              </div>
+              <div className="w-full overflow-hidden bg-slate-950 relative aspect-[16/10] sm:aspect-video flex items-center justify-center">
+                <video
+                  src="/assets/videos/export-capability.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-2.5 right-2.5 bg-slate-900/90 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow pointer-events-none z-10">
+                  ISPM-15 / Sea Export
+                </div>
               </div>
             </div>
 
