@@ -240,6 +240,7 @@ export default function Contact() {
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 text-sm focus:outline-none focus:border-emerald-500"
                   >
                     <option value="Corrugated Boxes & Heavy Duty Cartons">Corrugated Boxes (3, 5, 7-Ply)</option>
+                    <option value="Document Storage & Archival Corrugated Boxes in India">Document Storage & Archival Boxes</option>
                     <option value="Angle Boards & Edge Protectors">Angle Boards & Edge Protectors (V-Boards)</option>
                     <option value="Self-Adhesive Printed Packaging Tapes">Self-Adhesive Printed Tapes</option>
                     <option value="UN 1266 Hazmat Certified Packaging">UN 1266 Hazardous Material Packaging</option>

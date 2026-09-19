@@ -66,7 +66,7 @@ export const PRODUCTS_CATALOG = [
     id: 'eco-pallet-box',
     title: 'Eco-Corrugated Paper Pallet Box with Lid',
     subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
-    image: '/assets/images/eco-pallet-box.jpg',
+    image: '/assets/images/eco-corrugated-paper-pallet-box.jpg',
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Exempt / 100% Paper',
     description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
@@ -228,7 +228,7 @@ export const PRODUCTS_CATALOG = [
   },
   {
     id: 'tall-industrial-carton-esti',
-    title: 'Extra-Tall Vertical Industrial Carton (2+ Meters)',
+    title: 'Telescopic Vertical Industrial Cartons',
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
     image: '/assets/images/tall-industrial-carton-esti.jpg',
     category: 'Custom & Large Format',
@@ -298,7 +298,7 @@ export const PRODUCTS_CATALOG = [
     id: 'bottle-partition-boxes',
     title: 'Bottle Partition Outer Cartons & Beverage Shippers',
     subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
-    image: '/assets/images/bottle-partition-box.jpg',
+    image: '/assets/images/bottle-partition-beverage-shipper.jpg',
     category: 'Die-Cut & Partitions',
     badge: 'Fragile Goods Defense',
     description: 'Heavy-duty master corrugated shippers fitted with full-height internal cell dividers specifically designed to cushion and protect glass bottles containing wine, spirits, agro-chemicals, and oils during transit.',
@@ -315,6 +315,31 @@ export const PRODUCTS_CATALOG = [
       'Custom printed graphics for premium liquor and chemical branding'
     ],
     applications: 'Wines, craft beers, edible oils, pharmaceutical syrups, laboratory reagents, agrochemical bottles.'
+  },
+  {
+    id: 'document-storage-archival-boxes',
+    title: 'Document Storage & Archival Corrugated Boxes in India',
+    subtitle: 'Heavy-Duty Lift-Off Lid Record Boxes with Ergonomic Handholes for Corporate & Legal Archives',
+    image: '/assets/images/document-storage-archival-boxes.jpg',
+    category: 'Die-Cut & Partitions',
+    badge: 'Archival & BFSI Grade',
+    description: 'Precision-engineered corrugated document storage and records management boxes designed for banks, corporate offices, law firms, healthcare facilities, and archival record vaults across India. Featuring heavy-duty double-wall end panels, reinforced tear-resistant carrying handholes, deep lift-off dust lids, and pre-printed indexing panels for systematic long-term document retention.',
+    specs: [
+      { label: 'Standard Dimensions', value: '410 × 330 × 280 mm (Legal / Foolscap & A4 File Compatible)' },
+      { label: 'Board Structure', value: 'Heavy 3-Ply Single Wall & Reinforced 5-Ply Double-Wall Base' },
+      { label: 'Stacking Compression', value: 'Engineered for 5 to 7 tiers high vertical warehouse stacking' },
+      { label: 'Closure System', value: 'Full telescoping lift-off lid for dust-proof record protection' },
+      { label: 'Ergonomics', value: 'Smooth oval die-cut handholes rated for 30+ kg payload carrying' },
+      { label: 'Indexing Panels', value: 'Pre-printed File No, Department, From/To Date & Destroy By fields' }
+    ],
+    features: [
+      'Accommodates standard lever arch files, ring binders, box files, and ledger books without sagging',
+      'Double-thickness bottom and side walls withstand heavy multi-tier stack pressure in humid vaults',
+      'Smooth die-cut handholes prevent hand injury during manual warehouse file retrieval',
+      'Manufactured from neutral pH high-burst kraft board to preserve paper documents for decades',
+      'Supplied flat-packed with fast self-locking pop-up assembly for immediate office deployment'
+    ],
+    applications: 'BFSI & banking records, legal firms, corporate HR & finance departments, hospitals & clinical archives, government record vaults, document digitization centers.'
   },
   {
     id: 'angle-boards',

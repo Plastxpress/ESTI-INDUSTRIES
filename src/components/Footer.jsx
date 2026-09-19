@@ -72,6 +72,9 @@ export default function Footer() {
                 <a href="#products" className="hover:text-emerald-400 transition-colors">Die-Cut Packaging & Partitions</a>
               </li>
               <li>
+                <a href="#products" className="hover:text-emerald-400 transition-colors">Document Storage & Archival Boxes</a>
+              </li>
+              <li>
                 <a href="#products" className="hover:text-emerald-400 transition-colors">UN 1266 Certified Hazmat Boxes</a>
               </li>
               <li>
