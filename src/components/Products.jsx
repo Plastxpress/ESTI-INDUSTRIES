@@ -12,10 +12,11 @@ import {
   ZoomIn,
   ZoomOut,
   X,
-  RotateCcw
+  RotateCcw,
+  Images
 } from 'lucide-react';
 
-export const PRODUCTS_CATALOG = [
+const PRODUCTS_CATALOG = [
   {
     id: 'corrugated-boxes',
     title: 'Corrugated Boxes & Master Shipping Cartons',
@@ -67,9 +68,17 @@ export const PRODUCTS_CATALOG = [
     title: 'Eco-Corrugated Paper Pallet Box with Lid',
     subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
     image: '/assets/images/eco-corrugated-paper-pallet-box.jpg',
+    images: [
+      '/assets/images/eco-corrugated-paper-pallet-box.jpg',
+      '/assets/images/eco-pallet-box-shallow.jpg'
+    ],
+    imageLabels: [
+      'Standard Bulk Box',
+      'Low-Profile Tray Box'
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Exempt / 100% Paper',
-    description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
+    description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Available in standard deep bulk container and low-profile pallet tray configurations. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
     specs: [
       { label: 'Payload Capacity', value: 'Static load up to 1,000 kg / Dynamic load up to 600 kg' },
       { label: 'Pallet Base', value: 'Integrated heavy-gauge multi-layer corrugated runners' },
@@ -394,6 +403,16 @@ export default function Products() {
   const [zoomProduct, setZoomProduct] = useState(null);
   const [zoomScale, setZoomScale] = useState(1);
   const [transformOrigin, setTransformOrigin] = useState('center center');
+  const [selectedImageMap, setSelectedImageMap] = useState({});
+
+  const handleOpenZoom = (product, activeImg) => {
+    setZoomProduct({
+      ...product,
+      activeImage: activeImg || (product.images ? product.images[0] : product.image)
+    });
+    setZoomScale(1);
+    setTransformOrigin('center center');
+  };
 
   const handleMouseMove = (e) => {
     if (zoomScale <= 1) return;
@@ -442,7 +461,11 @@ export default function Products() {
     if (!zoomProduct) return;
     const currentIndex = PRODUCTS_CATALOG.findIndex(p => p.id === zoomProduct.id);
     const prevIndex = (currentIndex - 1 + PRODUCTS_CATALOG.length) % PRODUCTS_CATALOG.length;
-    setZoomProduct(PRODUCTS_CATALOG[prevIndex]);
+    const prevProduct = PRODUCTS_CATALOG[prevIndex];
+    setZoomProduct({
+      ...prevProduct,
+      activeImage: prevProduct.images ? prevProduct.images[0] : prevProduct.image
+    });
     setZoomScale(1);
     setTransformOrigin('center center');
   };
@@ -452,7 +475,11 @@ export default function Products() {
     if (!zoomProduct) return;
     const currentIndex = PRODUCTS_CATALOG.findIndex(p => p.id === zoomProduct.id);
     const nextIndex = (currentIndex + 1) % PRODUCTS_CATALOG.length;
-    setZoomProduct(PRODUCTS_CATALOG[nextIndex]);
+    const nextProduct = PRODUCTS_CATALOG[nextIndex];
+    setZoomProduct({
+      ...nextProduct,
+      activeImage: nextProduct.images ? nextProduct.images[0] : nextProduct.image
+    });
     setZoomScale(1);
     setTransformOrigin('center center');
   };
@@ -534,7 +561,8 @@ export default function Products() {
         <div className="space-y-12">
           {filteredProducts.map((product) => {
             const isExpanded = expandedId === product.id;
-            
+            const activeImgIndex = selectedImageMap[product.id] || 0;
+            const currentImg = product.images ? (product.images[activeImgIndex] || product.image) : product.image;
 
             return (
               <div
@@ -548,25 +576,19 @@ export default function Products() {
                   <div className="lg:col-span-5 flex flex-col space-y-3 font-sans">
                     <div 
                       className="relative h-64 sm:h-72 w-full rounded-xl overflow-hidden bg-slate-50 border border-slate-200 group flex items-center justify-center p-3 cursor-zoom-in hover:border-emerald-400 transition-colors"
-                      onClick={() => {
-                        setZoomProduct(product);
-                        setZoomScale(1);
-                        setTransformOrigin('center center');
-                      }}
+                      onClick={() => handleOpenZoom(product, currentImg)}
                       title="Click to zoom and view details in high resolution"
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault();
-                          setZoomProduct(product);
-                          setZoomScale(1);
-                          setTransformOrigin('center center');
+                          handleOpenZoom(product, currentImg);
                         }
                       }}
                     >
                       <img
-                        src={product.image}
+                        src={currentImg}
                         alt={product.title}
                         className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
@@ -575,12 +597,56 @@ export default function Products() {
                         {product.badge}
                       </div>
 
+                      {/* Multi-Image Badge Indicator */}
+                      {product.images && product.images.length > 1 && (
+                        <div className="absolute top-3 right-3 bg-slate-900/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2 py-0.5 rounded-md flex items-center gap-1.5 shadow border border-slate-700/50">
+                          <Images className="w-3.5 h-3.5 text-emerald-400" />
+                          <span>{activeImgIndex + 1} / {product.images.length} Views</span>
+                        </div>
+                      )}
+
                       {/* Floating Zoom Indicator on Hover */}
                       <div className="absolute bottom-3 right-3 bg-slate-900/85 group-hover:bg-slate-900 text-white text-[11px] font-semibold px-2.5 py-1 rounded-lg backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-200 flex items-center gap-1.5 shadow-md pointer-events-none transform translate-y-1 group-hover:translate-y-0">
                         <ZoomIn className="w-3.5 h-3.5 text-emerald-400" />
                         <span>Click to Zoom</span>
                       </div>
                     </div>
+
+                    {/* Multi-Image Thumbnail Switcher */}
+                    {product.images && product.images.length > 1 && (
+                      <div className="flex flex-wrap items-center gap-2 p-2 rounded-xl bg-white border border-slate-200 shadow-xs">
+                        <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider pl-1">Models:</span>
+                        <div className="flex flex-wrap items-center gap-2">
+                          {product.images.map((imgSrc, idx) => {
+                            const isSelected = activeImgIndex === idx;
+                            const label = product.imageLabels ? product.imageLabels[idx] : `Option ${idx + 1}`;
+                            return (
+                              <button
+                                key={idx}
+                                type="button"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setSelectedImageMap(prev => ({ ...prev, [product.id]: idx }));
+                                }}
+                                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg border text-xs font-semibold transition-all ${
+                                  isSelected
+                                    ? 'bg-emerald-50 border-emerald-600 text-emerald-800 ring-2 ring-emerald-500/20 shadow-xs'
+                                    : 'bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                }`}
+                                title={label}
+                              >
+                                <img
+                                  src={imgSrc}
+                                  alt={label}
+                                  className="w-5 h-5 object-contain rounded"
+                                />
+                                <span>{label}</span>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
 
                     <div className="text-xs text-slate-500 flex items-center gap-1.5 px-1 font-sans">
                       <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -703,10 +769,10 @@ export default function Products() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-sans shadow-sm transition-colors"
-                          title="Open in Gmail"
+                          title="Inquire via Gmail"
                         >
                           <Mail className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Email Us</span>
+                          <span>Inquire Us</span>
                         </a>
                       </div>
 
@@ -804,7 +870,7 @@ export default function Products() {
 
           {/* Central Image Viewing Stage */}
           <div 
-            className="relative flex-1 w-full max-w-7xl mx-auto flex items-center justify-center overflow-hidden my-3"
+            className="relative flex-1 w-full max-w-7xl mx-auto flex flex-col items-center justify-center overflow-hidden my-2"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Prev Navigation Arrow */}
@@ -831,7 +897,7 @@ export default function Products() {
 
             {/* Zoomable Image Container */}
             <div 
-              className={`relative max-w-full max-h-[76vh] flex items-center justify-center overflow-hidden transition-all duration-200 ${
+              className={`relative max-w-full max-h-[68vh] sm:max-h-[72vh] flex items-center justify-center overflow-hidden transition-all duration-200 ${
                 zoomScale > 1 ? 'cursor-zoom-out' : 'cursor-zoom-in'
               }`}
               onClick={handleImageClick}
@@ -839,17 +905,50 @@ export default function Products() {
               title={zoomScale > 1 ? 'Click to zoom out (or move cursor to pan)' : 'Click to zoom in 2x (or move cursor to pan)'}
             >
               <img
-                src={zoomProduct.image}
+                src={zoomProduct.activeImage || zoomProduct.image}
                 alt={zoomProduct.title}
                 style={{
                   transform: `scale(${zoomScale})`,
                   transformOrigin: transformOrigin,
                   transition: zoomScale === 1 ? 'transform 0.3s ease-out' : 'transform 0.1s ease-out'
                 }}
-                className="max-h-[74vh] max-w-[88vw] object-contain rounded-xl drop-shadow-2xl select-none"
+                className="max-h-[66vh] sm:max-h-[70vh] max-w-[88vw] object-contain rounded-xl drop-shadow-2xl select-none"
                 draggable={false}
               />
             </div>
+
+            {/* Multi-Image Switcher inside Zoom Modal */}
+            {zoomProduct.images && zoomProduct.images.length > 1 && (
+              <div className="z-20 flex items-center justify-center gap-2 mt-2.5 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-full shadow-lg backdrop-blur-md">
+                <Images className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mr-1">Views:</span>
+                {zoomProduct.images.map((imgSrc, idx) => {
+                  const isSelected = (zoomProduct.activeImage || zoomProduct.image) === imgSrc;
+                  const label = zoomProduct.imageLabels ? zoomProduct.imageLabels[idx] : `Model ${idx + 1}`;
+                  return (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setZoomProduct(prev => ({ ...prev, activeImage: imgSrc }));
+                        setZoomScale(1);
+                        setTransformOrigin('center center');
+                        setSelectedImageMap(prev => ({ ...prev, [zoomProduct.id]: idx }));
+                      }}
+                      className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold transition-all ${
+                        isSelected
+                          ? 'bg-emerald-600 text-white shadow'
+                          : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                      }`}
+                    >
+                      <img src={imgSrc} alt={label} className="w-4 h-4 object-contain bg-white rounded p-0.5" />
+                      <span>{label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
           </div>
 
           {/* Bottom Bar: Instructions & Quick Inquiry */}

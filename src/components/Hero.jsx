@@ -99,7 +99,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-emerald-50 text-emerald-900 font-bold text-sm sm:text-base shadow-md transition-all active:scale-95"
             >
               <MessageSquare className="w-4 h-4 text-emerald-600" />
-              <span>WhatsApp</span>
+              <span>Inquire Us</span>
             </a>
           </div>
 
