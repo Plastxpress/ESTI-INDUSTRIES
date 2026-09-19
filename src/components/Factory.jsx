@@ -73,8 +73,8 @@ export default function Factory() {
             <FactoryIcon className="w-3.5 h-3.5 text-emerald-700" />
             <span>Manufacturing Infrastructure & Core Values</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-display">
-            About Our <span className="text-emerald-700">Factory & Capabilities</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-heading">
+            About Our <span className="font-normal text-emerald-700">Factories & Capabilities</span>
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg leading-relaxed">
             We offer end-to-end packaging solutions (along with packaging design and contract packaging) for all industries, backed by 30+ years of manufacturing pedigree.

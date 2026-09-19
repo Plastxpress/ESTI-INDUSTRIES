@@ -106,9 +106,20 @@ export default function Navbar() {
                 <span className="text-xl sm:text-2xl font-black tracking-tight text-[#0a1240] font-display flex items-center gap-1 leading-none">
                   ESTI <span className="text-blue-700">PACKAGING</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.28em] text-slate-500 font-extrabold mt-1">
-                  I N D U S T R Y
-                </span>
+                <span className="sr-only">Industry</span>
+                <div 
+                  aria-hidden="true" 
+                  className="flex justify-between w-full text-[9px] sm:text-[10.5px] uppercase text-slate-500 font-extrabold mt-1 select-none leading-none tracking-normal"
+                >
+                  <span>I</span>
+                  <span>N</span>
+                  <span>D</span>
+                  <span>U</span>
+                  <span>S</span>
+                  <span>T</span>
+                  <span>R</span>
+                  <span>Y</span>
+                </div>
               </div>
             </a>
 

@@ -22,22 +22,32 @@ const PRODUCTS_CATALOG = [
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
     image: '/assets/images/corrugated-3-5-7-ply-boxes.jpg',
+    images: [
+      '/assets/images/corrugated-3-5-7-ply-boxes.jpg',
+      '/assets/images/corrugated-flute-profiles.jpg'
+    ],
+    imageLabels: [
+      '3, 5 & 7-Ply Boxes',
+      'Flute Profiles (A, C, B)'
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
-    description: 'Manufactured on our imported 2200 mm 5-ply board plant with fully automatic 2-color printer slotters (1800 x 3500 mm). Precision-engineered Regular Slotted Containers (RSC 0201) delivering maximum vertical compression resistance and stacking endurance.',
+    description: 'We produce boards ranging from 3mm to 15mm in thickness in custom flute combinations of E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, and AAA. Maximum sheet size of 5000mm in length and 2500mm in width, enabling unmatched structural integrity and efficiency for extra-large jumbo box manufacturing.',
     specs: [
+      { label: 'Board Thickness', value: '3 mm to 15 mm custom thickness range' },
+      { label: 'Flute Combinations', value: 'E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, AAA' },
+      { label: 'Max Sheet Size', value: '5000 mm length × 2500 mm width (Jumbo Box capacity)' },
       { label: 'Constructions', value: '3-Ply (Single Wall), 5-Ply (Double Wall), 7-Ply (Triple Wall)' },
-      { label: 'Flute Profiles', value: 'A, B, C, E, and combination BC & AAA flutes' },
       { label: 'Bursting Strength', value: '18 to 35+ kg/cm² (customized to client payload)' },
       { label: 'Edge Crush Test', value: 'ECT 32 up to ECT 90+ heavy industrial grade' },
       { label: 'Printing', value: 'High-definition 2-color flexographic computerized slotting' },
       { label: 'Eco Profile', value: '100% Recyclable high-grade virgin & semi-chemical kraft' }
     ],
     features: [
-      'Engineered for automated packing lines and manual rapid taping',
-      'High moisture-resistant kraft liners suitable for export sea cargo',
-      'Custom printing with brand logo, barcodes, and ISO handling symbols',
-      'Available in custom batch volumes with dedicated warehouse buffers'
+      'Custom flute combinations (E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, AAA) for precision load engineering',
+      'Massive sheet processing up to 5000 mm × 2500 mm for seamless, ultra-strong jumbo carton conversion',
+      'Engineered for automated packing lines and manual rapid taping with high vertical stacking endurance',
+      'High moisture-resistant kraft liners suitable for export sea cargo and heavy-duty supply chains'
     ],
     applications: 'FMCG, automotive components, electrical engineering, textiles, pharmaceuticals, e-commerce fulfillment.'
   },
@@ -327,28 +337,38 @@ const PRODUCTS_CATALOG = [
   },
   {
     id: 'document-storage-archival-boxes',
-    title: 'Document Storage & Archival Corrugated Boxes in India',
-    subtitle: 'Heavy-Duty Lift-Off Lid Record Boxes with Ergonomic Handholes for Corporate & Legal Archives',
-    image: '/assets/images/document-storage-archival-boxes.jpg',
+    title: 'Document Storage & Archival Corrugated Boxes',
+    subtitle: 'Professional Corrugated Storage Solutions by ESTI Packaging (Organize • Protect • Retrieve)',
+    image: '/assets/images/document-storage-archival-boxes.png',
+    images: [
+      '/assets/images/document-storage-archival-boxes.png',
+      '/assets/images/document-storage-stacked.jpg',
+      '/assets/images/document-storage-files.png'
+    ],
+    imageLabels: [
+      'Box Specs & Multi-View',
+      'Stacked Archive Storage',
+      'Filing System Layout'
+    ],
     category: 'Die-Cut & Partitions',
-    badge: 'Archival & BFSI Grade',
-    description: 'Precision-engineered corrugated document storage and records management boxes designed for banks, corporate offices, law firms, healthcare facilities, and archival record vaults across India. Featuring heavy-duty double-wall end panels, reinforced tear-resistant carrying handholes, deep lift-off dust lids, and pre-printed indexing panels for systematic long-term document retention.',
+    badge: 'Organize • Protect • Retrieve',
+    description: 'Custom-designed corrugated document storage and archival boxes manufactured by ESTI Packaging for the safe, organized, and long-term storage of files, records, documents, and valuable paper collections. Designed for corporate offices, law firms, healthcare facilities, warehouses, and record-management vaults, combining high stacking strength with dedicated labeling areas, locking/hinged lids, and integrated hand-holes for easy handling.',
     specs: [
-      { label: 'Standard Dimensions', value: '410 × 330 × 280 mm (Legal / Foolscap & A4 File Compatible)' },
-      { label: 'Board Structure', value: 'Heavy 3-Ply Single Wall & Reinforced 5-Ply Double-Wall Base' },
-      { label: 'Stacking Compression', value: 'Engineered for 5 to 7 tiers high vertical warehouse stacking' },
-      { label: 'Closure System', value: 'Full telescoping lift-off lid for dust-proof record protection' },
-      { label: 'Ergonomics', value: 'Smooth oval die-cut handholes rated for 30+ kg payload carrying' },
-      { label: 'Indexing Panels', value: 'Pre-printed File No, Department, From/To Date & Destroy By fields' }
+      { label: 'Typical Dimensions', value: '400 × 300 × 250 mm (A4 / Legal / Box Files, fully customizable L × W × H)' },
+      { label: 'Board Strength', value: '3-Ply or Heavy-Duty 5-Ply (BC / EB Flute) for high-density warehouse storage' },
+      { label: 'Lid Construction', value: 'Locking-tab design, one-piece hinged lid, or separate lift-off telescoping lid' },
+      { label: 'Easy Handling', value: 'Integrated die-cut hand-holes for ergonomic lifting, carrying & shelf retrieval' },
+      { label: 'Indexing Panels', value: 'Pre-printed label panels (File No., Department, Year, Contents, Destroy Date)' },
+      { label: 'Special Formats', value: 'Drop-front archival boxes for maps/prints and moisture-resistant barrier coatings' }
     ],
     features: [
-      'Accommodates standard lever arch files, ring binders, box files, and ledger books without sagging',
-      'Double-thickness bottom and side walls withstand heavy multi-tier stack pressure in humid vaults',
-      'Smooth die-cut handholes prevent hand injury during manual warehouse file retrieval',
-      'Manufactured from neutral pH high-burst kraft board to preserve paper documents for decades',
-      'Supplied flat-packed with fast self-locking pop-up assembly for immediate office deployment'
+      'Strong & Stackable: Manufactured using 3-ply or 5-ply corrugated board for reliable stacking and high-density storage',
+      'Dedicated Identification Panels: Indexing areas include File No., Department, Year, and Contents classification fields',
+      'Ergonomic Hand-Holes: Integrated die-cut hand-holes make boxes easier to lift, carry, and retrieve from high archival shelves',
+      'Archival & Drop-Front Designs: Suitable for long-term historical records, manuscripts, maps, and artwork with drop-front access',
+      'Custom Sizing & Printing: 1–2 color flexographic printing with custom dimensions, indexing layouts, and company branding'
     ],
-    applications: 'BFSI & banking records, legal firms, corporate HR & finance departments, hospitals & clinical archives, government record vaults, document digitization centers.'
+    applications: 'Office files & documents, invoices & financial records, legal & statutory records, personnel files, project documentation, hospital medical records, historical archives & library collections.'
   },
   {
     id: 'angle-boards',
@@ -371,6 +391,45 @@ const PRODUCTS_CATALOG = [
       '100% recyclable alternative to plastic or metal corner guards'
     ],
     applications: 'Palletized export goods, paper ream skids, appliances, sheet metal coils, ceramic tile boxes.'
+  },
+  {
+    id: 'heat-treated-wooden-pallets',
+    title: 'Heat-Treated & Reconditioned Wooden Pallets',
+    subtitle: 'ISPM-15 Certified (TR-183 HT-DB) Euro & Four-Way Pallets Across Maharashtra & Goa',
+    image: '/assets/images/pallet-1200x800-euro.jpg',
+    images: [
+      '/assets/images/pallet-1200x800-euro.jpg',
+      '/assets/images/pallet-close-boarded-3-base.jpg',
+      '/assets/images/pallet-perimeter-base.jpg',
+      '/assets/images/pallet-wing-type.jpg',
+      '/assets/images/pallet-close-boarded-perimeter.jpg'
+    ],
+    imageLabels: [
+      '1200x800 Euro Pallet',
+      'Close Boarded 3-Base',
+      'Perimeter Base',
+      'Wing Type',
+      'Close Boarded Perimeter'
+    ],
+    category: 'Corrugated & Pallet Boxes',
+    badge: 'ISPM-15 Certified / Zero to Landfill',
+    description: 'Comprehensive range of heat-treated wooden pallets, Euro pallets, and reconditioned pallet solutions compliant with international ISPM-15 export regulations across Maharashtra and Goa. Certified under official TR-183 HT-DB heat treatment seals and managed under a sustainable "Zero to Landfill" circular model, delivering identical load-bearing performance and service life to new timber pallets at substantial cost savings.',
+    specs: [
+      { label: 'Pallet Types', value: '1200 x 800 mm Euro Pallets, Four-Way Entry, CP Pallets, and Heavy Runners' },
+      { label: 'Base Constructions', value: 'Close Boarded 3-Base, Perimeter Base, Wing Type, and Close Boarded Perimeter' },
+      { label: 'Export Certification', value: '100% ISPM-15 compliant with official TR-183 HT-DB heat-treatment stamp' },
+      { label: 'Treatments Available', value: 'ISPM-15 Heat Treatment (HT) & Fumigation Treatment for international customs' },
+      { label: 'Service Life & Load', value: 'Same operational service life & dynamic payload capacity as newly manufactured pallets' },
+      { label: 'Turnkey Services', value: 'Pallet sourcing, warehouse buffer storage, custom stencilling, heat treatment & dedicated logistics' }
+    ],
+    features: [
+      'Significant Cost Savings: High-quality refurbished pallets save substantial money compared to new timber pallets',
+      'Full ISPM-15 Export Clearance: Heat-treated under official seal (TR-183 HT-DB) to prevent pest/quarantine border delays',
+      'Sustainable Circular Practice: Strict "Zero to Landfill" reuse model helping clients achieve ESG sustainability targets',
+      'Complete Type Matrix: Available in 4-way entry, Euro (1200x800), CP chemical, wing type, and heavy runner designs',
+      'End-to-End Supply: Reliable buffer inventory, on-site audits, brand stencilling, and regional dispatch across Maharashtra & Goa'
+    ],
+    applications: 'Export container shipments, automotive component logistics, FMCG warehousing, chemical drums (CP pallets), pharmaceutical supply chains, heavy industrial freight.'
   },
   {
     id: 'printed-tapes',
@@ -531,8 +590,8 @@ export default function Products() {
             <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>Industrial Product Catalog</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-sans">
-            Comprehensive <span className="text-emerald-700">Product Portfolio</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-heading">
+            Comprehensive <span className="font-normal text-emerald-700">Product Portfolio</span>
           </h2>
           <p className="mt-3 text-slate-600 text-base sm:text-lg font-sans">
             Engineered for strength, cost efficiency, and export compliance. Click on any product below for complete technical specifications and direct contact.
@@ -666,7 +725,7 @@ export default function Products() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-sans mt-1">
+                      <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heading mt-1">
                         {product.title}
                       </h3>
 
@@ -769,10 +828,10 @@ export default function Products() {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-sans shadow-sm transition-colors"
-                          title="Inquire via Gmail"
+                          title="Click to Inquire via Gmail"
                         >
                           <Mail className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>Inquire Us</span>
+                          <span>Click to Inquire</span>
                         </a>
                       </div>
 

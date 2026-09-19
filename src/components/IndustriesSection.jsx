@@ -56,9 +56,9 @@ export default function IndustriesSection() {
             <span>Tailored Industry Engineering</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-display">
-            Packaging Solutions <br />
-            <span className="text-emerald-700">Built for Every Industry</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-heading">
+            Packaging Solutions <br className="hidden sm:inline" />
+            <span className="font-normal text-emerald-700">Built for Every Industry</span>
           </h2>
 
           <p className="mt-4 text-slate-600 text-sm sm:text-base md:text-lg leading-relaxed font-normal">

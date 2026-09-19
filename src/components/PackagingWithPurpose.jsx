@@ -139,8 +139,8 @@ export default function PackagingWithPurpose() {
             <span>Sustainability & Engineering Integrity</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-            Packaging with <span className="text-emerald-700">Purpose</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight font-heading">
+            Packaging with <span className="font-normal text-emerald-700">Purpose</span>
           </h2>
           
           <p className="mt-4 text-slate-600 text-base sm:text-lg leading-relaxed">
@@ -345,8 +345,8 @@ export default function PackagingWithPurpose() {
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
               <span>Climate Defense & Quality Preservation</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight">
-              Calibrated Moisture Control & <span className="text-emerald-700">Mold-Free Assurance</span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-slate-900 tracking-tight font-heading">
+              Calibrated Moisture Control & <span className="font-normal text-emerald-700">Mold-Free Assurance</span>
             </h3>
             <p className="mt-3 text-slate-600 text-sm sm:text-base leading-relaxed">
               Industrial corrugated packaging engineered to preserve structural integrity, eliminate humidity sagging, and guarantee 100% mold-free export protection.

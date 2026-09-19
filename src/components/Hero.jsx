@@ -42,9 +42,9 @@ export default function Hero() {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15] font-display text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15] font-heading text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
             Engineered Corrugated & <br />
-            <span className="text-emerald-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
+            <span className="font-normal text-emerald-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
               Sustainable Packaging
             </span>
           </h1>
@@ -99,7 +99,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-emerald-50 text-emerald-900 font-bold text-sm sm:text-base shadow-md transition-all active:scale-95"
             >
               <MessageSquare className="w-4 h-4 text-emerald-600" />
-              <span>Inquire Us</span>
+              <span>Click to Inquire</span>
             </a>
           </div>
 

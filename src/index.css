@@ -27,6 +27,10 @@
     @apply bg-white text-slate-800 antialiased font-sans;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Century Gothic", "Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
   :focus-visible {
     outline: 2px solid var(--color-ultra);
     outline-offset: 3px;

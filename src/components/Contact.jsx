@@ -73,8 +73,8 @@ export default function Contact() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
             <span>Direct Commercial Contacts</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight font-display">
-            Get in <span className="text-emerald-400">Touch With Us</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight font-heading">
+            Get in <span className="font-normal text-emerald-400">Touch With Us</span>
           </h2>
           <p className="mt-3 text-slate-300 text-base sm:text-lg">
             Your trusted partner in packaging. Connect directly with our management and engineering team via Phone, WhatsApp, or Email.

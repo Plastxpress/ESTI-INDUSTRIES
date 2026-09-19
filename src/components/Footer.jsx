@@ -26,9 +26,20 @@ export default function Footer() {
                 <span className="text-xl font-black text-white font-display flex items-center gap-1 leading-none">
                   ESTI <span className="text-blue-400">PACKAGING</span>
                 </span>
-                <span className="text-[10px] uppercase tracking-[0.28em] text-slate-400 font-extrabold mt-1">
-                  I N D U S T R Y
-                </span>
+                <span className="sr-only">Industry</span>
+                <div 
+                  aria-hidden="true" 
+                  className="flex justify-between w-full text-[9px] uppercase text-slate-400 font-extrabold mt-1 select-none leading-none tracking-normal"
+                >
+                  <span>I</span>
+                  <span>N</span>
+                  <span>D</span>
+                  <span>U</span>
+                  <span>S</span>
+                  <span>T</span>
+                  <span>R</span>
+                  <span>Y</span>
+                </div>
               </div>
             </div>
 
