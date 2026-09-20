@@ -126,30 +126,6 @@ const PRODUCTS_CATALOG = [
     applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
   },
   {
-    id: 'mattress-furniture-box',
-    title: 'Large-Format 8ft × 6ft Mattress Box',
-    subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
-    image: '/assets/images/mattress-furniture-box.jpg',
-    category: 'Custom & Large Format',
-    badge: 'Extra Large Format',
-    description: 'Oversized flat-profile corrugated shipping carton manufactured to accommodate full 8 ft × 6 ft (96" × 72" × 10") king and queen size mattresses, flat-pack wooden furniture, and architectural sheet products without sagging.',
-    specs: [
-      { label: 'Dimensions', value: '8 ft (96") Length × 6 ft (72") Width × 10" Height' },
-      { label: 'Board Spec', value: 'High-puncture resistant 5-ply double wall corrugated board' },
-      { label: 'Box Style', value: 'Large-format five-panel folder (FPF) or telescope tray system' },
-      { label: 'Surface Printing', value: 'Large-bed flexographic branding with dimension & orientation marks' },
-      { label: 'Corner Defense', value: 'Folded edge flaps shield vulnerable mattress corners from dragging' },
-      { label: 'Customization', value: 'Customizable length up to 10 ft for bespoke furniture lines' }
-    ],
-    features: [
-      'Manufactured on extra-wide converting machinery capable of handling 3.5-meter board blanks',
-      'Prevents soiling, scuffing, puncture, and moisture damage during e-commerce doorstep delivery',
-      'Reinforced perimeter tape lines ensure box stays rigid during two-person manual handling',
-      'Can be supplied with reinforced corner buffers for maximum perimeter stiffness'
-    ],
-    applications: 'Mattress manufacturers, flat-pack furniture, solar panels, large display panels, architectural doors.'
-  },
-  {
     id: 'tall-industrial-carton-esti',
     title: 'Telescopic Vertical Industrial Cartons',
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
