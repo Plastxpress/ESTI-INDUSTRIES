@@ -21,22 +21,18 @@ const PRODUCTS_CATALOG = [
     id: 'corrugated-boxes',
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
-    image: '/assets/images/corrugated-box-line.png',
+    image: '/assets/images/corrugated-custom-bicycle-box.png',
     images: [
+      '/assets/images/corrugated-custom-bicycle-box.png',
       '/assets/images/corrugated-box-line.png',
       '/assets/images/corrugated-box-dispatch.jpg',
-      '/assets/images/corrugated-flute-profiles.jpeg',
-      '/assets/images/corrugated-solar-bulk-box.png',
-      '/assets/images/corrugated-solar-panel-shipper.png',
-      '/assets/images/corrugated-custom-bicycle-box.png'
+      '/assets/images/corrugated-flute-profiles.jpeg'
     ],
     imageLabels: [
+      'Custom Fitted Box',
       'Production Line',
       'Stacking & Dispatch',
-      'Flute Profiles (A, C, B)',
-      'Solar Bulk Box',
-      'Solar Panel Carton',
-      'Custom Fitted Box'
+      'Flute Profiles (A, C, B)'
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
