@@ -173,49 +173,49 @@ export default function Factory() {
             <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
                 <img
-                  src="/assets/images/double-wall-board.jpg"
-                  alt="Double Wall Corrugated Board Broad Flute"
+                  src="/assets/images/machinery-corrugator-line.jpg"
+                  alt="Automated High-Speed Corrugator Line"
                   className="w-full h-24 object-cover"
                   loading="lazy"
                 />
                 <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
-                  5-Ply Double Wall Flute
+                  Automated Corrugator Line
                 </div>
               </div>
 
               <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
                 <img
-                  src="/assets/images/corrugated-flute-stack.jpg"
-                  alt="High Compression Corrugated Board Stack"
+                  src="/assets/images/warehouse-paper-reels.jpg"
+                  alt="High-Capacity Paper Reel & Board Staging"
                   className="w-full h-24 object-cover"
                   loading="lazy"
                 />
                 <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
-                  Precision Flute Sheets
+                  Paper Reel & Board Storage
                 </div>
               </div>
 
               <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
                 <img
-                  src="/assets/images/factory-warehouse-panoramic.jpg"
-                  alt="High Capacity Converting & Storage Floor"
+                  src="/assets/images/conveyor-bundling-line.jpg"
+                  alt="Automated Conveyor & Bundling Line"
                   className="w-full h-24 object-cover"
                   loading="lazy"
                 />
                 <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
-                  1,200 MT Converting Plant
+                  Conveyor & Bundling Line
                 </div>
               </div>
 
               <div className="rounded-xl overflow-hidden bg-white border border-slate-200 shadow-sm">
                 <img
-                  src="/assets/images/warehouse-pallet-stack.jpg"
-                  alt="Finished Palletized Heavy Cargo Staging Floor"
+                  src="/assets/images/warehouse-forklift-dispatch.jpg"
+                  alt="Forklift Logistics & Heavy Cargo Pallet Dispatch"
                   className="w-full h-24 object-cover"
                   loading="lazy"
                 />
                 <div className="p-1.5 bg-white text-center text-[10px] font-bold text-slate-700">
-                  Heavy Pallet Staging Floor
+                  Forklift & Pallet Logistics
                 </div>
               </div>
             </div>
@@ -283,14 +283,21 @@ export default function Factory() {
               </div>
               <div className="w-full overflow-hidden bg-slate-950 relative aspect-[16/10] sm:aspect-video flex items-center justify-center">
                 <video
-                  src="/assets/videos/export-capability.mp4"
+                  ref={(el) => {
+                    if (el) {
+                      el.muted = true;
+                      el.defaultMuted = true;
+                    }
+                  }}
                   autoPlay
                   loop
                   muted
                   playsInline
                   controls
                   className="w-full h-full object-cover"
-                />
+                >
+                  <source src="/assets/videos/export-capability.mp4" type="video/mp4" />
+                </video>
                 <div className="absolute top-2.5 right-2.5 bg-slate-900/90 text-white text-[10px] font-bold px-2 py-0.5 rounded shadow pointer-events-none z-10">
                   ISPM-15 / Sea Export
                 </div>

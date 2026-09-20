@@ -9,11 +9,8 @@ import {
   ArrowRight, 
   Sparkles, 
   Scale, 
-  Zap, 
   Globe2, 
   Layers, 
-  Mail, 
-  MessageSquare,
   BarChart3,
   Award,
   Droplets,
@@ -278,64 +275,7 @@ export default function PackagingWithPurpose() {
 
         </div>
 
-        {/* Purpose Call-To-Action Card */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 rounded-3xl p-8 sm:p-10 lg:p-12 text-white shadow-xl relative overflow-hidden">
-          
-          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider mb-4 border border-emerald-500/30">
-              <Zap className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Sustainable Transition Partnership</span>
-            </div>
-            
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight">
-              Ready to Replace Timber & Single-Use Plastics in Your Supply Chain?
-            </h3>
-            
-            <p className="mt-3 text-sm sm:text-base text-slate-300 leading-relaxed">
-              Our packaging design engineers will evaluate your current payload weight, transit stresses, and international container utilization to deliver a custom, 100% recyclable corrugated solution that cuts freight cost and environmental impact.
-            </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=esteepack@gmail.com&su=${encodeURIComponent('Packaging with Purpose Audit Inquiry - ESTI Packaging')}&body=${encodeURIComponent(`Hello ESTI Packaging Team,\n\nWe are looking to transition our packaging to sustainable, high-strength corrugated solutions. Please connect with us for a packaging audit.\n\nCompany Name: \nProduct Type: \nCurrent Packaging (Timber/Plastic/Carton): \nEstimated Monthly Volume: \n\nThank you.`)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold shadow-lg shadow-emerald-900/30 transition-all hover:scale-[1.02] focus:outline-none"
-              >
-                <Mail className="w-4 h-4 text-white" />
-                <span>Request Packaging Purpose Audit (esteepack@gmail.com)</span>
-              </a>
-
-              <a
-                href="https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20we%20are%20interested%20in%20your%20Packaging%20with%20Purpose%20solutions%20and%20timber%20crate%20replacements."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-bold border border-white/20 backdrop-blur-sm transition-all hover:scale-[1.02]"
-              >
-                <MessageSquare className="w-4 h-4 text-emerald-400" />
-                <span>WhatsApp Consultant</span>
-              </a>
-            </div>
-
-            <div className="mt-6 flex flex-wrap items-center gap-6 text-xs text-slate-400">
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                Zero obligation CAD prototype
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                Comprehensive ISTA / BCT laboratory testing
-              </span>
-              <span className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-                Direct factory pricing (ESTI Khopoli facility)
-              </span>
-            </div>
-          </div>
-
-        </div>
 
         {/* Climate Defense & Quality Preservation Sub-Section */}
         <div className="mt-16 pt-16 border-t border-slate-200">
@@ -356,35 +296,35 @@ export default function PackagingWithPurpose() {
           {/* 2-Column Responsive Card Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
-            {/* Block 1: 9% Precision Moisture Control */}
+            {/* Block 1: Precision Moisture Control */}
             <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 border border-sky-200 text-sky-800 text-xs font-bold uppercase tracking-wider">
                     <Droplets className="w-3.5 h-3.5 text-sky-600" />
-                    <span>Optimal 9% RH</span>
+                    <span>Moisture Controlled</span>
                   </span>
                   <span className="text-xs font-semibold text-slate-400">
-                    Precision Controlled
+                    Precision Regulated
                   </span>
                 </div>
 
                 <h4 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-3">
-                  9% Moisture-Controlled Packaging
+                  Precision Moisture Control. Consistent Quality.
                 </h4>
 
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
-                  Manufactured under calibrated drying conditions to hold a steady 9% moisture content. Eliminates box sagging, softening, and warping, ensuring peak stacking strength throughout storage and humid transit.
+                  Our corrugated board manufacturing machines are equipped with advanced moisture control systems, enabling us to regulate and maintain paper moisture levels according to seasonal and environmental conditions. We carefully regulate moisture levels to support consistent paper quality, effective bonding, and dimensional stability—helping ensure reliable packaging performance throughout the year.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Eliminates Box Sagging & Warping</span>
+                    <span>Effective Bonding & Quality</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-semibold text-slate-700 bg-slate-50 px-3 py-2 rounded-xl border border-slate-100">
                     <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Peak Stacking Strength Retention</span>
+                    <span>Year-Round Dimensional Stability</span>
                   </div>
                 </div>
               </div>
@@ -393,17 +333,17 @@ export default function PackagingWithPurpose() {
               <div className="relative rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 aspect-[16/10] sm:aspect-video w-full group">
                 <img
                   src="/assets/images/moisture-controlled-corrugator.jpg"
-                  alt="[INSERT_MY_MOISTURE_IMAGE_HERE] - 9% Moisture-Controlled Packaging"
+                  alt="Precision Moisture Control. Consistent Quality."
                   data-placeholder="[INSERT_MY_MOISTURE_IMAGE_HERE]"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md text-sky-300 text-xs font-bold px-3 py-1 rounded-full border border-sky-400/30 flex items-center gap-1.5 shadow-sm">
                   <Droplets className="w-3.5 h-3.5 text-sky-400" />
-                  <span>Optimal 9% RH</span>
+                  <span>Precision Moisture</span>
                 </div>
                 <div className="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-md text-white px-3.5 py-2 rounded-xl border border-slate-700/80 pointer-events-none">
-                  <span className="text-[11px] font-medium text-slate-300">Calibrated corrugator heating bed maintaining 9% moisture content</span>
+                  <span className="text-[11px] font-medium text-slate-300">Advanced moisture control systems for year-round quality & dimensional stability</span>
                 </div>
               </div>
             </div>

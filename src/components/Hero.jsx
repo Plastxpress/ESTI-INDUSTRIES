@@ -50,7 +50,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-slate-200 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl text-left drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
-            Your trusted partner in custom corrugated packaging solutions. With over three decades of industry experience, <strong className="text-white font-semibold">ESTI Packaging Industry</strong> is a pioneer in manufacturing Jumbo Boxes, Pallet Boxes, and UN Certified Boxes, along with Edge Boards & Printed Tapes tailored for domestic and export operations.
+            Your trusted partner in custom corrugated packaging solutions. With over three decades of industry experience, <strong className="text-white font-semibold">ESTI Packaging Industry</strong> is a pioneer in manufacturing Jumbo Boxes, Pallet Boxes, and UN Certified Boxes tailored for domestic and export operations.
           </p>
 
           {/* 4 Feature Bullet Points Strip */}

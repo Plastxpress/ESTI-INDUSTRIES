@@ -6,7 +6,6 @@ import Products from './components/Products';
 import PackagingWithPurpose from './components/PackagingWithPurpose';
 import IndustriesSection from './components/IndustriesSection';
 import Factory from './components/Factory';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
@@ -34,9 +33,6 @@ export default function App() {
 
         {/* 4. Factory Infrastructure, Machinery & Export FTA Advantage */}
         <Factory />
-
-        {/* 5. Direct Contact & Locations (No Quote Button, No Database!) */}
-        <Contact />
       </main>
 
       {/* 7. Footer */}

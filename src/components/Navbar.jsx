@@ -18,7 +18,7 @@ export default function Navbar() {
     { name: 'Packaging with Purpose', href: '#purpose' },
     { name: 'Industries', href: '#industries' },
     { name: 'Factory & Specs', href: '#factory' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'Contact Us', href: '#footer' },
   ];
 
   const handleNavClick = (e, href) => {
@@ -140,8 +140,8 @@ export default function Navbar() {
             {/* Direct Factory Tag on Right */}
             <div className="hidden sm:flex items-center">
               <a
-                href="#contact"
-                onClick={(e) => handleNavClick(e, '#contact')}
+                href="#footer"
+                onClick={(e) => handleNavClick(e, '#footer')}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold shadow-sm transition-all"
               >
                 <span>Direct Inquiry</span>

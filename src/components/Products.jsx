@@ -21,14 +21,22 @@ const PRODUCTS_CATALOG = [
     id: 'corrugated-boxes',
     title: 'Corrugated Boxes & Master Shipping Cartons',
     subtitle: 'High-Burst Strength 3-Ply, 5-Ply & 7-Ply Shipping Boxes',
-    image: '/assets/images/corrugated-3-5-7-ply-boxes.jpg',
+    image: '/assets/images/corrugated-box-line.png',
     images: [
-      '/assets/images/corrugated-3-5-7-ply-boxes.jpg',
-      '/assets/images/corrugated-flute-profiles.jpg'
+      '/assets/images/corrugated-box-line.png',
+      '/assets/images/corrugated-box-dispatch.jpg',
+      '/assets/images/corrugated-flute-profiles.jpeg',
+      '/assets/images/corrugated-solar-bulk-box.png',
+      '/assets/images/corrugated-solar-panel-shipper.png',
+      '/assets/images/corrugated-custom-bicycle-box.png'
     ],
     imageLabels: [
-      '3, 5 & 7-Ply Boxes',
-      'Flute Profiles (A, C, B)'
+      'Production Line',
+      'Stacking & Dispatch',
+      'Flute Profiles (A, C, B)',
+      'Solar Bulk Box',
+      'Solar Panel Carton',
+      'Custom Fitted Box'
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
@@ -72,62 +80,6 @@ const PRODUCTS_CATALOG = [
       'Significantly lowers freight and handling costs for export consignments'
     ],
     applications: 'Automotive engines, gearbox assemblies, pumps, forged components, heavy industrial machinery.'
-  },
-  {
-    id: 'eco-pallet-box',
-    title: 'Eco-Corrugated Paper Pallet Box with Lid',
-    subtitle: '100% Recyclable Pallet Container with Integrated Paper Feet',
-    image: '/assets/images/eco-corrugated-paper-pallet-box.jpg',
-    images: [
-      '/assets/images/eco-corrugated-paper-pallet-box.jpg',
-      '/assets/images/eco-pallet-box-shallow.jpg'
-    ],
-    imageLabels: [
-      'Standard Bulk Box',
-      'Low-Profile Tray Box'
-    ],
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'ISPM-15 Exempt / 100% Paper',
-    description: 'All-in-one corrugated bulk container with integrated heavy paper pallet runners and telescoping lid. Available in standard deep bulk container and low-profile pallet tray configurations. Engineered as a fully circular, 100% recyclable alternative to wooden pallets and plastic containers, eliminating export fumigation requirements.',
-    specs: [
-      { label: 'Payload Capacity', value: 'Static load up to 1,000 kg / Dynamic load up to 600 kg' },
-      { label: 'Pallet Base', value: 'Integrated heavy-gauge multi-layer corrugated runners' },
-      { label: 'Wall Profile', value: '7-Ply Heavy-Duty AAA Flute corrugated sleeve' },
-      { label: 'Forklift Access', value: 'Standard 4-way entry for forklifts & pallet jacks' },
-      { label: 'Export Status', value: '100% ISPM-15 exempt (zero heat treatment / fumigation required)' },
-      { label: 'Circularity', value: 'Fully repulpable and 100% biodegradable kraft' }
-    ],
-    features: [
-      'Integrated corrugated pallet feet remove the need for separate wooden or plastic pallets',
-      'Exempt from international wood packaging quarantine regulations for instant customs clearance',
-      'Delivered flat-pack or assembled for immediate hopper or conveyor loading',
-      'Significantly lowers tare weight, slashing overseas air and sea freight bills'
-    ],
-    applications: 'Automotive exports, industrial fittings, electrical switchgear, green logistics, pharmaceutical distribution.'
-  },
-  {
-    id: 'poly-lined-bulk-box',
-    title: 'Poly-Lined Bulk Chemical & Resin Container',
-    subtitle: 'Heavy Multi-Wall Box Fitted with Heavy-Gauge Polyethylene Liner',
-    image: '/assets/images/poly-lined-bulk-box.jpg',
-    category: 'Corrugated & Pallet Boxes',
-    badge: 'Hygroscopic & Chemical Barrier',
-    description: 'Rugged corrugated bulk box integrated with a heavy-gauge internal polyethylene (PE) liner bag and telescopic lid. Engineered specifically to store and transport hygroscopic powders, resins, granular chemicals, and food-grade raw materials safely.',
-    specs: [
-      { label: 'Liner Material', value: 'Heavy-gauge virgin LDPE / HDPE liner (food-grade certified)' },
-      { label: 'Wall Rating', value: 'Heavy 5-ply double wall or 7-ply triple wall corrugated' },
-      { label: 'Capacity', value: '500 kg to 1,000 kg bulk filling capacity' },
-      { label: 'Sealing Method', value: 'Heat-sealable or twist-tie bag closure with top corrugated cap' },
-      { label: 'Moisture Barrier', value: 'Near-zero moisture vapor transmission rate (MVTR)' },
-      { label: 'Corner Reinforcement', value: 'Continuous heavy wire stitched corner seams' }
-    ],
-    features: [
-      'Internal liner prevents product contamination, dusting, and atmospheric moisture absorption',
-      'Eliminates the cost, return logistics, and cleaning overhead of steel drums or intermediate bulk containers',
-      'Square footprint utilizes 100% of shipping container floor space without drum void gaps',
-      'Compatible with top automated filling funnels and bottom vacuum probe discharge'
-    ],
-    applications: 'Plastic polymers & masterbatches, rubber chemicals, specialty powders, agricultural fertilizers, bulk food spices.'
   },
   {
     id: 'un-certified-boxes',
@@ -174,30 +126,6 @@ const PRODUCTS_CATALOG = [
     applications: 'Plastic resin granules, masterbatches, rubber chemicals, powders, metal fasteners, agricultural seeds.'
   },
   {
-    id: 'refrigerator-appliance-box',
-    title: 'White Goods & Refrigerator Box',
-    subtitle: 'Up to 1,700 mm Tall Heavy Appliance Packaging with Clamp-Safe Markings',
-    image: '/assets/images/refrigerator-appliance-box.jpg',
-    category: 'Custom & Large Format',
-    badge: 'Appliance Grade',
-    description: 'Heavy-duty corrugated upright carton engineered for large domestic refrigerators, commercial coolers, and washing appliances (up to 1,700 mm height). Designed with clamp-truck handling zones, ventilation handholds, and comprehensive ISO handling symbols.',
-    specs: [
-      { label: 'Standard Dimensions', value: '1700 mm (67") H × 700 mm (27.5") W × 650 mm (25.5") D' },
-      { label: 'Caliper & Flute', value: 'Heavy 5-ply BC Flute / 7-ply AAA Flute high-compression board' },
-      { label: 'Clamp Rating', value: 'Reinforced lower sidewall zone for hydraulic forklift clamp handling' },
-      { label: 'Ergonomics', value: 'Die-cut oval handholds rated for 75+ kg manual lifting' },
-      { label: 'Markings', value: 'Standardized clamp zones, center-of-gravity, and upright symbols' },
-      { label: 'BCT Strength', value: 'Box Compression Test engineered for 3-high vertical warehouse stacking' }
-    ],
-    features: [
-      'High vertical column strength prevents buckling under heavy top loads in high-bay warehouses',
-      'Clamp-safe indicator zones guide forklift operators to prevent side compression denting',
-      'Built-in handholds make domestic distribution and home delivery effortless and safe',
-      'Multi-panel flexographic printing displays corporate brand, energy star labels, and specs'
-    ],
-    applications: 'Refrigerators, commercial bottle coolers, washing machines, HVAC air conditioning units, water heaters.'
-  },
-  {
     id: 'mattress-furniture-box',
     title: 'Large-Format 8ft × 6ft Mattress Box',
     subtitle: 'Extra-Large Flat-Pack Packaging for 8ft x 6ft Mattresses & Architectural Panels',
@@ -217,33 +145,9 @@ const PRODUCTS_CATALOG = [
       'Manufactured on extra-wide converting machinery capable of handling 3.5-meter board blanks',
       'Prevents soiling, scuffing, puncture, and moisture damage during e-commerce doorstep delivery',
       'Reinforced perimeter tape lines ensure box stays rigid during two-person manual handling',
-      'Can be supplied with edge protector angle boards for maximum perimeter stiffness'
+      'Can be supplied with reinforced corner buffers for maximum perimeter stiffness'
     ],
     applications: 'Mattress manufacturers, flat-pack furniture, solar panels, large display panels, architectural doors.'
-  },
-  {
-    id: 'honeywell-stitched-box',
-    title: 'Reinforced Wire-Stitched Box with Cap',
-    subtitle: 'High-Tensile Wire Stitching with Telescopic Lid & Custom OEM Branding',
-    image: '/assets/images/honeywell-stitched-box.jpg',
-    category: 'Custom & Large Format',
-    badge: 'Wire-Stitched Heavy Armor',
-    description: 'Heavy-duty industrial corrugated carton reinforced with anti-corrosive zinc-coated wire stitched corner joints and a matching top cap. Engineered for multinational OEMs requiring maximum seam burst strength under severe transport vibrations.',
-    specs: [
-      { label: 'Joint Technology', value: 'Continuous heavy-gauge galvanized wire stitched seams' },
-      { label: 'Board Type', value: '5-Ply heavy double wall (BC Flute) with virgin kraft liners' },
-      { label: 'Closure System', value: 'Drop-over telescoping corrugated cap with friction interlock' },
-      { label: 'Branding', value: 'Custom 2-color OEM logo printing with international handling icons' },
-      { label: 'Bursting Strength', value: '24 to 30 kg/cm² seam burst retention' },
-      { label: 'Quality Standard', value: '100% compliant with global OEM packaging audit specifications' }
-    ],
-    features: [
-      'Wire-stitched seams will not pop open even in extreme desert heat or freezing transit conditions',
-      'Heavy telescoping cap allows swift unboxing and re-inspection at factory receiving docks',
-      'Pre-printed with ISO handling warnings (Fragile, This Way Up, Keep Dry, Max Stacking)',
-      'Tested to withstand rigorous drop and incline impact shock tests'
-    ],
-    applications: 'OEM electronics, industrial automation equipment, aerospace sub-assemblies, heavy instrumentation.'
   },
   {
     id: 'tall-industrial-carton-esti',
@@ -314,28 +218,6 @@ const PRODUCTS_CATALOG = [
     applications: 'Automotive lighting, machine sensors, cosmetic jars, electrical relays, turned metal components.'
   },
   {
-    id: 'bottle-partition-boxes',
-    title: 'Bottle Partition Outer Cartons & Beverage Shippers',
-    subtitle: 'Zero-Breakage Corrugated Shippers for Glass Bottles & Liquids',
-    image: '/assets/images/bottle-partition-beverage-shipper.jpg',
-    category: 'Die-Cut & Partitions',
-    badge: 'Fragile Goods Defense',
-    description: 'Heavy-duty master corrugated shippers fitted with full-height internal cell dividers specifically designed to cushion and protect glass bottles containing wine, spirits, agro-chemicals, and oils during transit.',
-    specs: [
-      { label: 'Bottle Capacities', value: '6-bottle, 12-bottle, and 24-bottle standard carton layouts' },
-      { label: 'Cushioning Height', value: 'Full-height partition walls cradle bottle neck and shoulder' },
-      { label: 'Drop Resistance', value: 'Engineered to survive multi-angle conveyor drop impacts' },
-      { label: 'Outer Box', value: 'High-puncture resistant 5-ply double wall master carton' }
-    ],
-    features: [
-      'Eliminates bottle-to-bottle clinking and accidental glass fracture',
-      'Absorptive corrugated liners contain localized leaks if primary seals breach',
-      'Stackable up to 5 tiers high in palletized warehousing without side bulge',
-      'Custom printed graphics for premium liquor and chemical branding'
-    ],
-    applications: 'Wines, craft beers, edible oils, pharmaceutical syrups, laboratory reagents, agrochemical bottles.'
-  },
-  {
     id: 'document-storage-archival-boxes',
     title: 'Document Storage & Archival Corrugated Boxes',
     subtitle: 'Professional Corrugated Storage Solutions by ESTI Packaging (Organize • Protect • Retrieve)',
@@ -371,45 +253,17 @@ const PRODUCTS_CATALOG = [
     applications: 'Office files & documents, invoices & financial records, legal & statutory records, personnel files, project documentation, hospital medical records, historical archives & library collections.'
   },
   {
-    id: 'angle-boards',
-    title: 'Angle Boards & Edge Protectors (V-Boards)',
-    subtitle: 'Multi-Ply Rigid Corner Protectors for Pallet Stacking & Strapping Defense',
-    image: '/assets/images/angle-edge-boards.jpg',
-    category: 'Edge Protection',
-    badge: 'Pallet Stability',
-    description: 'Rigid, multi-ply compressed laminated kraft paper corner boards that protect carton edges from strap damage during tensioning and dramatically increase vertical box column stacking strength on export skids.',
-    specs: [
-      { label: 'Leg Dimensions', value: '25 x 25 mm up to 100 x 100 mm (Equal & Unequal wings)' },
-      { label: 'Caliper / Thickness', value: '2.0 mm to 8.0 mm heavy-duty multi-ply kraft' },
-      { label: 'Lengths', value: 'Cut to customer dimensions from 100 mm up to 3,000 mm' },
-      { label: 'Finishes', value: 'Natural Brown Kraft, White coated, Water-resistant film' }
-    ],
-    features: [
-      'Prevents steel and polyester strapping tension from cutting into cartons',
-      'Increases warehouse pallet stacking height by up to 2-3 extra tiers safely',
-      'Distributes load tension uniformly across the entire pallet perimeter',
-      '100% recyclable alternative to plastic or metal corner guards'
-    ],
-    applications: 'Palletized export goods, paper ream skids, appliances, sheet metal coils, ceramic tile boxes.'
-  },
-  {
     id: 'heat-treated-wooden-pallets',
     title: 'Heat-Treated & Reconditioned Wooden Pallets',
     subtitle: 'ISPM-15 Certified (TR-183 HT-DB) Euro & Four-Way Pallets Across Maharashtra & Goa',
-    image: '/assets/images/pallet-1200x800-euro.jpg',
+    image: '/assets/images/wooden-pallets-stack.jpg',
     images: [
-      '/assets/images/pallet-1200x800-euro.jpg',
-      '/assets/images/pallet-close-boarded-3-base.jpg',
-      '/assets/images/pallet-perimeter-base.jpg',
-      '/assets/images/pallet-wing-type.jpg',
-      '/assets/images/pallet-close-boarded-perimeter.jpg'
+      '/assets/images/wooden-pallets-stack.jpg',
+      '/assets/images/wooden-pallets-warehouse.jpg'
     ],
     imageLabels: [
-      '1200x800 Euro Pallet',
-      'Close Boarded 3-Base',
-      'Perimeter Base',
-      'Wing Type',
-      'Close Boarded Perimeter'
+      'Standard Wooden Euro Pallets',
+      'Warehouse Inventory & Skids'
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Certified / Zero to Landfill',
@@ -430,28 +284,6 @@ const PRODUCTS_CATALOG = [
       'End-to-End Supply: Reliable buffer inventory, on-site audits, brand stencilling, and regional dispatch across Maharashtra & Goa'
     ],
     applications: 'Export container shipments, automotive component logistics, FMCG warehousing, chemical drums (CP pallets), pharmaceutical supply chains, heavy industrial freight.'
-  },
-  {
-    id: 'printed-tapes',
-    title: 'Self-Adhesive Printed Packaging Tapes',
-    subtitle: 'Branded Multi-Color Corporate Logo Tapes & Tamper-Evident Security',
-    image: '/assets/images/printed-tapes.jpg',
-    category: 'Packaging Accessories',
-    badge: 'Custom Logo Branding',
-    description: 'High-performance BOPP and reinforced Kraft packaging tapes featuring custom multi-color corporate logo printing, ensuring brand visibility and tamper-evident carton sealing throughout your supply chain.',
-    specs: [
-      { label: 'Tape Widths', value: '24 mm, 36 mm, 48 mm, and 72 mm standard widths' },
-      { label: 'Roll Lengths', value: '65 m, 100 m hand rolls up to 1000 m machine rolls' },
-      { label: 'Adhesive Type', value: 'Pressure-sensitive water-based acrylic / Hot melt rubber' },
-      { label: 'Print Capabilities', value: 'Up to 3-color rotogravure / flexo custom logo printing' }
-    ],
-    features: [
-      'High-shear tack ensures permanent bond to all kraft and recycled carton surfaces',
-      'Acts as immediate visual anti-tamper security against pilferage',
-      'Weather-resistant formulation withstands high humidity and temperature changes',
-      'Enhances corporate brand presentation on every dispatched carton'
-    ],
-    applications: 'Carton box sealing, export shipping, e-commerce fulfillment, cold storage packaging, brand marketing.'
   }
 ];
 
@@ -570,9 +402,7 @@ export default function Products() {
     'Corrugated & Pallet Boxes',
     'Custom & Large Format',
     'UN Certified Boxes',
-    'Die-Cut & Partitions',
-    'Edge Protection',
-    'Packaging Accessories'
+    'Die-Cut & Partitions'
   ];
 
   const filteredProducts = activeCategory === 'All'

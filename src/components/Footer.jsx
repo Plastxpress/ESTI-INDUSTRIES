@@ -1,4 +1,4 @@
-import { Layers, ShieldCheck, Mail, Phone, MapPin, ArrowUp, Globe, Check } from 'lucide-react';
+import { Layers, ShieldCheck, Mail, Phone, MapPin, ArrowUp, Check } from 'lucide-react';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -6,7 +6,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
+    <footer id="footer" className="bg-slate-950 text-slate-400 border-t border-slate-800 pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
@@ -89,10 +89,7 @@ export default function Footer() {
                 <a href="#products" className="hover:text-emerald-400 transition-colors">UN 1266 Certified Hazmat Boxes</a>
               </li>
               <li>
-                <a href="#products" className="hover:text-emerald-400 transition-colors">Angle Boards & Edge Protectors</a>
-              </li>
-              <li>
-                <a href="#products" className="hover:text-emerald-400 transition-colors">Self-Adhesive Printed Tapes</a>
+                <a href="#products" className="hover:text-emerald-400 transition-colors">Heat-Treated Wooden & Euro Pallets</a>
               </li>
             </ul>
           </div>
@@ -153,10 +150,7 @@ export default function Footer() {
                   sunil@estipackaging.com
                 </a>
               </li>
-              <li className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span className="text-slate-300">www.estipackaging.com</span>
-              </li>
+
               <li className="flex items-center gap-2.5">
                 <svg className="w-4 h-4 text-sky-400 fill-current shrink-0" viewBox="0 0 24 24">
                   <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.66 1.66 0 1 0 0 3.32 1.66 1.66 0 0 0 0-3.32Z"/>

@@ -241,8 +241,7 @@ export default function Contact() {
                   >
                     <option value="Corrugated Boxes & Heavy Duty Cartons">Corrugated Boxes (3, 5, 7-Ply)</option>
                     <option value="Document Storage & Archival Corrugated Boxes in India">Document Storage & Archival Boxes</option>
-                    <option value="Angle Boards & Edge Protectors">Angle Boards & Edge Protectors (V-Boards)</option>
-                    <option value="Self-Adhesive Printed Packaging Tapes">Self-Adhesive Printed Tapes</option>
+                    <option value="Heat-Treated Wooden Pallets & Bulk Containers">Heat-Treated Wooden & Euro Pallets</option>
                     <option value="UN 1266 Hazmat Certified Packaging">UN 1266 Hazardous Material Packaging</option>
                     <option value="Custom Contract Packaging & Value Engineering">Custom Formulation / Other</option>
                   </select>
