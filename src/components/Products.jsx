@@ -221,14 +221,12 @@ const PRODUCTS_CATALOG = [
     id: 'document-storage-archival-boxes',
     title: 'Document Storage & Archival Corrugated Boxes',
     subtitle: 'Professional Corrugated Storage Solutions by ESTI Packaging (Organize • Protect • Retrieve)',
-    image: '/assets/images/document-storage-archival-boxes.png',
+    image: '/assets/images/document-storage-stacked.jpg',
     images: [
-      '/assets/images/document-storage-archival-boxes.png',
       '/assets/images/document-storage-stacked.jpg',
       '/assets/images/document-storage-files.png'
     ],
     imageLabels: [
-      'Box Specs & Multi-View',
       'Stacked Archive Storage',
       'Filing System Layout'
     ],
