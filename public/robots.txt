@@ -1,0 +1,8 @@
+# Robots.txt for ESTI Packaging Industry
+# Website: https://www.estipack.com
+
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://www.estipack.com/sitemap.xml

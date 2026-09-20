@@ -58,22 +58,25 @@ const PRODUCTS_CATALOG = [
   {
     id: 'heavy-duty-pallet',
     title: 'Heavy-Duty Pallet Boxes & Bulk Containers',
-    subtitle: 'Cost-Effective Heavy Timber Crate Replacement (Up to 1,500 kg)',
+    subtitle: 'Cost-Effective Timber Crate Replacement — Lighter, Smarter, 100% Recyclable (Up to 1,500 kg)',
     image: '/assets/images/ssdn-heavy-duty-pallet.jpg',
     category: 'Corrugated & Pallet Boxes',
     badge: 'Timber Crate Replacement',
-    description: 'Ultra-heavy-duty multi-wall corrugated containers engineered to replace expensive, heavy wooden boxes. Easily strapped to wooden or plastic pallets for safe domestic transit and international containerized shipping.',
+    description: "EVERY CRATE YOU USE COSTS YOU — AND THE EARTH. It's time to move beyond heavy, expensive wooden packaging. Switch to ESTI high-strength corrugated export boxes. Lighter. Smarter. Cost-effective. 100% recyclable.",
     specs: [
       { label: 'Load Capacity', value: 'Static load up to 1,500 kg / Dynamic payload up to 800 kg' },
       { label: 'Wall Profile', value: 'Heavy 5-ply & 7-ply AAA/BC heavy-duty corrugated board' },
       { label: 'Weight Reduction', value: 'Up to 50% lighter than traditional wooden crates' },
-      { label: 'Pallet Integration', value: 'Compatible with standard Euro (1200x800) and ISO (1200x1000) pallets' }
+      { label: 'Pallet Integration', value: 'Compatible with standard Euro (1200x800) and ISO (1200x1000) pallets' },
+      { label: 'Sustainability', value: '100% Recyclable — Lighter, smarter & cost-effective' }
     ],
     features: [
       'Eliminates ISPM-15 wooden fumigation certificates and border delays',
       'Delivered flat-packed to save over 70% in inbound transport and storage space',
       'Massive impact absorption reduces shock and vibration during forklift transit',
-      'Significantly lowers freight and handling costs for export consignments'
+      'Significantly lowers freight and handling costs for export consignments',
+      "It's time to move beyond heavy, expensive wooden packaging with ESTI high-strength corrugated export boxes",
+      'Lighter. Smarter. Cost-effective. 100% recyclable'
     ],
     applications: 'Automotive engines, gearbox assemblies, pumps, forged components, heavy industrial machinery.'
   },

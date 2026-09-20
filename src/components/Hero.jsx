@@ -10,7 +10,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20 bg-black overflow-hidden border-b border-neutral-800">
+    <section id="hero" className="relative pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20 bg-black overflow-hidden border-b border-neutral-800">
       
       {/* High-definition Factory Background Video playing in continuous loop */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">

@@ -39,10 +39,14 @@ export default function Navbar() {
           
           {/* Direct Phone & Email Links */}
           <div className="flex items-center space-x-4 sm:space-x-6">
-            <span className="flex items-center gap-1.5 text-slate-300">
+            <a 
+              href="tel:+919833182733" 
+              title="Call ESTI Packaging"
+              className="flex items-center gap-1.5 text-slate-300 hover:text-emerald-400 transition-colors"
+            >
               <Phone className="w-3.5 h-3.5 text-emerald-400" />
               <span>(+91) 983 318 2733</span>
-            </span>
+            </a>
             <a 
               href="mailto:sunil@estipackaging.com" 
               className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors"
@@ -99,7 +103,10 @@ export default function Navbar() {
             >
               <img 
                 src="/assets/images/esti-logo-emblem.png" 
-                alt="ESTI Packaging Logo" 
+                alt="ESTI Packaging Industry Logo" 
+                width="44"
+                height="44"
+                fetchPriority="high"
                 className="h-10 sm:h-11 w-auto object-contain transition-transform group-hover:scale-105 drop-shadow-sm"
               />
               <div className="flex flex-col">

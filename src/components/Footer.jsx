@@ -18,7 +18,10 @@ export default function Footer() {
               <div className="w-11 h-11 rounded-xl bg-white p-1.5 shadow-sm flex items-center justify-center shrink-0">
                 <img 
                   src="/assets/images/esti-logo-emblem.png" 
-                  alt="ESTI Packaging Logo" 
+                  alt="ESTI Packaging Industry Emblem Logo" 
+                  width="44"
+                  height="44"
+                  loading="lazy"
                   className="w-full h-full object-contain"
                 />
               </div>
