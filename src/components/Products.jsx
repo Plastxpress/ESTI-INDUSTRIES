@@ -26,13 +26,24 @@ const PRODUCTS_CATALOG = [
       '/assets/images/corrugated-custom-bicycle-box.png',
       '/assets/images/corrugated-box-line.png',
       '/assets/images/corrugated-box-dispatch.jpg',
-      '/assets/images/corrugated-flute-profiles.jpeg'
+      '/assets/images/corrugated-flute-profiles.jpeg',
+      '/assets/images/corrugated-bokz-dual.jpg',
+      '/assets/images/corrugated-bokz-single.jpg',
+      '/assets/images/corrugated-flat-pallet-shipper.jpg'
     ],
     imageLabels: [
       'Custom Fitted Box',
       'Production Line',
       'Stacking & Dispatch',
-      'Flute Profiles (A, C, B)'
+      'Flute Profiles (A, C, B)',
+      'Dual Box System',
+      'Heavy-Duty Shipper',
+      'Flat Pallet Shipper'
+    ],
+    extraDescription: [
+      'Driven by engineering excellence, innovation, and advanced manufacturing, we develop packaging designed to meet the demanding performance, protection, and sustainability requirements of modern industries.',
+      'Our capabilities extend from standard corrugated packaging to heavy-duty and engineered packaging systems, offering dependable strength, dimensional precision, and consistent quality.',
+      'With modern manufacturing infrastructure and a commitment to continuous improvement, we deliver packaging engineered for performance, built for reliability, and designed for value.'
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Core Pedigree (Since 1995)',
@@ -85,6 +96,18 @@ const PRODUCTS_CATALOG = [
     title: 'UN 1266 Certified Hazardous Cargo Boxes',
     subtitle: 'Certified Packaging for Class 3 Flammable Liquids & Dangerous Goods',
     image: '/assets/images/un-certified-box.jpg',
+    images: [
+      '/assets/images/un-certified-box.jpg',
+      '/assets/images/un-certified-bulk-shipper.jpg',
+      '/assets/images/un-certified-4g-cartons.jpg',
+      '/assets/images/un-certified-flute-stack.jpg'
+    ],
+    imageLabels: [
+      'UN Certified Box',
+      'Bulk UN Shipper',
+      '4G/4GV Cartons',
+      'Corrugated Board Stack'
+    ],
     category: 'UN Certified Boxes',
     badge: 'UN 1266 / 4GV Certified',
     description: 'Rigidly tested and officially certified UN packaging compliant with IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations for the domestic transit and international export of hazardous and flammable liquid products.',
@@ -107,6 +130,18 @@ const PRODUCTS_CATALOG = [
     title: 'Octagonal Jumbo Bulk Bins & Drum Cartons',
     subtitle: 'Ransom Built to Protect - High Radial Outward Pressure Storage',
     image: '/assets/images/octagonal-bulk-bin.jpg',
+    images: [
+      '/assets/images/octagonal-bulk-bin.jpg',
+      '/assets/images/octagonal-bulk-bin-benzo.png',
+      '/assets/images/octagonal-bulk-bin-pallet.jpg',
+      '/assets/images/octagonal-bulk-bin-end-caps.jpg'
+    ],
+    imageLabels: [
+      'Standard Octabin',
+      'Multi-Size Octabins',
+      'Pallet-Mounted Octabin',
+      'Open End-Cap View'
+    ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Heavy Industrial Grade',
     description: 'Heavy-duty 8-sided octagonal corrugated bulk bins featuring heavy top and bottom caps. Specially designed to resist extreme outward hydrostatic pressure exerted by dense loose granular materials.',
@@ -129,6 +164,16 @@ const PRODUCTS_CATALOG = [
     title: 'Telescopic Vertical Industrial Cartons',
     subtitle: 'Custom 2-Meter Tall Corrugated Carton for Industrial Shafts & Long Profiles',
     image: '/assets/images/tall-industrial-carton-esti.jpg',
+    images: [
+      '/assets/images/tall-industrial-carton-esti.jpg',
+      '/assets/images/tall-carton-hdwell.png',
+      '/assets/images/tall-cartons-pair.jpg'
+    ],
+    imageLabels: [
+      'ESTI 2-Meter Carton',
+      'Printed Tall Carton',
+      'Telescopic Tall Boxes'
+    ],
     category: 'Custom & Large Format',
     badge: '2-Meter Extra Tall',
     description: 'Custom-engineered extra-tall corrugated carton towering over 2 meters in height. Built with high-caliper vertical fluting to provide extraordinary column strength for long industrial components, roll goods, and vertical machinery assemblies without bowing.',
@@ -153,6 +198,22 @@ const PRODUCTS_CATALOG = [
     title: 'Precision Die-Cut Boxes & Ergonomic Trays',
     subtitle: 'Flatbed CNC Die-Cutting with Integrated Handholes & Interlocks',
     image: '/assets/images/die-cut-corrugated.jpg',
+    images: [
+      '/assets/images/die-cut-corrugated.jpg',
+      '/assets/images/die-cut-handle-partition.jpg',
+      '/assets/images/die-cut-custom-insert.jpg',
+      '/assets/images/die-cut-mailer-sleeve.jpg',
+      '/assets/images/die-cut-open-tuck-top.jpg',
+      '/assets/images/die-cut-insulated-box.jpg'
+    ],
+    imageLabels: [
+      'CNC Die-Cut Box',
+      'Handle Partition Box',
+      'Custom Insert Tray',
+      'Mailer Sleeve',
+      'Tuck-Top Mailer',
+      'Insulated Shipper'
+    ],
     category: 'Die-Cut & Partitions',
     badge: 'CNC Precision Die-Cut',
     description: 'Custom-cut corrugated packaging produced with steel-rule die tooling to sub-millimeter precision. Features integrated ergonomic carrying handles, self-locking fold tabs, and display-ready wrap designs.',
@@ -199,11 +260,19 @@ const PRODUCTS_CATALOG = [
     image: '/assets/images/document-storage-stacked.jpg',
     images: [
       '/assets/images/document-storage-stacked.jpg',
-      '/assets/images/document-storage-files.png'
+      '/assets/images/document-storage-files.png',
+      '/assets/images/document-storage-dbs-bank.png',
+      '/assets/images/document-storage-jumbo-box.jpg',
+      '/assets/images/document-storage-open-lid.jpg',
+      '/assets/images/document-storage-banker-box.jpg'
     ],
     imageLabels: [
       'Stacked Archive Storage',
-      'Filing System Layout'
+      'Filing System Layout',
+      'Branded Document Box',
+      'Jumbo Storage Box',
+      'Open Lid Design',
+      'Standard Banker Box'
     ],
     category: 'Die-Cut & Partitions',
     badge: 'Organize • Protect • Retrieve',
@@ -232,11 +301,15 @@ const PRODUCTS_CATALOG = [
     image: '/assets/images/wooden-pallets-stack.jpg',
     images: [
       '/assets/images/wooden-pallets-stack.jpg',
-      '/assets/images/wooden-pallets-warehouse.jpg'
+      '/assets/images/wooden-pallets-warehouse.jpg',
+      '/assets/images/wooden-pallets-four-way.jpg',
+      '/assets/images/wooden-pallets-euro-stack.jpg'
     ],
     imageLabels: [
       'Standard Wooden Euro Pallets',
-      'Warehouse Inventory & Skids'
+      'Warehouse Inventory & Skids',
+      'Four-Way Entry Pallet',
+      'Euro Pallet Stack'
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'ISPM-15 Certified / Zero to Landfill',
@@ -514,6 +587,17 @@ export default function Products() {
                       <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
                       <span>Custom Dimensions: Manufactured to exact client drawings & blueprints.</span>
                     </div>
+
+                    {/* Extra Description Paragraphs */}
+                    {product.extraDescription && product.extraDescription.length > 0 && (
+                      <div className="space-y-3 mt-3 px-1">
+                        {product.extraDescription.map((para, idx) => (
+                          <p key={idx} className="text-xs sm:text-sm leading-relaxed text-emerald-800 font-medium">
+                            {para}
+                          </p>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Product Details & Engineering Specs (7 cols on lg) */}

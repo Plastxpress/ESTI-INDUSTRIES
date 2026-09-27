@@ -66,6 +66,7 @@ export default function PackagingWithPurpose() {
         'Delivered knocked-down flat, cutting inbound transport fuel by up to 70%',
         'Surpasses 1,500 kg static load capacity through high-ECT flute architecture'
       ],
+      video: '/assets/videos/corrugated-timber-replacement.mp4',
       image: '/assets/images/ssdn-heavy-duty-pallet.jpg'
     },
     {
@@ -252,13 +253,24 @@ export default function PackagingWithPurpose() {
 
             {/* Visual Side (5 cols) */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-100 h-80 sm:h-96 flex items-center justify-center p-4 group">
-                <img
-                  src={currentPillar.image}
-                  alt={currentPillar.title}
-                  className="max-h-full max-w-full object-contain rounded-lg drop-shadow transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                />
+              <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-md bg-slate-950 h-80 sm:h-96 flex items-center justify-center group">
+                {currentPillar.video ? (
+                  <video
+                    src={currentPillar.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                ) : (
+                  <img
+                    src={currentPillar.image}
+                    alt={currentPillar.title}
+                    className="max-h-full max-w-full object-contain rounded-lg drop-shadow transition-transform duration-300 group-hover:scale-105 p-4"
+                    loading="lazy"
+                  />
+                )}
                 <div className="absolute bottom-3 left-3 right-3 bg-slate-900/90 backdrop-blur-sm text-white p-3 rounded-xl border border-slate-800 pointer-events-none">
                   <div className="text-xs font-bold flex items-center gap-1.5 text-emerald-300">
                     <Globe2 className="w-3.5 h-3.5 text-emerald-400" />
