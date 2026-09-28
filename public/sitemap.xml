@@ -6,42 +6,49 @@
   <!-- Primary Landing Page -->
   <url>
     <loc>https://www.estipack.com/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Main Products Catalog Section -->
   <url>
     <loc>https://www.estipack.com/#products</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Sustainability & Value Proposition Section -->
   <url>
     <loc>https://www.estipack.com/#purpose</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Industries Served Section -->
   <url>
     <loc>https://www.estipack.com/#industries</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Factory Infrastructure & Specifications Section -->
   <url>
     <loc>https://www.estipack.com/#factory</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Contact & Inquiry Section -->
+  <!-- Quote / Inquiry Section -->
+  <url>
+    <loc>https://www.estipack.com/#quote</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Contact & Footer Section -->
   <url>
     <loc>https://www.estipack.com/#footer</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-09-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
