@@ -139,12 +139,12 @@ export default function Footer() {
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-emerald-400 shrink-0" />
                 <a 
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=esteepack@gmail.com" 
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=info@estipack.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-emerald-400 transition-colors break-all"
                 >
-                  esteepack@gmail.com
+                  info@estipack.com
                 </a>
               </li>
               <li className="flex items-center gap-2.5">

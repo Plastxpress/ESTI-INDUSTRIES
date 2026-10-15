@@ -50,7 +50,7 @@ export default function BoardSpec() {
             <p className="mt-10 measure-sm text-[15px] leading-[1.6] text-ink-soft lg:mt-auto lg:pt-12">
               Not sure which grade the job needs?{' '}
               <a
-                href="mailto:esteepack@gmail.com?subject=Board%20grade%20enquiry"
+                href="mailto:info@estipack.com?subject=Board%20grade%20enquiry"
                 className="font-semibold text-ultra underline decoration-1 underline-offset-4 transition-colors hover:text-ultra-lift"
               >
                 Send us the load

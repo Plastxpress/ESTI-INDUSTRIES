@@ -711,7 +711,7 @@ export default function Products() {
                         </a>
 
                         <a
-                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=esteepack@gmail.com&su=${encodeURIComponent(`Inquiry: ${product.title} - ESTI Packaging`)}&body=${encodeURIComponent(`Hello ESTI Packaging Team,\n\nI am interested in learning more about ${product.title}.\n\nPlease provide:\n- Technical Specifications\n- Pricing & Minimum Order Quantity (MOQ)\n- Delivery Timeline\n\nThank you.`)}`}
+                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=info@estipack.com&su=${encodeURIComponent(`Inquiry: ${product.title} - ESTI Packaging`)}&body=${encodeURIComponent(`Hello ESTI Packaging Team,\n\nI am interested in learning more about ${product.title}.\n\nPlease provide:\n- Technical Specifications\n- Pricing & Minimum Order Quantity (MOQ)\n- Delivery Timeline\n\nThank you.`)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold font-sans shadow-sm transition-colors"
