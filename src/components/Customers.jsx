@@ -2,22 +2,22 @@ import React from 'react';
 import { Award, Users, CheckCircle } from 'lucide-react';
 
 const CLIENTS = [
-  { name: 'Garrett', sector: 'Automotive & Turbochargers' },
-  { name: 'Tyman International', sector: 'Building & Fenestration' },
-  { name: 'Idemitsu', sector: 'Petrochemicals & Lubricants' },
-  { name: 'Godrej', sector: 'FMCG & Consumer Goods' },
-  { name: 'PepsiCo', sector: 'Food & Beverage' },
-  { name: 'Maersk', sector: 'Global Shipping & Logistics' },
-  { name: 'Cipla', sector: 'Pharmaceuticals' },
-  { name: 'Mansons', sector: 'Auto Components' },
-  { name: 'Honeywell', sector: 'Industrial Aerospace & Controls' },
-  { name: 'Britannia', sector: 'Packaged Foods' },
-  { name: 'Racold', sector: 'Water Heating & Appliances' },
-  { name: 'SchlegelGiesse', sector: 'Engineered Hardware' },
-  { name: 'Rubaloy', sector: 'NBR-PVC Polymers' },
-  { name: 'Bharat Forge', sector: 'Forging & Heavy Engineering' },
-  { name: 'Kalyani Group', sector: 'Specialty Engineering' },
-  { name: 'Piramal', sector: 'Healthcare & Pharma' },
+  { name: 'Garrett', sector: 'Automotive & Turbochargers', logo: '/assets/images/logos/garrett.png' },
+  { name: 'Tyman International', sector: 'Building & Fenestration', logo: '/assets/images/logos/tyman.png' },
+  { name: 'Idemitsu', sector: 'Petrochemicals & Lubricants', logo: '/assets/images/logos/idemitsu.png' },
+  { name: 'Godrej', sector: 'FMCG & Consumer Goods', logo: '/assets/images/logos/godrej.png' },
+  { name: 'PepsiCo', sector: 'Food & Beverage', logo: '/assets/images/logos/pepsico.png' },
+  { name: 'Maersk', sector: 'Global Shipping & Logistics', logo: '/assets/images/logos/maersk.png' },
+  { name: 'Cipla', sector: 'Pharmaceuticals', logo: '/assets/images/logos/cipla.png' },
+  { name: 'Mansons', sector: 'Auto Components', logo: '/assets/images/logos/mansons.png' },
+  { name: 'Honeywell', sector: 'Industrial Aerospace & Controls', logo: '/assets/images/logos/honeywell.png' },
+  { name: 'Britannia', sector: 'Packaged Foods', logo: '/assets/images/logos/britannia.png' },
+  { name: 'Racold', sector: 'Water Heating & Appliances', logo: '/assets/images/logos/racold.png' },
+  { name: 'SchlegelGiesse', sector: 'Engineered Hardware', logo: '/assets/images/logos/schlegelgiesse.png' },
+  { name: 'Rubaloy', sector: 'NBR-PVC Polymers', logo: '/assets/images/logos/rubaloy.png' },
+  { name: 'Bharat Forge', sector: 'Forging & Heavy Engineering', logo: '/assets/images/logos/bharat-forge.png' },
+  { name: 'Kalyani Group', sector: 'Specialty Engineering', logo: '/assets/images/logos/kalyani.png' },
+  { name: 'Piramal', sector: 'Healthcare & Pharma', logo: '/assets/images/logos/piramal.png' },
 ];
 
 export default function Customers() {
@@ -46,10 +46,21 @@ export default function Customers() {
               key={idx}
               className="p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-emerald-300 hover:shadow-md transition-all duration-200 flex flex-col justify-center items-center text-center group"
             >
-              <div className="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center font-black text-xs mb-2.5 group-hover:scale-110 transition-transform">
-                {client.name.charAt(0)}
+              <div className="h-12 w-full flex items-center justify-center mb-3">
+                {client.logo ? (
+                  <img
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    className="max-h-10 max-w-[120px] object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-9 h-9 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center font-black text-xs group-hover:scale-110 transition-transform">
+                    {client.name.charAt(0)}
+                  </div>
+                )}
               </div>
-              <h4 className="text-base font-black text-slate-800 font-display group-hover:text-emerald-700 transition-colors">
+              <h4 className="text-sm sm:text-base font-black text-slate-800 font-display group-hover:text-emerald-700 transition-colors">
                 {client.name}
               </h4>
               <span className="text-[11px] font-medium text-slate-600 mt-1">

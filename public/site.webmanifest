@@ -1,0 +1,25 @@
+{
+  "name": "ESTI Packaging Industry",
+  "short_name": "ESTI Pack",
+  "description": "Manufacturer of custom corrugated boxes, heavy-duty pallet containers, and UN-certified export packaging since 1995.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#020617",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -48,12 +48,11 @@ export default function Navbar() {
               <span>(+91) 983 318 2733</span>
             </a>
             <a 
-              href="mailto:sunil@estipackaging.com" 
+              href="mailto:info@estipack.com" 
               className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors"
             >
               <Mail className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="hidden sm:inline">sunil@estipackaging.com</span>
-              <span className="sm:hidden">Email</span>
+              <span>info@estipack.com</span>
             </a>
             <div className="hidden lg:flex items-center gap-1.5 text-slate-400">
               <MapPin className="w-3.5 h-3.5 text-slate-400" />
@@ -186,7 +185,9 @@ export default function Navbar() {
             ))}
             
             <div className="pt-3 border-t border-slate-100 text-center text-xs text-slate-500">
-              Email: <span className="font-medium text-slate-800">sunil@estipackaging.com</span>
+              <a href="mailto:info@estipack.com" className="font-medium text-slate-800 hover:text-emerald-600 transition-colors">
+                info@estipack.com
+              </a>
             </div>
           </div>
         )}

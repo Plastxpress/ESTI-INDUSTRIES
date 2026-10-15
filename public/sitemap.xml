@@ -1,55 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- =====================================================
+       ESTI Packaging Industry — Comprehensive XML Sitemap
+       Website: https://www.estipack.com
+       Last updated: 2026-10-15
+       ===================================================== -->
+
   <!-- Primary Landing Page -->
   <url>
     <loc>https://www.estipack.com/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/esti-logo-full.jpg</image:loc>
+      <image:title>ESTI Packaging Industry Logo</image:title>
+      <image:caption>ESTI Packaging Industry — ISO 9001 and UN 1266 certified corrugated box manufacturer in India since 1995</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/esti-logo-emblem.png</image:loc>
+      <image:title>ESTI Packaging Emblem</image:title>
+      <image:caption>Official emblem of ESTI Packaging Industry</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/favicon-512x512.png</image:loc>
+      <image:title>ESTI Packaging Brand Icon</image:title>
+      <image:caption>Official brand icon and Google search logo for ESTI Packaging Industry</image:caption>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://www.estipack.com/assets/images/factory-warehouse-panoramic.jpg</video:thumbnail_loc>
+      <video:title>ESTI Packaging Factory — Corrugated Box Manufacturing Plant</video:title>
+      <video:description>Inside the ESTI Packaging corrugated box manufacturing facility featuring automated 5-ply board plant, printer slotters, and quality testing laboratory. Plants in Mumbai and Pune, Maharashtra, India.</video:description>
+      <video:content_loc>https://www.estipack.com/assets/videos/hero-factory-bg.mp4</video:content_loc>
+    </video:video>
   </url>
-  <!-- Main Products Catalog Section -->
+
+  <!-- ====== Products Catalog Section ====== -->
   <url>
     <loc>https://www.estipack.com/#products</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/corrugated-custom-bicycle-box.png</image:loc>
+      <image:title>Corrugated Boxes and Master Shipping Cartons</image:title>
+      <image:caption>Custom 3-ply, 5-ply, and 7-ply corrugated shipping boxes manufactured by ESTI Packaging with sheet sizes up to 5000x2500mm</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/ssdn-heavy-duty-pallet.jpg</image:loc>
+      <image:title>Heavy-Duty Pallet Boxes and Bulk Containers</image:title>
+      <image:caption>Heavy-duty corrugated pallet containers supporting up to 1500 kg static load — timber crate replacement</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/un-certified-box.jpg</image:loc>
+      <image:title>UN 1266 Certified Hazardous Cargo Boxes</image:title>
+      <image:caption>UN certified corrugated boxes compliant with IMDG, ICAO/IATA, and ADR for Class 3 flammable liquids</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/octagonal-bulk-bin.jpg</image:loc>
+      <image:title>Octagonal Jumbo Bulk Bins</image:title>
+      <image:caption>8-sided octagonal corrugated bulk bins with top and bottom caps for high-pressure storage up to 1000 kg</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/tall-industrial-carton-esti.jpg</image:loc>
+      <image:title>Telescopic Vertical Industrial Cartons</image:title>
+      <image:caption>Custom 2-meter tall corrugated cartons with vertical fluting for extreme column strength</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/eco-pallet-box.jpg</image:loc>
+      <image:title>Eco-Friendly Paper Pallet Boxes</image:title>
+      <image:caption>Sustainable corrugated pallet containers with integrated paper runners — ISPM-15 exempt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/die-cut-corrugated.jpg</image:loc>
+      <image:title>Die-Cut Cartons and Self-Locking Mailers</image:title>
+      <image:caption>Precision CNC rotary die-cut boxes with locking tabs, tear strips, and ventilation holes</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/custom-dividers.jpg</image:loc>
+      <image:title>Custom Interlocking Grid Dividers and Partition Sets</image:title>
+      <image:caption>Corrugated dividers providing individual cell protection for fragile components</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/document-storage-stacked.jpg</image:loc>
+      <image:title>Document Storage and Archival Boxes</image:title>
+      <image:caption>Corrugated archival boxes with labeling panels and hand-holes for corporate records</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/wooden-pallets-stack.jpg</image:loc>
+      <image:title>Heat-Treated ISPM-15 Wooden Pallets</image:title>
+      <image:caption>ISPM-15 certified Euro and four-way wooden pallets for heavy industrial freight</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/paper-core-tubes.jpg</image:loc>
+      <image:title>Paper Cores and Industrial Spirally Wound Tubes</image:title>
+      <image:caption>High crush-strength spiral paper tubes for paper mills, film extrusion, textiles, and foil winding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/angle-edge-boards.jpg</image:loc>
+      <image:title>Edge and Corner Protectors</image:title>
+      <image:caption>Laminated solid board L-shaped and U-profile angle boards for transit protection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/honeycomb-packaging.jpg</image:loc>
+      <image:title>Honeycomb Packaging and Void Fill Solutions</image:title>
+      <image:caption>Hexagonal honeycomb paperboard panels for lightweight high-compression cushioning</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/printed-tapes.jpg</image:loc>
+      <image:title>Industrial Heavy-Duty Packaging Tapes</image:title>
+      <image:caption>BOPP and reinforced cross-weave filament tapes for corrugated carton sealing</image:caption>
+    </image:image>
   </url>
-  <!-- Sustainability & Value Proposition Section -->
+
+  <!-- ====== Packaging with Purpose / Sustainability Section ====== -->
   <url>
     <loc>https://www.estipack.com/#purpose</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-  <!-- Industries Served Section -->
+
+  <!-- ====== Industries Served Section ====== -->
   <url>
     <loc>https://www.estipack.com/#industries</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
-  <!-- Factory Infrastructure & Specifications Section -->
+
+  <!-- ====== Factory Infrastructure & Specifications Section ====== -->
   <url>
     <loc>https://www.estipack.com/#factory</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/factory-warehouse-panoramic.jpg</image:loc>
+      <image:title>ESTI Packaging Factory Warehouse</image:title>
+      <image:caption>Panoramic view of the ESTI Packaging manufacturing and warehouse facility</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.estipack.com/assets/images/machinery-corrugator-line.jpg</image:loc>
+      <image:title>Corrugator Manufacturing Line</image:title>
+      <image:caption>Imported 5-ply board plant with 2200mm width automatic corrugating line</image:caption>
+    </image:image>
   </url>
-  <!-- Quote / Inquiry Section -->
+
+  <!-- ====== Board Specifications Section ====== -->
   <url>
-    <loc>https://www.estipack.com/#quote</loc>
-    <lastmod>2026-09-28</lastmod>
+    <loc>https://www.estipack.com/#board</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
   </url>
-  <!-- Contact & Footer Section -->
+
+  <!-- ====== Why ESTI Section ====== -->
+  <url>
+    <loc>https://www.estipack.com/#why-esti</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- ====== Contact & Footer Section ====== -->
   <url>
     <loc>https://www.estipack.com/#footer</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.75</priority>
   </url>
+
 </urlset>

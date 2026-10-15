@@ -1,8 +1,37 @@
+# =========================================================
 # Robots.txt for ESTI Packaging Industry
 # Website: https://www.estipack.com
+# Last updated: 2026-10-15
+# =========================================================
 
+# Allow all search engine crawlers full access
 User-agent: *
 Allow: /
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /.git/
+Disallow: /dist/
+Disallow: /*.map$
 
-# Sitemap Index
+# Crawl-delay for polite crawling
+Crawl-delay: 5
+
+# Google Bot — unrestricted
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Google Image Bot — allow all images and favicons for Google Search
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# Sitemap location
 Sitemap: https://www.estipack.com/sitemap.xml
+
+# Host directive (for Yandex and other crawlers)
+Host: https://www.estipack.com

@@ -41,7 +41,7 @@ export default function Contact() {
     e.preventDefault();
     const subject = encodeURIComponent(`B2B Packaging Inquiry: ${inquirySubject} - ${clientCompany || clientName || 'Buyer'}`);
     const body = encodeURIComponent(
-      `Hello Sunil / ESTI Packaging Industry,\n\n` +
+      `Hello ESTI Packaging Team,\n\n` +
       `I would like to inquire about your packaging solutions.\n\n` +
       `Contact Name: ${clientName || 'Not specified'}\n` +
       `Company: ${clientCompany || 'Not specified'}\n` +
@@ -50,12 +50,12 @@ export default function Contact() {
       `Requirements / Message:\n${clientMessage || 'Please provide technical catalog, pricing, and minimum order quantities.'}\n\n` +
       `Thank you.`
     );
-    window.location.href = `mailto:sunil@estipackaging.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@estipack.com?subject=${subject}&body=${body}`;
   };
 
   const handleWhatsAppChat = () => {
     const text = encodeURIComponent(
-      `Hello Sunil,\nI am contacting ESTI Packaging regarding ${inquirySubject}.\nPlease share product specifications and quotation details.`
+      `Hello ESTI Packaging Team,\nI am contacting ESTI Packaging regarding ${inquirySubject}.\nPlease share product specifications and quotation details.`
     );
     window.open(`https://wa.me/919833182733?text=${text}`, '_blank');
   };
@@ -139,14 +139,14 @@ export default function Contact() {
               </div>
               <p className="text-xs font-bold uppercase tracking-wider text-slate-400">Corporate & RFQ Inbox</p>
               <h3 className="text-xl sm:text-2xl font-black text-white font-display mt-1 break-all">
-                sunil@estipackaging.com
+                info@estipack.com
               </h3>
               <p className="text-xs text-slate-400 mt-2">
                 Official email for purchase orders, enterprise tenders, and international export queries.
               </p>
             </div>
             <a
-              href="mailto:sunil@estipackaging.com"
+              href="mailto:info@estipack.com"
               className="mt-6 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-700 hover:bg-slate-600 text-white text-xs sm:text-sm font-bold transition-colors"
             >
               <Mail className="w-4 h-4" />
@@ -224,7 +224,7 @@ export default function Contact() {
                   Quick Email Inquiry Generator
                 </h3>
                 <p className="text-xs text-slate-400 mt-1">
-                  Fill in your details below to instantly open a pre-formatted email to <span className="text-emerald-400 font-semibold">sunil@estipackaging.com</span>.
+                  Fill in your details below to instantly open a pre-formatted email to <span className="text-emerald-400 font-semibold">info@estipack.com</span>.
                 </p>
               </div>
 

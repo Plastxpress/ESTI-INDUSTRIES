@@ -1,4 +1,8 @@
+# =========================================================
 # ESTI Packaging - Apache / LiteSpeed Server Optimization
+# Comprehensive SEO, Performance & Security Configuration
+# =========================================================
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
@@ -9,6 +13,10 @@
   # Canonical Hostname (www redirection for estipack.com or estipackaging.com)
   RewriteCond %{HTTP_HOST} ^(estipack\.com|estipackaging\.com) [NC]
   RewriteRule ^(.*)$ https://www.%1/$1 [L,R=301]
+
+  # Remove trailing slash (except root) for clean canonical URLs
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)/$ /$1 [L,R=301]
 
   # SPA Routing: Send all non-file requests to index.html
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -22,7 +30,7 @@
   ExpiresDefault "access plus 1 month"
   ExpiresByType text/html "access plus 0 seconds"
   ExpiresByType text/xml "access plus 0 seconds"
-  ExpiresByType application/xml "access plus 0 seconds"
+  ExpiresByType application/xml "access plus 1 day"
   ExpiresByType application/json "access plus 0 seconds"
   ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
@@ -33,11 +41,14 @@
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
 # Gzip / Deflate Compression
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml application/xml font/woff font/woff2
 </IfModule>
 
 # Security Headers
@@ -46,4 +57,21 @@
   Header set X-Frame-Options "SAMEORIGIN"
   Header set X-XSS-Protection "1; mode=block"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(self)"
+  
+  # SEO: X-Robots-Tag for search engine directives via HTTP headers
+  Header set X-Robots-Tag "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 </IfModule>
+
+# Correct MIME types for sitemap and other SEO files
+<IfModule mod_mime.c>
+  AddType application/xml .xml
+  AddType text/plain .txt
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
+# ETag optimization (reduce overhead)
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
