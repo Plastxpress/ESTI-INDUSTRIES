@@ -7,17 +7,19 @@
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- =====================================================
-       ESTI Packaging Industry — Comprehensive XML Sitemap
+       ESTI Packaging Industry — Canonical XML Sitemap
        Website: https://www.estipack.com
        Last updated: 2026-10-15
        ===================================================== -->
 
-  <!-- Primary Landing Page -->
+  <!-- Primary Website URL with all indexed media assets -->
   <url>
     <loc>https://www.estipack.com/</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <!-- Brand Identity Assets -->
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/esti-logo-full.jpg</image:loc>
       <image:title>ESTI Packaging Industry Logo</image:title>
@@ -33,20 +35,16 @@
       <image:title>ESTI Packaging Brand Icon</image:title>
       <image:caption>Official brand icon and Google search logo for ESTI Packaging Industry</image:caption>
     </image:image>
+
+    <!-- Factory Video -->
     <video:video>
       <video:thumbnail_loc>https://www.estipack.com/assets/images/factory-warehouse-panoramic.jpg</video:thumbnail_loc>
       <video:title>ESTI Packaging Factory — Corrugated Box Manufacturing Plant</video:title>
       <video:description>Inside the ESTI Packaging corrugated box manufacturing facility featuring automated 5-ply board plant, printer slotters, and quality testing laboratory. Plants in Mumbai and Pune, Maharashtra, India.</video:description>
       <video:content_loc>https://www.estipack.com/assets/videos/hero-factory-bg.mp4</video:content_loc>
     </video:video>
-  </url>
 
-  <!-- ====== Products Catalog Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#products</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <!-- Product Line Images -->
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/corrugated-custom-bicycle-box.png</image:loc>
       <image:title>Corrugated Boxes and Master Shipping Cartons</image:title>
@@ -117,30 +115,8 @@
       <image:title>Industrial Heavy-Duty Packaging Tapes</image:title>
       <image:caption>BOPP and reinforced cross-weave filament tapes for corrugated carton sealing</image:caption>
     </image:image>
-  </url>
 
-  <!-- ====== Packaging with Purpose / Sustainability Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#purpose</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ====== Industries Served Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#industries</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- ====== Factory Infrastructure & Specifications Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#factory</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <!-- Manufacturing Infrastructure Images -->
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/factory-warehouse-panoramic.jpg</image:loc>
       <image:title>ESTI Packaging Factory Warehouse</image:title>
@@ -151,30 +127,6 @@
       <image:title>Corrugator Manufacturing Line</image:title>
       <image:caption>Imported 5-ply board plant with 2200mm width automatic corrugating line</image:caption>
     </image:image>
-  </url>
-
-  <!-- ====== Board Specifications Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#board</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- ====== Why ESTI Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#why-esti</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-
-  <!-- ====== Contact & Footer Section ====== -->
-  <url>
-    <loc>https://www.estipack.com/#footer</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
   </url>
 
 </urlset>
