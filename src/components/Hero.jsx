@@ -49,6 +49,11 @@ export default function Hero() {
             </span>
           </h1>
 
+          {/* Technical Subheading */}
+          <h2 className="-mt-1 text-base sm:text-lg md:text-xl font-semibold text-emerald-300 leading-snug drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+            Multiple flute Combinations for 3 Ply, 5 Ply &amp; 7 Ply Corrugated Boxes, Wall Thickness ranging from 3mm up to 15 mm.
+          </h2>
+
           <p className="text-slate-200 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl text-left drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
             Your trusted partner in custom corrugated packaging solutions. With over three decades of industry experience, <strong className="text-white font-semibold">ESTI Packaging Industry</strong> is a pioneer in manufacturing Jumbo Boxes, Pallet Boxes, and UN Certified Boxes tailored for domestic and export operations.
           </p>
