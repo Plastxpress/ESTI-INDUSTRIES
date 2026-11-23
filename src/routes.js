@@ -28,11 +28,10 @@ const organization = {
   name: SITE_NAME,
   alternateName: ['ESTI Packaging'],
   url: SITE_URL,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-512x512.png`, width: 512, height: 512 },
+  logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-512x512.png?v=2`, width: 512, height: 512 },
   image: [
     `${SITE_URL}/assets/images/og/about.jpg`,
     `${SITE_URL}/assets/images/og/contact.jpg`,
-    `${SITE_URL}/assets/images/esti-logo-full.jpg`,
   ],
   description:
     'ESTI Packaging Industry manufactures corrugated boxes (3-ply, 5-ply and 7-ply), heavy-duty pallet boxes, UN 1266 certified boxes, octagonal bulk bins, 2-metre tall cartons, die-cut boxes, dividers, document storage boxes and supplies heat-treated wooden pallets. Over 30 years of box manufacturing since 1995.',

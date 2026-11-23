@@ -1,75 +1,79 @@
+// Regenerates every site icon from the ESTI "E" emblem:
+//   node generate-favicons.cjs
+// Icons are the emblem centred on a solid white square with generous padding, so they
+// stay whole when Google / Android crop them into a circle or rounded square.
 const sharp = require('sharp');
 const path = require('path');
 const fs = require('fs');
 
-const inputPath = path.join(__dirname, 'public', 'assets', 'images', 'esti-logo-emblem.png');
-const publicDir = path.join(__dirname, 'public');
+const SRC = path.join(__dirname, 'public', 'assets', 'images', 'esti-logo-emblem.png');
+const OUT = path.join(__dirname, 'public');
+const WHITE = { r: 255, g: 255, b: 255, alpha: 1 };
 
-async function generateFavicons() {
-  console.log('Generating square favicons from esti-logo-emblem.png...');
-  
-  const image = sharp(inputPath);
-  const metadata = await image.metadata();
-  console.log(`Source: ${metadata.width}x${metadata.height}`);
-  
-  // Make the image square by adding white padding
-  const maxDim = Math.max(metadata.width, metadata.height);
-  
-  const sizes = [
-    { name: 'favicon-512x512.png', size: 512 },
-    { name: 'favicon-192x192.png', size: 192 },
-    { name: 'favicon-180x180.png', size: 180 },
-    { name: 'favicon-48x48.png', size: 48 },
-    { name: 'favicon-32x32.png', size: 32 },
-    { name: 'favicon-16x16.png', size: 16 },
-  ];
-
-  for (const { name, size } of sizes) {
-    await sharp(inputPath)
-      .resize(size, size, {
-        fit: 'contain',
-        background: { r: 255, g: 255, b: 255, alpha: 0 }
-      })
-      .png()
-      .toFile(path.join(publicDir, name));
-    console.log(`  ✓ ${name} (${size}x${size})`);
+// The emblem PNG has a faint white glow on its left edge: trim transparent/near-white
+// borders so only the blue mark remains.
+async function emblem() {
+  // Keep only the blue mark: any pixel that is not clearly blue (the grey/white glow) becomes white.
+  const { data, info } = await sharp(SRC).flatten({ background: WHITE }).raw().toBuffer({ resolveWithObject: true });
+  for (let i = 0; i < data.length; i += info.channels) {
+    const [r, g, b] = [data[i], data[i + 1], data[i + 2]];
+    if (b - Math.max(r, g) < 45) { data[i] = 255; data[i + 1] = 255; data[i + 2] = 255; }
   }
-
-  // Generate ICO file (using 48x48 and 32x32 and 16x16 PNGs)
-  // For the ICO, we'll just use the 48x48 PNG — Google accepts PNG favicons
-  // But we need a favicon.ico at root for legacy browser support
-  const ico48 = await sharp(inputPath)
-    .resize(48, 48, {
-      fit: 'contain', 
-      background: { r: 255, g: 255, b: 255, alpha: 0 }
-    })
-    .png()
-    .toBuffer();
-  
-  // Create a simple ICO file from the 48x48 PNG
-  // ICO header: 2 bytes reserved (0), 2 bytes type (1=icon), 2 bytes count (1)
-  // ICO directory entry: 16 bytes
-  // Then raw PNG data
-  const icoHeader = Buffer.alloc(6);
-  icoHeader.writeUInt16LE(0, 0);  // reserved
-  icoHeader.writeUInt16LE(1, 2);  // type: icon
-  icoHeader.writeUInt16LE(1, 4);  // count: 1 image
-
-  const icoEntry = Buffer.alloc(16);
-  icoEntry.writeUInt8(48, 0);     // width
-  icoEntry.writeUInt8(48, 1);     // height
-  icoEntry.writeUInt8(0, 2);      // color palette
-  icoEntry.writeUInt8(0, 3);      // reserved
-  icoEntry.writeUInt16LE(1, 4);   // color planes
-  icoEntry.writeUInt16LE(32, 6);  // bits per pixel
-  icoEntry.writeUInt32LE(ico48.length, 8);  // image size
-  icoEntry.writeUInt32LE(22, 12); // offset (6 header + 16 entry = 22)
-
-  const icoBuffer = Buffer.concat([icoHeader, icoEntry, ico48]);
-  fs.writeFileSync(path.join(publicDir, 'favicon.ico'), icoBuffer);
-  console.log('  ✓ favicon.ico (48x48 ICO)');
-
-  console.log('\nAll favicons generated successfully!');
+  return sharp(data, { raw: info }).trim({ background: '#ffffff', threshold: 10 }).png().toBuffer();
 }
 
-generateFavicons().catch(console.error);
+// Emblem centred on white; `fill` = share of the canvas the emblem's longest side uses.
+async function icon(size, fill) {
+  const mark = await emblem();
+  const inner = Math.round(size * fill);
+  const resized = await sharp(mark).resize(inner, inner, { fit: 'inside', kernel: 'lanczos3' }).toBuffer();
+  return sharp({ create: { width: size, height: size, channels: 4, background: WHITE } })
+    .composite([{ input: resized, gravity: 'center' }])
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+}
+
+// Minimal .ico writer (PNG-compressed entries, supported by all modern browsers).
+function ico(pngs) {
+  const header = Buffer.alloc(6);
+  header.writeUInt16LE(0, 0);
+  header.writeUInt16LE(1, 2);
+  header.writeUInt16LE(pngs.length, 4);
+  const dir = Buffer.alloc(16 * pngs.length);
+  let offset = 6 + dir.length;
+  pngs.forEach(({ size, data }, i) => {
+    const o = i * 16;
+    dir.writeUInt8(size >= 256 ? 0 : size, o);
+    dir.writeUInt8(size >= 256 ? 0 : size, o + 1);
+    dir.writeUInt8(0, o + 2);
+    dir.writeUInt8(0, o + 3);
+    dir.writeUInt16LE(1, o + 4);
+    dir.writeUInt16LE(32, o + 6);
+    dir.writeUInt32LE(data.length, o + 8);
+    dir.writeUInt32LE(offset, o + 12);
+    offset += data.length;
+  });
+  return Buffer.concat([header, dir, ...pngs.map((p) => p.data)]);
+}
+
+(async () => {
+  const sizes = [
+    ['favicon-16x16.png', 16, 0.94],
+    ['favicon-32x32.png', 32, 0.9],
+    ['favicon-48x48.png', 48, 0.8],
+    ['favicon-180x180.png', 180, 0.72],
+    ['apple-touch-icon.png', 180, 0.72],
+    ['favicon-192x192.png', 192, 0.7],
+    ['favicon-512x512.png', 512, 0.7],
+    // Android adaptive icons crop to the central 80% circle → smaller mark.
+    ['icon-maskable-512x512.png', 512, 0.56],
+  ];
+  for (const [name, size, fill] of sizes) {
+    fs.writeFileSync(path.join(OUT, name), await icon(size, fill));
+    console.log(`  ✓ ${name}`);
+  }
+  const icoEntries = [];
+  for (const [size, fill] of [[16, 0.94], [32, 0.9], [48, 0.8]]) icoEntries.push({ size, data: await icon(size, fill) });
+  fs.writeFileSync(path.join(OUT, 'favicon.ico'), ico(icoEntries));
+  console.log('  ✓ favicon.ico (16, 32, 48)');
+})();
