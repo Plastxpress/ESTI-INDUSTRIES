@@ -68,7 +68,10 @@ export default function ProductPage({ product: p }) {
 
             <div className="lg:col-span-5">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-kraft-700">{p.category}</p>
-              <h1 className="mt-3 font-grotesk text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-[-0.02em] leading-[1.05] text-ink">{p.title}</h1>
+              <h1 className="mt-3 font-grotesk text-3xl sm:text-4xl lg:text-[2.75rem] font-extrabold tracking-[-0.02em] leading-[1.05] text-ink">
+                {p.title}
+                <span className="mt-2 block font-sans text-sm sm:text-base font-bold uppercase tracking-[0.16em] text-kraft-700">{p.h1Location}</span>
+              </h1>
               <p className="mt-3 text-base sm:text-lg font-medium text-ink-soft">{p.subtitle}</p>
 
               <dl className="mt-7 grid grid-cols-1 gap-px rounded-2xl overflow-hidden border border-line bg-line">
@@ -150,9 +153,15 @@ export default function ProductPage({ product: p }) {
 
       {/* Quote */}
       <section className="relative overflow-hidden py-14 md:py-20 bg-ink">
-        <div className="absolute -right-32 top-0 w-[26rem] h-[26rem] rounded-full bg-kraft-500/15 blur-3xl pointer-events-none" aria-hidden="true" />
+        <div className="absolute -right-32 top-0 w-[26rem] h-[26rem] bg-[radial-gradient(closest-side,rgba(197,155,97,0.2),transparent)] pointer-events-none" aria-hidden="true" />
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <InquiryForm defaultProductId={p.id} heading={`Request a Quote: ${p.navLabel}`} />
+          <p className="mt-6 text-center text-sm text-white/75">
+            Prefer to talk to us?{' '}
+            <a href="/contact" className="inline-flex items-center min-h-11 font-bold text-kraft-300 underline underline-offset-4 hover:text-white">
+              Visit our Contact page
+            </a>
+          </p>
         </div>
       </section>
 

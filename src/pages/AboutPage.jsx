@@ -9,7 +9,7 @@ import { UNITS, ADDRESS_TEXT } from '../data/site';
 export default function AboutPage() {
   return (
     <div className="readable">
-      <PageHeader crumbs={[{ name: 'Home', href: '/' }, { name: 'About' }]} title="About ESTI Packaging Industry">
+      <PageHeader crumbs={[{ name: 'Home', href: '/' }, { name: 'About' }]} title="About ESTI Packaging Industry" h1Location="Corrugated Box Manufacturer in Mumbai & Pune">
         <p className="mt-4 text-base sm:text-lg text-slate-700 max-w-3xl leading-relaxed">
           Your trusted partner in custom corrugated packaging solutions with over 30 years of experience in box manufacturing (Since 1995).
         </p>

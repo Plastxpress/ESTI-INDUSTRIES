@@ -390,6 +390,8 @@ const PAGES = {
 export const PRODUCTS = CATALOG.map((p) => ({
   ...p,
   ...PAGES[p.id],
+  // Location line shown in the product H1 (wooden pallets are supplied/reconditioned, not manufactured).
+  h1Location: p.id === 'heat-treated-wooden-pallets' ? 'Supplier across Maharashtra & Goa' : 'Manufacturer in Mumbai & Pune',
   images: p.images || [p.image],
   imageLabels: p.imageLabels || [p.title],
   path: `/${PAGES[p.id].slug}`,

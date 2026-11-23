@@ -1,6 +1,6 @@
 import React from 'react';
-import { Home, LayoutGrid, Ruler, Building2 } from 'lucide-react';
-import { whatsappLink } from '../data/site';
+import { Home, LayoutGrid, Ruler, Building2, Phone } from 'lucide-react';
+import { whatsappLink, PHONE_TEL, PHONE_DISPLAY } from '../data/site';
 
 function WhatsAppIcon({ className }) {
   return (
@@ -20,7 +20,7 @@ export default function MobileBar({ path = '/' }) {
   ];
   return (
     <>
-      <nav aria-label="Quick links" className="lg:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-4 bg-white/95 backdrop-blur border-t border-line shadow-[0_-4px_20px_rgba(17,22,29,0.08)] pb-[env(safe-area-inset-bottom)]">
+      <nav aria-label="Quick links" className="lg:hidden fixed bottom-0 inset-x-0 z-40 grid grid-cols-4 bg-white border-t border-line shadow-[0_-4px_20px_rgba(17,22,29,0.08)] pb-[env(safe-area-inset-bottom)]">
         {items.map(({ href, label, icon: Icon, active }) => (
           <a
             key={href}
@@ -35,15 +35,23 @@ export default function MobileBar({ path = '/' }) {
         ))}
       </nav>
 
+      {/* Floating call button (phones/tablets; desktop shows the number in the header) */}
+      <a
+        href={`tel:${PHONE_TEL}`}
+        aria-label={`Call ${PHONE_DISPLAY}`}
+        className="lg:hidden fixed right-[1.375rem] sm:right-[1.875rem] bottom-[calc(8.5rem+env(safe-area-inset-bottom))] z-40 w-12 h-12 rounded-full bg-ink text-kraft-300 flex items-center justify-center shadow-[0_10px_24px_-8px_rgba(17,22,29,0.6)] active:scale-95 transition-transform"
+      >
+        <Phone className="w-5 h-5" />
+      </a>
+
       {/* Floating WhatsApp button (bottom-right; sits above the bar on phones) */}
       <a
         href={whatsappLink('Hello ESTI Packaging, I am interested in your corrugated and packaging products.')}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="group fixed right-4 sm:right-6 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] lg:bottom-6 z-40 flex items-center h-14 rounded-full bg-wa text-white shadow-[0_12px_30px_-8px_rgba(31,157,85,0.7)] hover:bg-wa-dark transition-all duration-300"
+        className="group fixed right-4 sm:right-6 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] lg:bottom-6 z-40 flex items-center h-14 rounded-full bg-wa text-white shadow-[0_12px_30px_-8px_rgba(21,127,61,0.6)] hover:bg-wa-dark transition-all duration-300"
       >
-        <span className="absolute inset-0 rounded-full bg-wa animate-ping opacity-20 pointer-events-none" aria-hidden="true" />
         <span className="relative w-14 h-14 flex items-center justify-center shrink-0">
           <WhatsAppIcon className="w-7 h-7" />
         </span>

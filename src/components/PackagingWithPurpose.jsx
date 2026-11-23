@@ -125,7 +125,7 @@ export default function PackagingWithPurpose({ index }) {
 
   return (
     <section id="purpose" className="relative overflow-hidden bg-ink text-white py-16 md:py-24">
-      <div className="absolute -left-40 top-20 w-[30rem] h-[30rem] rounded-full bg-kraft-500/10 blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute -left-40 top-20 w-[30rem] h-[30rem] bg-[radial-gradient(closest-side,rgba(197,155,97,0.14),transparent)] pointer-events-none" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="reveal">
           <SectionHead
@@ -240,7 +240,7 @@ export default function PackagingWithPurpose({ index }) {
             <article className="rounded-[2rem] bg-white text-ink overflow-hidden reveal">
               <div className="relative aspect-[16/9] bg-ink-2">
                 <Img src="/assets/images/moisture-controlled-corrugator.jpg" alt="Precision Moisture Control. Consistent Quality." className="w-full h-full object-cover" sizes="(min-width: 1024px) 600px, 100vw" />
-                <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-ink/85 backdrop-blur px-3 py-1 text-xs font-bold text-white">
+                <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-ink/90 px-3 py-1 text-xs font-bold text-white">
                   <Droplets className="w-3.5 h-3.5 text-kraft-300" /> Moisture Controlled
                 </span>
               </div>

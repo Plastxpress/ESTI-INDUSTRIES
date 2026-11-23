@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Mail, MessageSquare } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, MessageSquare, Navigation } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import InquiryForm from '../components/InquiryForm';
 import {
@@ -10,7 +10,7 @@ import {
   HOURS_TEXT,
   UNITS,
   MAP_EMBED_URL,
-  MAP_LINK_URL,
+  DIRECTIONS_URL,
   whatsappLink,
 } from '../data/site';
 
@@ -38,7 +38,7 @@ export default function ContactPage() {
 
   return (
     <div className="readable">
-      <PageHeader crumbs={[{ name: 'Home', href: '/' }, { name: 'Contact Us' }]} title="Contact ESTI Packaging Industry" />
+      <PageHeader crumbs={[{ name: 'Home', href: '/' }, { name: 'Contact Us' }]} title="Contact ESTI Packaging Industry" h1Location="Khopoli, Maharashtra" />
 
       <section className="py-12 md:py-16 bg-white border-b border-line">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10">
@@ -46,19 +46,19 @@ export default function ContactPage() {
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight font-grotesk">Direct Contact</h2>
               <address className="not-italic mt-5">
-                <dl className="space-y-4">
+                <ul className="space-y-4">
                   {rows.map(({ icon: Icon, label, content }) => (
-                    <div key={label} className="flex items-start gap-3">
+                    <li key={label} className="flex items-start gap-3">
                       <div className="w-10 h-10 rounded-xl bg-kraft-50 text-kraft-700 flex items-center justify-center shrink-0">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <dt className="text-xs font-bold uppercase tracking-wider text-slate-600">{label}</dt>
-                        <dd className="mt-0.5 text-base text-ink">{content}</dd>
+                        <p className="text-xs font-bold uppercase tracking-wider text-slate-600">{label}</p>
+                        <p className="mt-0.5 text-base text-ink">{content}</p>
                       </div>
-                    </div>
+                    </li>
                   ))}
-                </dl>
+                </ul>
               </address>
             </div>
 
@@ -87,8 +87,8 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-3 mb-5">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight font-grotesk">Find Us</h2>
-            <a href={MAP_LINK_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-11 text-sm font-bold text-kraft-700 hover:text-kraft-800">
-              Open in Google Maps
+            <a href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 min-h-11 px-5 rounded-full bg-ink hover:bg-ink-2 text-white text-sm font-bold">
+              <Navigation className="w-4 h-4 text-kraft-300" /> Get Directions
             </a>
           </div>
           <p className="text-base text-slate-700 mb-4">{ADDRESS_TEXT}</p>

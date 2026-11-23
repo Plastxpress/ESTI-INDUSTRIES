@@ -244,7 +244,7 @@ export function Certifications({ index }) {
 export function ContactCta() {
   return (
     <section className="relative overflow-hidden bg-ink text-white">
-      <div className="absolute -right-32 -top-32 w-[28rem] h-[28rem] rounded-full bg-kraft-500/15 blur-3xl pointer-events-none" aria-hidden="true" />
+      <div className="absolute -right-32 -top-32 w-[28rem] h-[28rem] bg-[radial-gradient(closest-side,rgba(197,155,97,0.2),transparent)] pointer-events-none" aria-hidden="true" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
         <div className="lg:col-span-7 reveal">
           <SectionHead

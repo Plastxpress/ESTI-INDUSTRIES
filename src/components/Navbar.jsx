@@ -44,7 +44,7 @@ export default function Navbar({ path = '/' }) {
           <div className="flex items-center space-x-4 sm:space-x-6">
             <a href="tel:+919833182733" className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
               <Phone className="w-3.5 h-3.5 text-kraft-400" />
-              <span>(+91) 983 318 2733</span>
+              <span>+91 98331 82733</span>
             </a>
             <a href="mailto:info@estipack.com" className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
               <Mail className="w-3.5 h-3.5 text-kraft-400" />

@@ -42,3 +42,14 @@ WebP images with width/height, lazy media, sitemap.xml, robots.txt, LocalBusines
 4. **Directory listings / links:** IndiaMART, TradeIndia, Justdial, industry associations — same NAP everywhere.
 5. **Reviews** on the Google Business Profile (real customers only).
 6. After 4–8 weeks: review Search Console queries and refine titles/FAQs for the queries that actually show impressions.
+
+## Round 3 — ranking / speed pass (2026-11-23, implemented-locally)
+
+- NAP unified from `src/data/site.js`: "ESTI Packaging Industry", "21, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203, India", "+91 98331 82733" (header, hero, footer, contact, schema, llms.txt).
+- LocalBusiness: openingHours `Mo-Su 00:00-23:59`, plant photos as `image`, `sameAs` from `PROFILE_URLS`, `geo` from `GEO` — **YouTube / IndiaMART / GlobalLinker URLs and plant coordinates are empty, waiting for the owner** (not guessed).
+- Contact: lazy Google Map + "Get Directions" (Google Maps directions to the address).
+- H1s: keyword + location line added (home, products, about, contact, industries); one H1 per page.
+- Open Graph: per-page 1200×630 JPGs (real product / plant photos) + width/height/alt.
+- Images: every `<img>` is WebP with width/height/alt (client logos converted too).
+- Speed: self-hosted Latin fonts (preloaded), no Google Fonts request; removed blur-over-video and decorative blur blobs; hero video loads after page load (poster first); lazy video posters; hydration after first paint. Lighthouse mobile (local, gzip): all 14 pages Perf 90–98, A11y/BP/SEO 100, CLS 0.
+- Sitemap lastmod = date site content last changed (git), 14 URLs; robots.txt clean; friendly 404; Search Console tag via `GOOGLE_SITE_VERIFICATION`; floating call + WhatsApp buttons on phones.

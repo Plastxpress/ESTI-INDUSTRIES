@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 // Videos that also have a smaller, sharper AV1 (WebM) version. Browsers that can
 // play AV1 use it; everything else falls back to the H.264 MP4. Both are < 3 MB.
@@ -13,6 +13,29 @@ export const AV1_VERSIONS = {
  */
 export default function LazyVideo({ src, poster, className = '', controls = false, label }) {
   const ref = useRef(null);
+  // The poster image is also lazy: it is attached shortly before the video scrolls into view,
+  // so off-screen posters don't compete with the first screen for bandwidth.
+  const [showPoster, setShowPoster] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return undefined;
+    if (!('IntersectionObserver' in window)) {
+      setShowPoster(true);
+      return undefined;
+    }
+    const near = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShowPoster(true);
+          near.disconnect();
+        }
+      },
+      { rootMargin: '800px 0px' },
+    );
+    near.observe(el);
+    return () => near.disconnect();
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -44,7 +67,7 @@ export default function LazyVideo({ src, poster, className = '', controls = fals
     <video
       ref={ref}
       src={AV1_VERSIONS[src] ? undefined : src}
-      poster={poster}
+      poster={showPoster ? poster : undefined}
       preload="none"
       loop
       muted

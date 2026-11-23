@@ -133,7 +133,7 @@ export default function Factory() {
                 <button
                   type="button"
                   onClick={(e) => { e.stopPropagation(); setIsFullscreenOpen(true); }}
-                  className="w-11 h-11 shrink-0 inline-flex items-center justify-center rounded-full bg-white/20 hover:bg-white/35 backdrop-blur transition-all group-hover:scale-110"
+                  className="w-11 h-11 shrink-0 inline-flex items-center justify-center rounded-full bg-ink/60 hover:bg-ink/80 transition-all group-hover:scale-110"
                   aria-label="Watch fullscreen"
                   title="Expand to Fullscreen"
                 >

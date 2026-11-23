@@ -99,9 +99,7 @@ export default function BoardSpec({ step }) {
               <Row term="Flutes / metre">
                 <span className="nums">{flutes.map((f) => f.perMetre).join(' · ')}</span>
               </Row>
-              <div className="col-span-2">
-                <Row term="Typical use">{APPLICATION[combo]}</Row>
-              </div>
+              <Row term="Typical use" className="col-span-2">{APPLICATION[combo]}</Row>
             </dl>
 
             <p className="mt-5 text-[12px] leading-relaxed text-slate">
@@ -139,9 +137,9 @@ function Chip({ on, children, onClick }) {
   );
 }
 
-function Row({ term, children }) {
+function Row({ term, children, className }) {
   return (
-    <div>
+    <div className={className}>
       <dt className="text-slate">{term}</dt>
       <dd className="mt-1 font-semibold">{children}</dd>
     </div>

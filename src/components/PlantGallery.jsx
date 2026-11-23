@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, X, Expand, Film } from 'lucide-react';
-import Img, { webp } from './Img';
+import Img from './Img';
 import LazyVideo from './LazyVideo';
 import More from './More';
 import SectionHead from './SectionHead';
@@ -66,7 +66,7 @@ export default function PlantGallery({ id = 'plant', index }) {
             {PLANT_VIDEOS.map((v) => (
               <figure key={v.src} className="relative aspect-[9/16] rounded-[1.75rem] overflow-hidden bg-ink shadow-[0_30px_60px_-30px_rgba(17,22,29,0.6)]">
                 <LazyVideo src={v.src} poster={v.poster} label={v.caption} className="absolute inset-0 w-full h-full object-cover" />
-                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-ink/75 backdrop-blur px-2.5 py-1 text-[11px] font-bold text-kraft-200 pointer-events-none">
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-ink/85 px-2.5 py-1 text-[11px] font-bold text-kraft-200 pointer-events-none">
                   <Film className="w-3.5 h-3.5" /> Factory Floor in Action
                 </span>
                 <figcaption className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-ink/90 to-transparent text-sm font-semibold text-white pointer-events-none">
@@ -113,11 +113,13 @@ export default function PlantGallery({ id = 'plant', index }) {
             </button>
           </div>
           <div className="relative flex-1 flex items-center justify-center my-3" onClick={(e) => e.stopPropagation()}>
-            <img
+            <Img
               key={open}
-              src={webp(PLANT_PHOTOS[open].src)}
+              src={PLANT_PHOTOS[open].src}
               alt={altFor(PLANT_PHOTOS[open])}
-              className="max-h-[78vh] max-w-full object-contain rounded-xl animate-[fadeUp_0.3s_ease-out]"
+              eager
+              sizes="90vw"
+              className="max-h-[78vh] max-w-full w-auto h-auto object-contain rounded-xl animate-[fadeUp_0.3s_ease-out]"
             />
             <button type="button" onClick={() => go(-1)} className="absolute left-0 sm:left-2 w-12 h-12 rounded-full bg-white/15 hover:bg-kraft-500 hover:text-ink text-white flex items-center justify-center transition-colors" aria-label="Previous photo">
               <ChevronLeft className="w-6 h-6" />

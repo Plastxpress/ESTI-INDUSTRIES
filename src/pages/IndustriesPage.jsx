@@ -10,6 +10,7 @@ export default function IndustriesPage() {
         crumbs={[{ name: 'Home', href: '/' }, { name: 'Industries' }]}
         eyebrow="Tailored Industry Engineering"
         title="Packaging Solutions Built for Every Industry"
+        h1Location="Corrugated Packaging Manufacturer in Mumbai & Pune"
       />
       <IndustriesSection asPage />
       <ContactCta />

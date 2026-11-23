@@ -9,6 +9,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { execSync } from 'node:child_process';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
@@ -34,7 +35,19 @@ for (const route of [...ROUTES, NOT_FOUND]) {
 // sitemap.xml — every indexable page (+ product images). Written to dist/ and
 // mirrored to public/ so the committed file always matches the live pages.
 const SITE = 'https://www.estipack.com';
-const today = new Date().toISOString().slice(0, 10);
+// lastmod = when site content last changed: the last commit touching site files, or
+// today if there are uncommitted changes to them (falls back to today without git).
+const today = (() => {
+  const now = new Date().toISOString().slice(0, 10);
+  try {
+    const opts = { cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] };
+    const paths = '-- src public index.html';
+    if (execSync(`git status --porcelain ${paths}`, opts).trim()) return now;
+    return execSync(`git log -1 --format=%cs ${paths}`, opts).trim() || now;
+  } catch {
+    return now;
+  }
+})();
 const xmlEsc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const webpPath = (src) => `/assets/images/webp/${src.replace(/^.*\//, '').replace(/\.(png|jpe?g)$/i, '')}.webp`;
 const imageXml = (src, title) =>

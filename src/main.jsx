@@ -13,7 +13,9 @@ const app = (
 // Production pages are pre-rendered to static HTML, so hydrate them.
 // In dev (or if pre-rendering is skipped) the root is empty: render normally.
 if (root.firstElementChild) {
-  ReactDOM.hydrateRoot(root, app)
+  // Let the browser paint the pre-rendered HTML first, then attach React on the next
+  // frame (hydration is a long task; running it before first paint delays the page).
+  requestAnimationFrame(() => setTimeout(() => ReactDOM.hydrateRoot(root, app), 0))
 } else {
   ReactDOM.createRoot(root).render(app)
 }

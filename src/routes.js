@@ -9,8 +9,10 @@ import {
   SITE_NAME,
   EMAIL,
   PHONE_TEL,
-  LINKEDIN_URL,
   MAP_LINK_URL,
+  PROFILE_URLS,
+  GEO,
+  GOOGLE_SITE_VERIFICATION,
 } from './data/site';
 
 const abs = (p) => `${SITE_URL}${p === '/' ? '/' : p}`;
@@ -24,18 +26,25 @@ const organization = {
   '@type': ['Organization', 'LocalBusiness'],
   '@id': ORG_ID,
   name: SITE_NAME,
-  alternateName: ['ESTI Packaging', 'ESTI Industries', 'ESTI Pack'],
+  alternateName: ['ESTI Packaging'],
   url: SITE_URL,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-512x512.png`, width: 512, height: 512 },
-  image: `${SITE_URL}/assets/images/esti-logo-full.jpg`,
+  image: [
+    `${SITE_URL}/assets/images/og/about.jpg`,
+    `${SITE_URL}/assets/images/og/contact.jpg`,
+    `${SITE_URL}/assets/images/esti-logo-full.jpg`,
+  ],
   description:
     'ESTI Packaging Industry manufactures corrugated boxes (3-ply, 5-ply and 7-ply), heavy-duty pallet boxes, UN 1266 certified boxes, octagonal bulk bins, 2-metre tall cartons, die-cut boxes, dividers, document storage boxes and supplies heat-treated wooden pallets. Over 30 years of box manufacturing since 1995.',
   foundingDate: '1995',
   telephone: PHONE_TEL,
   email: EMAIL,
   contactPoint: [{ '@type': 'ContactPoint', telephone: PHONE_TEL, email: EMAIL, contactType: 'sales' }],
-  sameAs: [LINKEDIN_URL],
+  // Only real, owner-confirmed profiles (empty slots in data/site.js are skipped).
+  sameAs: Object.values(PROFILE_URLS).filter(Boolean),
   hasMap: MAP_LINK_URL,
+  ...(GEO.latitude && GEO.longitude ? { geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude } } : {}),
+  openingHours: 'Mo-Su 00:00-23:59',
   knowsAbout: [
     'Corrugated boxes',
     '3-ply, 5-ply and 7-ply corrugated board',
@@ -163,7 +172,7 @@ const STATIC_ROUTES = [
     description:
       'ESTI Packaging Industry makes 3, 5 & 7-ply corrugated boxes, pallet boxes, UN 1266 certified boxes and octabins in Khopoli, Maharashtra. Since 1995.',
     crumbs: [HOME],
-    ogImage: '/assets/images/corrugated-custom-bicycle-box.png',
+    og: 'home',
   },
   {
     path: '/packaging-guide',
@@ -219,7 +228,7 @@ const PRODUCT_ROUTES = PRODUCTS.map((p) => ({
   title: p.seoTitle,
   description: p.seoDescription,
   crumbs: [HOME, { name: 'Products', path: '/#products' }, { name: p.navLabel, path: p.path }],
-  ogImage: p.image,
+  og: p.slug,
   product: p,
 }));
 
@@ -262,9 +271,13 @@ const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /** <head> tags for a route (inserted at build time by the prerenderer). */
+const OG_KEYS = new Set(['home', 'packaging-guide', 'industries', 'about', 'contact', ...PRODUCTS.map((p) => p.slug)]);
+
 export function headHtml(r) {
   const url = abs(r.path);
-  const image = `${SITE_URL}${r.ogImage ? webp(r.ogImage) : '/assets/images/esti-logo-full.jpg'}`;
+  // Per-page 1200x630 share image (real product / plant photo) from public/assets/images/og/.
+  const ogKey = r.og || r.path.replace(/^\//, '');
+  const image = `${SITE_URL}/assets/images/og/${OG_KEYS.has(ogKey) ? ogKey : 'home'}.jpg`;
   const tags = [
     `<title>${esc(r.title)}</title>`,
     `<meta name="description" content="${esc(r.description)}" />`,
@@ -272,6 +285,9 @@ export function headHtml(r) {
       ? '<meta name="robots" content="noindex, follow" />'
       : '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />',
   ];
+  if (GOOGLE_SITE_VERIFICATION) tags.push(`<meta name="google-site-verification" content="${esc(GOOGLE_SITE_VERIFICATION)}" />`);
+  // Home: start fetching the hero poster (first paint) right away.
+  if (r.page === 'home') tags.push('<link rel="preload" as="image" href="/assets/videos/posters/hero-factory-bg.webp" fetchpriority="high" />');
   if (!r.noindex) {
     tags.push(
       `<link rel="canonical" href="${url}" />`,
@@ -281,6 +297,9 @@ export function headHtml(r) {
       `<meta property="og:description" content="${esc(r.description)}" />`,
       `<meta property="og:url" content="${url}" />`,
       `<meta property="og:image" content="${image}" />`,
+      '<meta property="og:image:width" content="1200" />',
+      '<meta property="og:image:height" content="630" />',
+      `<meta property="og:image:alt" content="${esc(r.title)}" />`,
       '<meta property="og:locale" content="en_IN" />',
       '<meta name="twitter:card" content="summary_large_image" />',
       `<meta name="twitter:title" content="${esc(r.title)}" />`,

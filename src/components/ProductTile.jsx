@@ -20,7 +20,7 @@ export default function ProductTile({ p, specs = 2, headingLevel = 3, showQuote 
           sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw"
           className="absolute inset-0 w-full h-full object-contain p-3 sm:p-6 transition-transform duration-500 ease-out group-hover:scale-[1.06]"
         />
-        <span className="absolute top-3 left-3 max-w-[80%] truncate rounded-full bg-ink/90 backdrop-blur px-3 py-1 text-xs font-bold text-white">
+        <span className="absolute top-3 left-3 max-w-[80%] truncate rounded-full bg-ink/90 px-3 py-1 text-xs font-bold text-white">
           {p.badge}
         </span>
         <span className="hidden sm:flex absolute bottom-3 right-3 w-10 h-10 rounded-full bg-white shadow items-center justify-center text-ink opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0" aria-hidden="true">

@@ -1,0 +1,66 @@
+{
+ "bharat-forge": {
+  "w": 104,
+  "h": 36
+ },
+ "britannia": {
+  "w": 71,
+  "h": 36
+ },
+ "cipla": {
+  "w": 62,
+  "h": 36
+ },
+ "garrett": {
+  "w": 54,
+  "h": 36
+ },
+ "godrej": {
+  "w": 43,
+  "h": 36
+ },
+ "honeywell": {
+  "w": 95,
+  "h": 36
+ },
+ "idemitsu": {
+  "w": 64,
+  "h": 36
+ },
+ "kalyani": {
+  "w": 61,
+  "h": 36
+ },
+ "maersk": {
+  "w": 40,
+  "h": 36
+ },
+ "mansons": {
+  "w": 92,
+  "h": 36
+ },
+ "pepsico": {
+  "w": 81,
+  "h": 36
+ },
+ "piramal": {
+  "w": 76,
+  "h": 36
+ },
+ "racold": {
+  "w": 97,
+  "h": 36
+ },
+ "rubaloy": {
+  "w": 81,
+  "h": 36
+ },
+ "schlegelgiesse": {
+  "w": 146,
+  "h": 36
+ },
+ "tyman": {
+  "w": 68,
+  "h": 36
+ }
+}

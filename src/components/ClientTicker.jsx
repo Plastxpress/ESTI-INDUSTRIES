@@ -1,4 +1,5 @@
 import React from 'react';
+import LOGO_META from '../data/logoMeta.json';
 import { ShieldCheck, ArrowRight } from 'lucide-react';
 
 export const CLIENT_LOGOS = [
@@ -60,8 +61,11 @@ export default function ClientTicker() {
               title={logo.alt}
             >
               <img
-                src={logo.src}
+                src={logo.src.replace(/\.png$/, '.webp')}
                 alt={logo.alt}
+                width={LOGO_META[logo.src.replace(/^.*\/|\.png$/g, '')]?.w}
+                height={LOGO_META[logo.src.replace(/^.*\/|\.png$/g, '')]?.h}
+                decoding="async"
                 className="h-7 sm:h-9 w-auto max-w-[140px] object-contain filter grayscale opacity-75 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-200"
                 loading="lazy"
               />
