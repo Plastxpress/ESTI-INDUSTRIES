@@ -1,135 +1,93 @@
 import React from 'react';
-import { ShieldCheck, Phone, ArrowDown, CheckCircle2, MessageSquare, Award, Leaf, Zap, Factory } from 'lucide-react';
+import { ShieldCheck, Phone, ArrowDown, Check, MessageSquare } from 'lucide-react';
+
+const FEATURES = ['3, 5 & 7-Ply Boards', 'UN 1266 Certified', '1,200 MT/Mo Capacity', 'Up to 40% Cost Savings'];
+const METRICS = [
+  { value: '30+ Years', label: 'Experience (Since 1995)' },
+  { value: '1,200 MT', label: 'Monthly Board Capacity' },
+  { value: 'Up to 40%', label: 'Cost Savings from India' },
+  { value: '3, 5 & 7-Ply', label: 'A, B, C & E Flutes' },
+];
 
 export default function Hero() {
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="hero" className="relative pt-32 sm:pt-36 md:pt-40 pb-16 md:pb-20 bg-black overflow-hidden border-b border-neutral-800">
-      
-      {/* High-definition Factory Background Video playing in continuous loop */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover object-center"
-        >
+    <section id="hero" className="relative isolate overflow-hidden bg-ink text-white min-h-[100svh] flex flex-col justify-end pt-36 sm:pt-40">
+      {/* Background factory video — same file and playback as before */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <video autoPlay loop muted playsInline preload="auto" poster="/assets/videos/posters/hero-factory-bg.webp" className="w-full h-full object-cover object-center">
+          <source src="/assets/videos/hero-factory-bg.webm" type={`video/webm; codecs="av01.0.05M.08"`} />
           <source src="/assets/videos/hero-factory-bg.mp4" type="video/mp4" />
         </video>
-
-        {/* Clean Neutral Dark Gradient: removes blue tint completely, lets factory video shine through naturally with high clarity */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/65"></div>
+        {/* Ink overlays in the site palette (keeps text readable over the video) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/95 via-ink/70 to-ink/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/40" />
+        <div className="absolute -left-40 bottom-0 w-[36rem] h-[36rem] rounded-full bg-kraft-500/15 blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Left-Aligned Hero Content */}
-        <div className="max-w-4xl flex flex-col items-start text-left space-y-6">
-          
-          {/* Top Badge (Since 1995) */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-emerald-400/40 text-emerald-300 text-xs sm:text-sm font-bold backdrop-blur-md shadow-md">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Over 30 Years of Box Manufacturing (Since 1995)</span>
-          </div>
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14">
+        <div className="max-w-5xl">
+          <p className="inline-flex items-center gap-2 rounded-full border border-kraft-400/40 bg-ink/50 backdrop-blur px-4 py-1.5 text-xs sm:text-sm font-semibold text-kraft-200">
+            <ShieldCheck className="w-4 h-4 text-kraft-400" />
+            Over 30 Years of Box Manufacturing (Since 1995)
+          </p>
 
-          {/* Main Headline */}
-          <h1 className="text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15] font-heading text-left drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
-            Engineered Corrugated & <br />
-            <span className="font-normal text-emerald-400 drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
-              Sustainable Packaging
-            </span>
+          <h1 className="mt-6 font-grotesk text-[2.5rem] leading-[1.02] sm:text-6xl lg:text-[4.25rem] font-extrabold tracking-[-0.035em]">
+            Engineered Corrugated &amp; <br />
+            <span className="text-kraft-300">Sustainable Packaging</span>
           </h1>
 
-          {/* Technical Subheading */}
-          <h2 className="-mt-1 text-base sm:text-lg md:text-xl font-semibold text-emerald-300 leading-snug drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+          <h2 className="mt-6 max-w-3xl font-sans text-[15px] sm:text-xl font-semibold text-white/90 leading-snug">
             Multiple flute Combinations for 3 Ply, 5 Ply &amp; 7 Ply Corrugated Boxes, Wall Thickness ranging from 3mm up to 15 mm.
           </h2>
 
-          <p className="text-slate-200 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl text-left drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)]">
+          <p className="mt-4 max-w-2xl text-sm sm:text-lg text-white/70 leading-relaxed">
             Your trusted partner in custom corrugated packaging solutions. With over three decades of industry experience, <strong className="text-white font-semibold">ESTI Packaging Industry</strong> is a pioneer in manufacturing Jumbo Boxes, Pallet Boxes, and UN Certified Boxes tailored for domestic and export operations.
           </p>
 
-          {/* 4 Feature Bullet Points Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl w-full pt-1">
-            <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-xs sm:text-sm text-slate-100 font-medium shadow-md">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>3, 5 & 7-Ply Boards</span>
-            </div>
-            <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-xs sm:text-sm text-slate-100 font-medium shadow-md">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>UN 1266 Certified</span>
-            </div>
-            <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-xs sm:text-sm text-slate-100 font-medium shadow-md">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>1,200 MT/Mo Capacity</span>
-            </div>
-            <div className="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 text-xs sm:text-sm text-slate-100 font-medium shadow-md">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-              <span>Up to 40% Cost Savings</span>
-            </div>
-          </div>
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2">
+            {FEATURES.map((f) => (
+              <li key={f} className="inline-flex items-center gap-2 text-sm font-semibold text-white/85">
+                <span className="w-5 h-5 rounded-full bg-kraft-500 flex items-center justify-center">
+                  <Check className="w-3 h-3 text-ink" strokeWidth={3} />
+                </span>
+                {f}
+              </li>
+            ))}
+          </ul>
 
-          {/* Direct Contact CTAs */}
-          <div className="pt-2 flex flex-wrap items-center justify-start gap-3.5">
-            <button
-              type="button"
-              onClick={() => scrollTo('products')}
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-lg hover:shadow-emerald-600/30 transition-all active:scale-95"
-            >
-              <span>View Product Portfolio</span>
-              <ArrowDown className="w-4 h-4" />
-            </button>
-
-            <a
-              href="tel:+919833182733"
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-black/70 hover:bg-neutral-900 text-white font-bold text-sm sm:text-base border border-white/20 shadow-md backdrop-blur-md transition-all"
-            >
-              <Phone className="w-4 h-4 text-emerald-400" />
-              <span>Call: (+91) 983 318 2733</span>
+          <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3">
+            <a href="#products" className="group inline-flex items-center justify-center gap-2 min-h-14 px-7 rounded-full bg-kraft-500 hover:bg-kraft-400 text-ink font-bold transition-colors">
+              View Product Portfolio
+              <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
             </a>
-
+            <a href="tel:+919833182733" className="inline-flex items-center justify-center gap-2 min-h-14 px-7 rounded-full border border-white/25 bg-white/5 backdrop-blur hover:bg-white/15 font-bold transition-colors">
+              <Phone className="w-4 h-4 text-kraft-300" />
+              Call: (+91) 983 318 2733
+            </a>
             <a
               href="https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20am%20interested%20in%20your%20corrugated%20and%20packaging%20products."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white hover:bg-emerald-50 text-emerald-900 font-bold text-sm sm:text-base shadow-md transition-all active:scale-95"
+              className="inline-flex items-center justify-center gap-2 min-h-14 px-7 rounded-full bg-wa hover:bg-wa-dark font-bold transition-colors"
             >
-              <MessageSquare className="w-4 h-4 text-emerald-600" />
-              <span>Click to Inquire</span>
+              <MessageSquare className="w-4 h-4" />
+              Click to Inquire
             </a>
           </div>
-
         </div>
 
-        {/* Minimalist 4-Metric Strip */}
-        <div className="mt-14 pt-8 border-t border-white/15 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
-          <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 shadow-lg">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-400 font-display">30+ Years</div>
-            <div className="text-xs text-slate-300 font-semibold mt-0.5">Experience (Since 1995)</div>
-          </div>
-          <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 shadow-lg">
-            <div className="text-2xl sm:text-3xl font-black text-white font-display">1,200 MT</div>
-            <div className="text-xs text-slate-300 font-semibold mt-0.5">Monthly Board Capacity</div>
-          </div>
-          <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 shadow-lg">
-            <div className="text-2xl sm:text-3xl font-black text-emerald-400 font-display">Up to 40%</div>
-            <div className="text-xs text-slate-300 font-semibold mt-0.5">Cost Savings from India</div>
-          </div>
-          <div className="p-4 rounded-xl bg-black/60 backdrop-blur-md border border-white/15 shadow-lg">
-            <div className="text-2xl sm:text-3xl font-black text-white font-display">3, 5 & 7-Ply</div>
-            <div className="text-xs text-slate-300 font-semibold mt-0.5">A, B, C & E Flutes</div>
-          </div>
-        </div>
-
+        {/* Metric strip */}
+        <dl className="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 rounded-3xl border border-white/10 bg-ink/55 backdrop-blur-md overflow-hidden">
+          {METRICS.map((m, i) => (
+            <div
+              key={m.label}
+              className={`flex flex-col-reverse gap-1 px-5 py-5 sm:px-7 sm:py-6 ${i % 2 ? 'border-l border-white/10' : ''} ${i > 1 ? 'border-t lg:border-t-0 border-white/10' : ''} ${i === 2 ? 'lg:border-l' : ''}`}
+            >
+              <dt className="text-xs sm:text-sm text-white/60 font-medium">{m.label}</dt>
+              <dd className={`font-grotesk text-2xl sm:text-4xl font-extrabold tracking-tight ${i % 2 ? 'text-white' : 'text-kraft-300'}`}>{m.value}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );

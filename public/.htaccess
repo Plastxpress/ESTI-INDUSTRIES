@@ -18,11 +18,19 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)/$ /$1 [L,R=301]
 
-  # SPA Routing: Send all non-file requests to index.html
+  # Redirect /page.html to the clean URL /page
+  RewriteCond %{THE_REQUEST} \s/+([^.?\s]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [L,R=301]
+
+  # Serve pre-rendered pages: /about -> about.html
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+)$ $1.html [L]
 </IfModule>
+
+# Unknown URLs get a real 404 page (not the home page)
+ErrorDocument 404 /404.html
 
 # Browser Caching Headers
 <IfModule mod_expires.c>
@@ -67,6 +75,8 @@
 <IfModule mod_mime.c>
   AddType application/xml .xml
   AddType text/plain .txt
+  AddType text/markdown .md
+  AddCharset utf-8 .md .txt
   AddType application/manifest+json .webmanifest
 </IfModule>
 

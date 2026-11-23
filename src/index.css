@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --color-ink: #0a1240;
-  --color-ink-soft: #1b2557;
-  --color-ultra: #1128ac;
-  --color-ultra-lift: #2b46d8;
-  --color-mist: #eef1f6;
-  --color-mist-deep: #e2e7f0;
-  --color-rule: #d7dce6;
+  --color-ink: #11161d;
+  --color-ink-soft: #2b3440;
+  --color-ultra: #9a5b22;
+  --color-ultra-lift: #b3702f;
+  --color-mist: #f6f3ee;
+  --color-mist-deep: #ede7dd;
+  --color-rule: #e3dccf;
+  interpolate-size: allow-keywords;
   --color-slate: #5f6a83;
   --color-kraft: #c4a176;
   --color-kraft-deep: #a97f4f;
@@ -51,6 +52,25 @@
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile readability: bump tiny text inside page content (.readable wraps every
+   section except the hero and the client-logo strip). Phones only. */
+@media (max-width: 639px) {
+  .readable .text-\[10px\],
+  .readable .text-\[11px\],
+  .readable .text-\[12px\] {
+    font-size: 0.8125rem; /* 13px */
+    line-height: 1.25rem;
+  }
+  .readable .text-xs,
+  .readable .text-\[13px\] {
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.35rem;
+  }
+  .readable .text-slate-500 {
+    color: #475569; /* slate-600 */
   }
 }
 
@@ -102,4 +122,39 @@
 
 .animate-ticker:hover {
   animation-play-state: paused;
+}
+
+/* 44px minimum tap height for the Packaging with Purpose tabs */
+[data-pillar-tab] {
+  min-height: 44px;
+}
+
+/* ---------- "See more" disclosure (content stays in the HTML for SEO) ---------- */
+details.more > summary { list-style: none; cursor: pointer; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), content-visibility 0.4s allow-discrete;
+}
+details.more[open]::details-content { block-size: auto; }
+details.more .more-less, details.more[open] .more-more { display: none; }
+details.more[open] .more-less { display: inline; }
+details.more .more-chev { transition: transform 0.3s ease; }
+details.more[open] .more-chev { transform: rotate(180deg); }
+
+/* ---------- Scroll reveal (only when JS runs; no-JS sees everything) ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js .reveal.is-in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
 }

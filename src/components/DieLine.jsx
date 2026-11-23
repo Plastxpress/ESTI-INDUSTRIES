@@ -35,7 +35,9 @@ const CREASE = {
   vectorEffect: 'non-scaling-stroke',
 };
 
-export default function DieLine() {
+// headingLevel 2 = used as its own page section (Packaging Guide); 3 = nested.
+export default function DieLine({ headingLevel = 3, className = 'mt-14 lg:mt-16' }) {
+  const Heading = headingLevel === 2 ? 'h2' : 'h3';
   const [raw, setRaw] = useState({ L: '400', W: '300', H: '250' });
   const [folded, setFolded] = useState(false);
   const [compact, setCompact] = useState(false);
@@ -68,11 +70,17 @@ export default function DieLine() {
   const view = folded ? isoLayout(L, W, H, vbW) : flatLayout(blank, vbW);
 
   return (
-    <figure className="mt-14 overflow-hidden rounded-md border border-rule bg-white lg:mt-16">
+    <figure className={`${className} overflow-hidden rounded-md border border-rule bg-white`}>
       <div className="flex flex-wrap items-center justify-between gap-4 border-b border-rule px-5 py-4 sm:px-7">
-        <h3 className="w-semi text-[13px] font-bold tracking-[0.02em]">
+        <Heading
+          className={
+            headingLevel === 2
+              ? 'w-expanded text-[clamp(1.4rem,3vw,1.9rem)] font-bold leading-tight tracking-[-0.02em]'
+              : 'w-semi text-[13px] font-bold tracking-[0.02em]'
+          }
+        >
           Die-line · FEFCO 0201 regular slotted carton
-        </h3>
+        </Heading>
         <div className="flex gap-2" role="group" aria-label="Drawing view">
           {[
             [false, 'Flat blank'],
@@ -83,7 +91,7 @@ export default function DieLine() {
               type="button"
               onClick={() => setFolded(v)}
               aria-pressed={folded === v}
-              className={`rounded-sm border px-3 py-1.5 text-[13px] font-semibold transition-colors ${
+              className={`min-h-11 rounded-sm border px-3 py-1.5 text-[13px] font-semibold transition-colors ${
                 folded === v
                   ? 'border-ultra bg-ultra text-white'
                   : 'border-rule bg-white text-ink hover:border-slate'
@@ -127,7 +135,7 @@ export default function DieLine() {
                   max="1600"
                   value={raw[k]}
                   onChange={(e) => setRaw({ ...raw, [k]: e.target.value })}
-                  className="nums w-24 rounded-sm border border-rule bg-white px-3 py-2 text-[15px] font-semibold outline-none transition-colors focus:border-ultra"
+                  className="nums w-24 min-h-11 rounded-sm border border-rule bg-white px-3 py-2.5 sm:py-2 text-[16px] sm:text-[15px] font-semibold outline-none transition-colors focus:border-ultra"
                 />
                 <span className="text-[13px] text-slate">mm</span>
               </span>

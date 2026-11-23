@@ -2,7 +2,7 @@ import { useState } from 'react';
 import BoardSection from './BoardSection';
 import { PLIES, FLUTES, APPLICATION, caliper } from '../boardData';
 
-export default function BoardSpec() {
+export default function BoardSpec({ step }) {
   const [plyIndex, setPlyIndex] = useState(0);
   const [combo, setCombo] = useState('C');
 
@@ -20,6 +20,9 @@ export default function BoardSpec() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div className="flex flex-col">
+            {step && (
+              <p className="mb-2 text-xs font-bold uppercase tracking-wider text-kraft-700">{step}</p>
+            )}
             <h2 className="w-expanded text-[clamp(1.9rem,4vw,2.9rem)] font-bold leading-[1.02] tracking-[-0.025em]">
               Start from the board, not the box
             </h2>
@@ -127,7 +130,7 @@ function Chip({ on, children, onClick }) {
       type="button"
       onClick={onClick}
       aria-pressed={on}
-      className={`nums min-w-11 rounded-sm border px-3 py-2 text-[14px] font-semibold transition-colors ${
+      className={`nums min-w-11 min-h-11 rounded-sm border px-3 py-2 text-[14px] font-semibold transition-colors ${
         on ? 'border-ultra bg-ultra text-white' : 'border-rule bg-white text-ink hover:border-slate'
       }`}
     >

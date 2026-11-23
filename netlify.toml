@@ -1,7 +1,5 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Pages are pre-rendered to /<page>.html. Netlify serves them at /<page> and
+# uses /404.html for unknown URLs, so no SPA catch-all redirect is needed.
 
 # SEO: Proper headers for sitemap
 [[headers]]
@@ -32,3 +30,15 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
     X-Robots-Tag = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+
+# Markdown page versions and the AI-tool guide
+[[headers]]
+  for = "/*.md"
+  [headers.values]
+    Content-Type = "text/markdown; charset=utf-8"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"

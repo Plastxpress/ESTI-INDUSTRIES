@@ -1,42 +1,57 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import ClientTicker from './components/ClientTicker';
-import Products from './components/Products';
-import PackagingWithPurpose from './components/PackagingWithPurpose';
-import IndustriesSection from './components/IndustriesSection';
-import Factory from './components/Factory';
 import Footer from './components/Footer';
+import MobileBar from './components/MobileBar';
+import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
+import IndustriesPage from './pages/IndustriesPage';
+import PackagingGuidePage from './pages/PackagingGuidePage';
+import CompanyInfoPage from './pages/CompanyInfoPage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
+import NotFoundPage from './pages/NotFoundPage';
+import { findRoute } from './routes';
+import useReveal from './components/useReveal';
 
-export default function App() {
+function PageBody({ route }) {
+  switch (route.page) {
+    case 'home':
+      return <HomePage />;
+    case 'product':
+      return <ProductPage product={route.product} />;
+    case 'companyInfo':
+      return <CompanyInfoPage />;
+    case 'guide':
+      return <PackagingGuidePage />;
+    case 'industries':
+      return <IndustriesPage />;
+    case 'about':
+      return <AboutPage />;
+    case 'contact':
+      return <ContactPage />;
+    default:
+      return <NotFoundPage />;
+  }
+}
+
+export default function App({ path }) {
+  const route = findRoute(path);
+  useReveal(route.path);
+
+  // Keeps the tab title right in dev (production HTML already has it).
+  useEffect(() => {
+    document.title = route.title;
+  }, [route.title]);
+
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex flex-col font-sans selection:bg-emerald-600 selection:text-white">
-      {/* 1. Header with Top Info Bar & Direct Contact */}
-      <Navbar />
-
-      {/* Main Single-Page Sections */}
+    // pb-14 on phones/tablets leaves room for the sticky bottom bar.
+    <div id="top" className="min-h-screen bg-white text-ink flex flex-col font-sans selection:bg-kraft-400 selection:text-ink pb-14 lg:pb-0">
+      <Navbar path={route.path} />
       <main className="flex-grow">
-        {/* 2. Hero Section */}
-        <Hero />
-
-        {/* 2.5 Moving Client Logo Ticker (Directly below Hero!) */}
-        <ClientTicker />
-
-        {/* 3. Product Portfolio with Details (Directly after Hero & Ticker!) */}
-        <Products />
-
-        {/* 3.5 Packaging with Purpose (Directly below Products!) */}
-        <PackagingWithPurpose />
-
-        {/* 4. Packaging Solutions Built for Every Industry & 16 Verticals */}
-        <IndustriesSection />
-
-        {/* 4. Factory Infrastructure, Machinery & Export FTA Advantage */}
-        <Factory />
+        <PageBody route={route} />
       </main>
-
-      {/* 7. Footer */}
-      <Footer />
+      <Footer roomy />
+      <MobileBar path={route.path} />
     </div>
   );
 }

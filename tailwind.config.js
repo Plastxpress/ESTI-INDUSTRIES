@@ -7,13 +7,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0a1240',
-        'ink-soft': '#1b2557',
-        ultra: '#1128ac',
-        'ultra-lift': '#2b46d8',
-        mist: '#eef1f6',
-        'mist-deep': '#e2e7f0',
-        rule: '#d7dce6',
+        // Redesign palette: deep ink + kraft (corrugated brown) on warm paper.
+        ink: '#11161d',
+        'ink-soft': '#2b3440',
+        'ink-2': '#1a212b',
+        paper: '#f6f3ee',
+        'paper-2': '#ede7dd',
+        line: '#e3dccf',
+        wa: '#1f9d55',
+        'wa-dark': '#17864a',
+        ultra: '#9a5b22',
+        'ultra-lift': '#b3702f',
+        mist: '#f6f3ee',
+        'mist-deep': '#ede7dd',
+        rule: '#e3dccf',
         'kraft-deep': '#a97f4f',
         brand: {
           50: '#f0fdf4',
@@ -31,11 +38,14 @@ export default {
           50: '#fdfbf7',
           100: '#f7f1e6',
           200: '#ede1cd',
+          300: '#e0c79f',
+          400: '#d4b183',
           500: '#c59b61',
           600: '#b48344',
           700: '#946635',
           800: '#79522f',
           900: '#64442a',
+          950: '#3b2817',
         },
         slate: {
           DEFAULT: '#5f6a83',
@@ -46,6 +56,7 @@ export default {
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         display: ['"Century Gothic"', 'Outfit', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+        grotesk: ['Archivo', 'Inter', 'system-ui', 'sans-serif'],
         heading: ['"Century Gothic"', 'Outfit', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {

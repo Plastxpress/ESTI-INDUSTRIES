@@ -26,3 +26,6 @@ screenshot_*.png
 *.njsproj
 *.sln
 *.sw?
+
+# Raw source media (originals). The site uses the optimized copies in public/.
+Media/
