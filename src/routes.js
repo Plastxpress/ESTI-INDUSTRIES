@@ -59,7 +59,7 @@ const organization = {
   // Owner-provided address, phone and hours.
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '21, Arkose Industrial Estate, Dheku, Khalapur',
+    streetAddress: 'Arkose Industrial Estate, Dheku',
     addressLocality: 'Khopoli',
     postalCode: '410203',
     addressRegion: 'Maharashtra',
@@ -204,7 +204,7 @@ const STATIC_ROUTES = [
     pageType: 'ContactPage',
     title: 'Contact ESTI Packaging, Khopoli | Request a Quote',
     description:
-      'ESTI Packaging Industry, 21, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203. Call +91 98331 82733, open 24 hours, 7 days.',
+      'ESTI Packaging Industry, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203. Call +91 98331 82733, open 24 hours, 7 days.',
     crumbs: [HOME, { name: 'Contact Us', path: '/contact' }],
   },
 ];

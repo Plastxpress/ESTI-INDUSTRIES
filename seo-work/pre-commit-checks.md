@@ -15,12 +15,12 @@ the same size; Chrome/Edge/Firefox/newer Safari) plus an H.264 MP4 fallback. All
 `preload="none"` and start only when scrolled into view; the hero keeps `preload="auto"` + a poster image.
 Original hero file is kept in `Media/make_one_more_video_to_add_bef (1).mp4`.
 
-## 5. Quote form — does NOT email info@estipack.com
+## 5. Quote form — does NOT email admin@estipack.com
 At the owner's earlier request the form opens **WhatsApp (+91 98331 82733)** with all fields pre-filled
-(plus the page it was sent from). Below the form is an "or email us at info@estipack.com" link (mailto).
-Nothing is sent to info@estipack.com automatically. Options if email delivery is wanted — owner decision:
-- **Netlify Forms** (if the site is hosted on Netlify): free tier, emails each submission to info@estipack.com.
-- **FormSubmit.co / Web3Forms**: free, works on any host; one-time activation from the info@estipack.com inbox. Form data passes through that third-party service.
+(plus the page it was sent from). Below the form is an "or email us at admin@estipack.com" link (mailto).
+Nothing is sent to admin@estipack.com automatically. Options if email delivery is wanted — owner decision:
+- **Netlify Forms** (if the site is hosted on Netlify): free tier, emails each submission to admin@estipack.com.
+- **FormSubmit.co / Web3Forms**: free, works on any host; one-time activation from the admin@estipack.com inbox. Form data passes through that third-party service.
 - Keep WhatsApp as primary and add email as a second destination.
 
 ## 6. Address audit (report only — nothing changed)
@@ -28,7 +28,7 @@ Single source: `src/data/site.js` (`ADDRESS_TEXT`, `UNITS`).
 
 | Where | Shows |
 |---|---|
-| Schema LocalBusiness `address` (all pages) | 21, Arkose Industrial Estate, Dheku, Khalapur, Khopoli 410203 (owner-provided) |
+| Schema LocalBusiness `address` (all pages) | Arkose Industrial Estate, Dheku, Khalapur, Khopoli 410203 (owner-provided) |
 | Schema `department` (all pages) | Mumbai: Deonar 400088; Pune: Shirur - Ranjangaon Industrial Zone |
 | Footer "Direct Contact" (all pages) | Full Khopoli address |
 | Footer "Manufacturing Units" (all pages) | Mumbai: Deonar, Mumbai - 400 088 · Khopoli: Dheku, Khopoli - 410 203 · Pune: Shirur - Ranjangaon |

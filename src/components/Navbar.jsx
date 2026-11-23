@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Phone, Mail, MapPin, Menu, X, Award, Clock, ArrowRight, ChevronDown, Ruler } from 'lucide-react';
 import Img from './Img';
 import { PRODUCTS } from '../data/products';
+import { EMAIL } from '../data/site';
 
 const LINKS = [
   { name: 'Packaging Guide', href: '/packaging-guide' },
@@ -46,9 +47,9 @@ export default function Navbar({ path = '/' }) {
               <Phone className="w-3.5 h-3.5 text-kraft-400" />
               <span>+91 98331 82733</span>
             </a>
-            <a href="mailto:info@estipack.com" className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
+            <a href={`mailto:${EMAIL}`} className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
               <Mail className="w-3.5 h-3.5 text-kraft-400" />
-              <span>info@estipack.com</span>
+              <span>{EMAIL}</span>
             </a>
             <div className="hidden lg:flex items-center gap-1.5 text-white/60">
               <MapPin className="w-3.5 h-3.5" />

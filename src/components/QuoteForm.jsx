@@ -155,8 +155,8 @@ export default function QuoteForm({ selectedSolution, selectedIndustry, onClearS
                   </div>
                   <div>
                     <p className="text-xs uppercase font-bold tracking-wider text-slate-400">Inquiry & RFQ Inbox</p>
-                    <a href="mailto:info@estipack.com" className="text-sm font-semibold text-slate-100 hover:text-amber-400 transition-colors mt-0.5 block">
-                      info@estipack.com
+                    <a href="mailto:admin@estipack.com" className="text-sm font-semibold text-slate-100 hover:text-amber-400 transition-colors mt-0.5 block">
+                      admin@estipack.com
                     </a>
                     <p className="text-xs text-slate-400 mt-0.5">Response turnaround under 2 business hours</p>
                   </div>

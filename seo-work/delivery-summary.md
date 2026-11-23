@@ -45,7 +45,7 @@ WebP images with width/height, lazy media, sitemap.xml, robots.txt, LocalBusines
 
 ## Round 3 — ranking / speed pass (2026-11-23, implemented-locally)
 
-- NAP unified from `src/data/site.js`: "ESTI Packaging Industry", "21, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203, India", "+91 98331 82733" (header, hero, footer, contact, schema, llms.txt).
+- NAP unified from `src/data/site.js`: "ESTI Packaging Industry", "Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203, India", "+91 98331 82733" (header, hero, footer, contact, schema, llms.txt).
 - LocalBusiness: openingHours `Mo-Su 00:00-23:59`, plant photos as `image`, `sameAs` from `PROFILE_URLS`, `geo` from `GEO` — **YouTube / IndiaMART / GlobalLinker URLs and plant coordinates are empty, waiting for the owner** (not guessed).
 - Contact: lazy Google Map + "Get Directions" (Google Maps directions to the address).
 - H1s: keyword + location line added (home, products, about, contact, industries); one H1 per page.

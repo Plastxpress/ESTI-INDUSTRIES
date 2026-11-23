@@ -4,10 +4,10 @@
 export const SITE_URL = 'https://www.estipack.com';
 export const SITE_NAME = 'ESTI Packaging Industry';
 
-export const EMAIL = 'info@estipack.com';
+export const EMAIL = 'admin@estipack.com';
 export const PHONE_TEL = '+919833182733';
 export const PHONE_DISPLAY = '+91 98331 82733';
-export const ADDRESS_TEXT = '21, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203, India';
+export const ADDRESS_TEXT = 'Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203, India';
 export const HOURS_TEXT = 'Open 24 hours, 7 days';
 
 export const WHATSAPP_BASE = 'https://wa.me/919833182733';

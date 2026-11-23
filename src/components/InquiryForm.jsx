@@ -34,7 +34,7 @@ export default function InquiryForm({ defaultProductId = '', heading = 'Request 
       `*Phone:* ${get('phone')}`,
       `*Company:* ${get('company')}`,
       `*Product:* ${get('product')}`,
-      `*Quantity:* ${get('quantity')}`,
+      `*Delivery Location:* ${get('deliveryLocation')}`,
       `*Message:* ${get('message')}`,
       '',
       `*Sent from:* ${window.location.href.split('#')[0]}`,
@@ -89,8 +89,15 @@ export default function InquiryForm({ defaultProductId = '', heading = 'Request 
           </select>
         </label>
         <label className={`${label} sm:col-span-2`}>
-          Quantity
-          <input name="quantity" type="text" className={field} />
+          Delivery Location
+          <input
+            id={`${id}-delivery-location`}
+            name="deliveryLocation"
+            type="text"
+            placeholder="e.g. Mumbai, Pune, Gujarat"
+            autoComplete="address-level2"
+            className={field}
+          />
         </label>
         <label className={`${label} sm:col-span-2`}>
           Message
