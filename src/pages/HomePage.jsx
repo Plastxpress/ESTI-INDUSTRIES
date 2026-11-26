@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ShieldCheck, Award, Phone, Mail, MessageSquare, Factory as FactoryIcon, Check } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Award, Mail, MessageSquare, Factory as FactoryIcon, Check } from 'lucide-react';
 import Hero from '../components/Hero';
 import ClientTicker from '../components/ClientTicker';
 import PackagingWithPurpose from '../components/PackagingWithPurpose';
@@ -10,7 +10,7 @@ import LazyVideo from '../components/LazyVideo';
 import { PRODUCTS } from '../data/products';
 import { GROUPS, groupOf } from '../data/catalogue';
 import { INDUSTRIES_DATA as INDUSTRIES } from '../components/IndustriesSection';
-import { EMAIL, PHONE_TEL, PHONE_DISPLAY, whatsappLink } from '../data/site';
+import { EMAIL, whatsappLink } from '../data/site';
 import { PLANT_PHOTOS, altFor } from '../data/plant';
 import Img from '../components/Img';
 import Faq from '../components/Faq';
@@ -258,9 +258,6 @@ export function ContactCta() {
           <a href="/contact#quote-form" className="inline-flex items-center justify-between gap-2 min-h-14 px-6 rounded-full bg-kraft-500 hover:bg-kraft-400 text-ink font-bold transition-colors">
             <span className="inline-flex items-center gap-2"><Mail className="w-5 h-5" /> Request a Quote</span>
             <ArrowRight className="w-5 h-5" />
-          </a>
-          <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 min-h-14 px-6 rounded-full border border-white/20 hover:bg-white/10 font-bold transition-colors">
-            <Phone className="w-5 h-5 text-kraft-300" /> {PHONE_DISPLAY}
           </a>
           <a
             href={whatsappLink('Hello ESTI Packaging, I am interested in your corrugated and packaging products.')}

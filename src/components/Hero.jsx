@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ShieldCheck, Phone, ArrowDown, Check, MessageSquare } from 'lucide-react';
+import { ShieldCheck, ArrowDown, Check, MessageSquare } from 'lucide-react';
 
 const FEATURES = ['3, 5 & 7-Ply Boards', 'UN 1266 Certified', '1,200 MT/Mo Capacity', 'Up to 40% Cost Savings'];
 const METRICS = [
@@ -86,10 +86,6 @@ export default function Hero() {
             <a href="#products" className="group inline-flex items-center justify-center gap-2 min-h-14 px-7 rounded-full bg-kraft-500 hover:bg-kraft-400 text-ink font-bold transition-colors">
               View Product Portfolio
               <ArrowDown className="w-4 h-4 transition-transform group-hover:translate-y-0.5" />
-            </a>
-            <a href="tel:+919833182733" className="inline-flex items-center justify-center gap-2 min-h-14 px-7 rounded-full border border-white/25 bg-ink/40 hover:bg-white/15 font-bold transition-colors">
-              <Phone className="w-4 h-4 text-kraft-300" />
-              Call: +91 98331 82733
             </a>
             <a
               href="https://wa.me/919833182733?text=Hello%20ESTI%20Packaging,%20I%20am%20interested%20in%20your%20corrugated%20and%20packaging%20products."

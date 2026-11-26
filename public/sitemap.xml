@@ -5,22 +5,22 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.estipack.com/</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.estipack.com/packaging-guide</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.estipack.com/industries</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.estipack.com/about</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.7</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/plant-printer-slotter-line.webp</image:loc>
@@ -73,12 +73,12 @@
   </url>
   <url>
     <loc>https://www.estipack.com/contact</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.estipack.com/corrugated-boxes</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/corrugated-custom-bicycle-box.webp</image:loc>
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/pallet-boxes</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/ssdn-heavy-duty-pallet.webp</image:loc>
@@ -120,7 +120,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/un-1266-boxes</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/un-certified-box.webp</image:loc>
@@ -141,7 +141,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/octagonal-bins</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/octagonal-bulk-bin.webp</image:loc>
@@ -162,7 +162,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/2-metre-tall-cartons</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/tall-industrial-carton-esti.webp</image:loc>
@@ -179,7 +179,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/die-cut-boxes</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/die-cut-corrugated.webp</image:loc>
@@ -208,7 +208,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/dividers</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/custom-dividers.webp</image:loc>
@@ -217,7 +217,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/document-storage-boxes</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/document-storage-stacked.webp</image:loc>
@@ -246,7 +246,7 @@
   </url>
   <url>
     <loc>https://www.estipack.com/wooden-pallets</loc>
-    <lastmod>2026-11-23</lastmod>
+    <lastmod>2026-11-26</lastmod>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.estipack.com/assets/images/webp/wooden-pallets-stack.webp</image:loc>

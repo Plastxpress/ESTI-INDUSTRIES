@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Phone, Mail, MapPin, Menu, X, Award, Clock, ArrowRight, ChevronDown, Ruler } from 'lucide-react';
+import { Mail, MapPin, Menu, X, Award, Clock, ArrowRight, ChevronDown, Ruler } from 'lucide-react';
 import Img from './Img';
 import { PRODUCTS } from '../data/products';
 import { EMAIL } from '../data/site';
@@ -43,10 +43,6 @@ export default function Navbar({ path = '/' }) {
       <div className="bg-ink text-white/75 text-xs py-2 border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center space-x-4 sm:space-x-6">
-            <a href="tel:+919833182733" className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
-              <Phone className="w-3.5 h-3.5 text-kraft-400" />
-              <span>+91 98331 82733</span>
-            </a>
             <a href={`mailto:${EMAIL}`} className="flex items-center gap-1.5 py-[14px] -my-[14px] hover:text-white transition-colors">
               <Mail className="w-3.5 h-3.5 text-kraft-400" />
               <span>{EMAIL}</span>

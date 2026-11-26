@@ -1,6 +1,6 @@
 import React from 'react';
-import { Home, LayoutGrid, Ruler, Building2, Phone } from 'lucide-react';
-import { whatsappLink, PHONE_TEL, PHONE_DISPLAY } from '../data/site';
+import { Home, LayoutGrid, Ruler, Building2 } from 'lucide-react';
+import { whatsappLink } from '../data/site';
 
 function WhatsAppIcon({ className }) {
   return (
@@ -34,15 +34,6 @@ export default function MobileBar({ path = '/' }) {
           </a>
         ))}
       </nav>
-
-      {/* Floating call button (phones/tablets; desktop shows the number in the header) */}
-      <a
-        href={`tel:${PHONE_TEL}`}
-        aria-label={`Call ${PHONE_DISPLAY}`}
-        className="lg:hidden fixed right-[1.375rem] sm:right-[1.875rem] bottom-[calc(8.5rem+env(safe-area-inset-bottom))] z-40 w-12 h-12 rounded-full bg-ink text-kraft-300 flex items-center justify-center shadow-[0_10px_24px_-8px_rgba(17,22,29,0.6)] active:scale-95 transition-transform"
-      >
-        <Phone className="w-5 h-5" />
-      </a>
 
       {/* Floating WhatsApp button (bottom-right; sits above the bar on phones) */}
       <a
