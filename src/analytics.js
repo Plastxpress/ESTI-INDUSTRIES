@@ -1,4 +1,4 @@
-// Google Analytics 4, loaded only after the page has finished loading (and the browser is idle),
+// Google Analytics 4, loaded after the page: at the first interaction or 6 s after load,
 // and only once a real measurement ID is set in data/site.js.
 // Click events: whatsapp_click, phone_click, email_click. Form event: quote_form_submit.
 import { GA_MEASUREMENT_ID } from './data/site';
@@ -33,7 +33,12 @@ export function initAnalytics() {
       if (name) track(name, { link_url: a.href, page_path: window.location.pathname });
     }, { capture: true });
   };
-  const idle = () => (window.requestIdleCallback ? requestIdleCallback(start, { timeout: 4000 }) : setTimeout(start, 2000));
-  if (document.readyState === 'complete') idle();
-  else window.addEventListener('load', idle, { once: true });
+  // Start at the first interaction (scroll, tap, key) or 6 s after load, whichever comes first,
+  // so the GA script never competes with the first paint or first input.
+  let started = false;
+  const go = () => { if (started) return; started = true; start(); };
+  const later = () => setTimeout(() => (window.requestIdleCallback ? requestIdleCallback(go, { timeout: 2000 }) : go()), 6000);
+  if (document.readyState === 'complete') later();
+  else window.addEventListener('load', later, { once: true });
+  ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach((t) => window.addEventListener(t, go, { once: true, passive: true }));
 }
