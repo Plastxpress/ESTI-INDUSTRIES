@@ -13,6 +13,7 @@ const sectorsQ = (id) => ({
 
 export const PRODUCT_FAQS = {
   'corrugated-boxes': [
+    { q: 'Are you a jumbo box manufacturer in Mumbai?', a: 'Yes. ESTI Packaging Industry manufactures jumbo boxes, with manufacturing units in Mumbai, Khopoli and Pune and a maximum sheet size of 5000 mm in length and 2500 mm in width for extra-large jumbo box manufacturing.' },
     ownerFaq('plies'),
     ownerFaq('flutes'),
     ownerFaq('gsm-bf'),
@@ -21,6 +22,7 @@ export const PRODUCT_FAQS = {
     sectorsQ('corrugated-boxes'),
   ],
   'heavy-duty-pallet': [
+    { q: 'Are you a pallet box manufacturer in Mumbai?', a: `Yes. ESTI Packaging Industry manufactures heavy-duty corrugated pallet boxes (${spec('heavy-duty-pallet', 'Load Capacity').replace(/^S/, 's')}), with manufacturing units in Mumbai, Khopoli and Pune.` },
     ownerFaq('export'),
     ownerFaq('stacking'),
     { q: 'How much load can an ESTI corrugated pallet box carry?', a: `${spec('heavy-duty-pallet', 'Load Capacity')}.` },
@@ -30,6 +32,7 @@ export const PRODUCT_FAQS = {
     sectorsQ('heavy-duty-pallet'),
   ],
   'un-certified-boxes': [
+    { q: 'Are you a UN certified boxes manufacturer in India?', a: 'Yes. ESTI Packaging Industry manufactures UN 1266 certified boxes for Class 3 flammable liquids (Packaging Group II & III), compliant with IMDG (Sea), ICAO/IATA (Air) and ADR (Road) regulations.' },
     ownerFaq('strength'),
     ownerFaq('coa'),
     { q: 'What are UN 1266 certified boxes used for?', a: `${spec('un-certified-boxes', 'Certification')} — for the domestic transit and international export of hazardous and flammable liquid products.` },

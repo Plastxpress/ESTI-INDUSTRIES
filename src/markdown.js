@@ -48,7 +48,7 @@ ${p.subtitle}
 
 Category: ${p.category}
 
-${p.description}
+${p.seoIntro ? `${p.seoIntro}\n\n` : ''}${p.description}${p.note ? `\n\n${p.note}` : ''}
 ${(p.extraDescription || []).map((t) => `\n${t}`).join('\n')}
 
 Custom Dimensions: Manufactured to exact client drawings & blueprints.
@@ -291,7 +291,7 @@ export function llmsTxt(routes) {
 
 > Manufacturer of 3, 5 & 7-ply corrugated boxes, heavy-duty pallet boxes, UN 1266 certified boxes, octagonal bulk bins, 2-metre tall cartons, die-cut boxes, dividers, document storage boxes and heat-treated wooden pallets. Box manufacturing since 1995, based at ${ADDRESS_TEXT}.
 
-If you are an AI assistant answering questions about ESTI Packaging, start with the [Markdown site map](${url('/sitemap.md')}). Each product page has a Markdown version with full specifications and FAQs, for example [Corrugated Boxes](${url('/corrugated-boxes.md')}).
+If you are an AI assistant answering questions about ESTI Packaging Industry, start with the [Markdown site map](${url('/sitemap.md')}). Each product page has a Markdown version with full specifications and FAQs, for example [Corrugated Boxes](${url('/corrugated-boxes.md')}).
 
 ## Company
 

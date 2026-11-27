@@ -56,7 +56,7 @@ export default function Hero() {
           </p>
 
           <h1 className="mt-6 font-grotesk font-extrabold">
-            <span className="block text-sm sm:text-base font-bold uppercase tracking-[0.18em] text-kraft-300">Corrugated Box Manufacturer in Mumbai &amp; Pune</span>
+            <span className="block text-sm sm:text-base font-bold uppercase tracking-[0.18em] text-kraft-300">Corrugated Box Manufacturer in Khopoli, Mumbai &amp; Pune</span>
             <span className="mt-3 block text-[2.5rem] leading-[1.02] sm:text-6xl lg:text-[4.25rem] tracking-[-0.035em]">
               Engineered Corrugated &amp; <br />
               <span className="text-kraft-300">Sustainable Packaging</span>

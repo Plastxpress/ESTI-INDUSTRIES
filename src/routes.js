@@ -27,7 +27,6 @@ const organization = {
   '@type': ['Organization', 'LocalBusiness'],
   '@id': ORG_ID,
   name: SITE_NAME,
-  alternateName: ['ESTI Packaging'],
   url: SITE_URL,
   logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon-512x512.png?v=2`, width: 512, height: 512 },
   image: [
@@ -42,7 +41,7 @@ const organization = {
   contactPoint: [{ '@type': 'ContactPoint', telephone: PHONE_TEL, email: EMAIL, contactType: 'sales' }],
   // Only real, owner-confirmed profiles (empty slots in data/site.js are skipped).
   sameAs: Object.values(PROFILE_URLS).filter(Boolean),
-  hasMap: MAP_LINK_URL,
+  hasMap: PROFILE_URLS.googleBusinessProfile || MAP_LINK_URL,
   ...(GEO.latitude && GEO.longitude ? { geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude } } : {}),
   openingHours: 'Mo-Su 00:00-23:59',
   knowsAbout: [
@@ -129,11 +128,11 @@ const productSchema = (p) => ({
   '@type': 'Product',
   '@id': `${abs(p.path)}#product`,
   name: p.title,
-  description: p.description,
+  description: p.note ? `${p.description} ${p.note}` : p.description,
   image: p.images.map((src) => `${SITE_URL}${webp(src)}`),
   category: p.category,
   url: abs(p.path),
-  brand: { '@type': 'Brand', name: 'ESTI Packaging' },
+  brand: { '@type': 'Brand', name: SITE_NAME },
   manufacturer: { '@id': ORG_ID },
   additionalProperty: p.specs.map((s) => ({ '@type': 'PropertyValue', name: s.label, value: s.value })),
 });
@@ -168,16 +167,16 @@ const STATIC_ROUTES = [
   {
     path: '/',
     page: 'home',
-    title: 'Corrugated Box Manufacturer in India | ESTI Packaging',
+    title: 'Corrugated Boxes Khopoli & Mumbai | ESTI Packaging Industry',
     description:
-      'ESTI Packaging Industry makes 3, 5 & 7-ply corrugated boxes, pallet boxes, UN 1266 certified boxes and octabins in Khopoli, Maharashtra. Since 1995.',
+      'ESTI Packaging Industry makes 3, 5 & 7-ply corrugated boxes, pallet boxes and UN 1266 boxes in Khopoli, with units in Mumbai and Pune. Since 1995.',
     crumbs: [HOME],
     og: 'home',
   },
   {
     path: '/packaging-guide',
     page: 'guide',
-    title: 'Corrugated Board & Box Die-Line Guide | ESTI Packaging',
+    title: 'Corrugated Board & Die-Line Guide | ESTI Packaging Industry',
     description:
       'Build a 3, 5 or 7-ply corrugated board section and see its caliper, then draw a FEFCO 0201 die-line and see how many blanks fit one 1800 × 3500 sheet.',
     crumbs: [HOME, { name: 'Packaging Guide', path: '/packaging-guide' }],
@@ -185,7 +184,7 @@ const STATIC_ROUTES = [
   {
     path: '/industries',
     page: 'industries',
-    title: 'Industrial Packaging for 16 Industries | ESTI Packaging',
+    title: 'Packaging for 16 Industries | ESTI Packaging Industry',
     description:
       'Corrugated packaging for 16 industries, from heavy engineering, automotive and pharmaceuticals to FMCG, food, e-commerce, logistics and export.',
     crumbs: [HOME, { name: 'Industries', path: '/industries' }],
@@ -194,16 +193,16 @@ const STATIC_ROUTES = [
     path: '/about',
     page: 'about',
     pageType: 'AboutPage',
-    title: 'About ESTI Packaging Industry | Box Manufacturing Since 1995',
+    title: 'About ESTI Packaging Industry | Manufacturing Since 1995',
     description:
-      'Box manufacturing since 1995. ISO 9001 and UN 1266 certified, 1,200 MT monthly board capacity, with units in Mumbai, Khopoli and Pune.',
+      'Box manufacturing since 1995. ISO 9001 and UN 1266 certified, 1,200 MT monthly board capacity, with manufacturing units in Mumbai, Khopoli and Pune.',
     crumbs: [HOME, { name: 'About', path: '/about' }],
   },
   {
     path: '/contact',
     page: 'contact',
     pageType: 'ContactPage',
-    title: 'Contact ESTI Packaging, Khopoli | Request a Quote',
+    title: 'Contact ESTI Packaging Industry, Khopoli | Request a Quote',
     description:
       'ESTI Packaging Industry, Arkose Industrial Estate, Dheku, Khalapur, Khopoli, Maharashtra 410203. Call +91 98331 82733, open 24 hours, 7 days.',
     crumbs: [HOME, { name: 'Contact Us', path: '/contact' }],
@@ -237,7 +236,7 @@ export const ROUTES = [...STATIC_ROUTES, ...PRODUCT_ROUTES];
 export const NOT_FOUND = {
   path: '/404',
   page: 'notfound',
-  title: 'Page not found | ESTI Packaging',
+  title: 'Page not found | ESTI Packaging Industry',
   description: 'The page you were looking for could not be found.',
   crumbs: [HOME],
   noindex: true,

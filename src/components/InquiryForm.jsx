@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MessageSquare, Mail } from 'lucide-react';
 import { PRODUCTS } from '../data/products';
 import { EMAIL, WHATSAPP_BASE } from '../data/site';
+import { track } from '../analytics';
 
 /**
  * Short quote form. There is no server: submitting opens WhatsApp
@@ -40,6 +41,7 @@ export default function InquiryForm({ defaultProductId = '', heading = 'Request 
       `*Sent from:* ${window.location.href.split('#')[0]}`,
     ].join('\n');
     const url = `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;
+    track('quote_form_submit', { product: get('product'), page_path: window.location.pathname });
     // New tab on desktop; if a popup blocker stops it, open in the same tab.
     const win = window.open(url, '_blank', 'noopener');
     if (!win) window.location.href = url;

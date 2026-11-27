@@ -8,6 +8,7 @@ import {
   ADDRESS_TEXT,
   HOURS_TEXT,
   LINKEDIN_URL,
+  GOOGLE_PROFILE_URL,
   UNITS,
   whatsappLink,
 } from '../data/site';
@@ -168,6 +169,17 @@ export default function Footer({ roomy = false }) {
                     className={`hover:text-sky-400 transition-colors${tap}`}
                   >
                     linkedin.com/in/estipack/
+                  </a>
+                </li>
+                <li className="flex items-center gap-2.5">
+                  <MapPin className="w-4 h-4 text-kraft-300 shrink-0" aria-hidden="true" />
+                  <a
+                    href={GOOGLE_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`hover:text-kraft-300 transition-colors${tap}`}
+                  >
+                    Find us on Google
                   </a>
                 </li>
               </ul>

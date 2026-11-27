@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { initAnalytics } from './analytics'
 
 const root = document.getElementById('root')
 const app = (
@@ -19,3 +20,5 @@ if (root.firstElementChild) {
 } else {
   ReactDOM.createRoot(root).render(app)
 }
+
+initAnalytics()

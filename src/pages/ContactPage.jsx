@@ -11,6 +11,7 @@ import {
   UNITS,
   MAP_EMBED_URL,
   DIRECTIONS_URL,
+  GOOGLE_PROFILE_URL,
   whatsappLink,
 } from '../data/site';
 
@@ -89,6 +90,9 @@ export default function ContactPage() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-ink tracking-tight font-grotesk">Find Us</h2>
             <a href={DIRECTIONS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 min-h-11 px-5 rounded-full bg-ink hover:bg-ink-2 text-white text-sm font-bold">
               <Navigation className="w-4 h-4 text-kraft-300" /> Get Directions
+            </a>
+            <a href={GOOGLE_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 min-h-11 px-5 rounded-full border border-line bg-white hover:bg-paper text-ink text-sm font-bold">
+              <MapPin className="w-4 h-4 text-kraft-700" /> View on Google Maps
             </a>
           </div>
           <p className="text-base text-slate-700 mb-4">{ADDRESS_TEXT}</p>

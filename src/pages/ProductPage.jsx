@@ -110,7 +110,9 @@ export default function ProductPage({ product: p }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-7">
             <h2 className="font-grotesk text-2xl sm:text-3xl font-extrabold tracking-tight text-ink">Overview</h2>
+            {p.seoIntro && <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">{p.seoIntro}</p>}
             <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">{p.description}</p>
+            {p.note && <p className="mt-4 text-base sm:text-lg text-ink-soft leading-relaxed">{p.note}</p>}
             {p.extraDescription?.length > 0 && (
               <More className="mt-5" more="Read more" less="Read less">
                 <div className="space-y-3 text-ink-soft leading-relaxed">

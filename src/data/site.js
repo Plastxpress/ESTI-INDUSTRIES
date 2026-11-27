@@ -20,11 +20,16 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/estipack/';
 
 // Official profile URLs for schema "sameAs" (only real, existing profiles).
 export const PROFILE_URLS = {
-  linkedin: LINKEDIN_URL,
-  youtube: '', // e.g. https://www.youtube.com/@...
-  indiamart: '', // e.g. https://www.indiamart.com/...
-  globallinker: '', // e.g. https://www.globallinker.com/...
+  googleBusinessProfile: '', // [PASTE GBP SHARE LINK] — Google Business Profile > Share
+  indiamart: '', // [LINK]
+  globallinker: 'https://www.globallinker.com/seller/esti-packaging-industry',
+  linkedin: LINKEDIN_URL, // existing LinkedIn link on the site
+  youtube: '', // [LINK]
 };
+
+// Google Analytics 4 measurement ID. Placeholder until the owner creates the GA4 property;
+// while it is the placeholder, no analytics script is loaded.
+export const GA_MEASUREMENT_ID = 'G-XXXXXXX';
 
 // Khopoli plant coordinates (Google Maps: right-click the pin → copy the two numbers).
 export const GEO = { latitude: null, longitude: null };
@@ -38,6 +43,8 @@ const ADDRESS_Q = encodeURIComponent(ADDRESS_TEXT);
 export const MAP_EMBED_URL = `https://www.google.com/maps?q=${ADDRESS_Q}&output=embed`;
 export const MAP_LINK_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS_Q}`;
 export const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${ADDRESS_Q}`;
+// Google profile link: the Business Profile once filled, otherwise a Maps search for the address.
+export const GOOGLE_PROFILE_URL = PROFILE_URLS.googleBusinessProfile || MAP_LINK_URL;
 
 // Manufacturing units exactly as listed in the existing footer.
 export const UNITS = [
