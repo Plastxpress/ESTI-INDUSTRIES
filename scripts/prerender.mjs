@@ -16,7 +16,13 @@ const DIST = path.join(ROOT, 'dist');
 const SSR = path.join(ROOT, 'dist-ssr', 'entry-server.js');
 
 const { render, ROUTES, NOT_FOUND, markdownFor, mdPath, sitemapMd, llmsTxt, PLANT_PHOTOS } = await import(pathToFileURL(SSR).href);
-const template = fs.readFileSync(path.join(DIST, 'index.html'), 'utf8');
+// The pages are fully pre-rendered, so the app script (hydration only) is fetched after the
+// page's load event, or at the first interaction, so it doesn't compete with first paint.
+const template = fs
+  .readFileSync(path.join(DIST, 'index.html'), 'utf8')
+  .replace(/<script type="module" crossorigin src="([^"]+)"><\/script>/, (_, src) =>
+    `<script type="module">const go=()=>import(${JSON.stringify(src)});addEventListener('load',()=>setTimeout(go,0),{once:true});['pointerdown','keydown','touchstart'].forEach((t)=>addEventListener(t,go,{once:true,passive:true}));</script>`);
+if (!/import\("\/assets\/index-/.test(template)) throw new Error('app script tag not found for deferred loading');
 
 if (!template.includes('<!--app-head-->') || !template.includes('<!--app-html-->')) {
   throw new Error('index.html template placeholders missing');

@@ -25,6 +25,7 @@ export const PROFILE_URLS = {
   globallinker: 'https://www.globallinker.com/seller/esti-packaging-industry',
   linkedin: LINKEDIN_URL, // existing LinkedIn link on the site
   youtube: '', // [LINK]
+  linkerStore: 'https://estipackaging.linker.store',
 };
 
 // Google Analytics 4 measurement ID. Placeholder until the owner creates the GA4 property;

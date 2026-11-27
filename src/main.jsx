@@ -16,7 +16,17 @@ const app = (
 if (root.firstElementChild) {
   // Let the browser paint the pre-rendered HTML first, then attach React on the next
   // frame (hydration is a long task; running it before first paint delays the page).
-  requestAnimationFrame(() => setTimeout(() => ReactDOM.hydrateRoot(root, app), 0))
+  // Hydrate once the browser is idle after load, or at the first interaction, whichever comes first.
+  let done = false
+  const hydrate = () => {
+    if (done) return
+    done = true
+    ReactDOM.hydrateRoot(root, app)
+  }
+  const idle = () => (window.requestIdleCallback ? requestIdleCallback(hydrate, { timeout: 3000 }) : setTimeout(hydrate, 1500))
+  if (document.readyState === 'complete') idle()
+  else window.addEventListener('load', idle, { once: true })
+  ;['pointerdown', 'keydown', 'touchstart', 'focusin'].forEach((t) => window.addEventListener(t, hydrate, { once: true, passive: true, capture: true }))
 } else {
   ReactDOM.createRoot(root).render(app)
 }

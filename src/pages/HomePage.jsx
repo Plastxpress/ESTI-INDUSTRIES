@@ -193,7 +193,7 @@ export default function HomePage() {
       <Hero />
       <ClientTicker />
 
-      <div className="readable">
+      <div className="readable defer-render">
         <Catalogue />
         <OneRoof index="02" />
         <Capability />

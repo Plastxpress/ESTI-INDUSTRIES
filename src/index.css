@@ -185,3 +185,10 @@ details.more[open] .more-chev { transform: rotate(180deg); }
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: none; }
 }
+
+/* Homepage sections below the hero: the browser skips their layout/paint until they near
+   the viewport (content stays in the HTML for users, crawlers and find-in-page). */
+.defer-render > * {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
