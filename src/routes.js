@@ -10,7 +10,6 @@ import {
   SITE_NAME,
   EMAIL,
   PHONE_TEL,
-  MAP_LINK_URL,
   PROFILE_URLS,
   GEO,
   GOOGLE_SITE_VERIFICATION,
@@ -41,7 +40,7 @@ const organization = {
   contactPoint: [{ '@type': 'ContactPoint', telephone: PHONE_TEL, email: EMAIL, contactType: 'sales' }],
   // Only real, owner-confirmed profiles (empty slots in data/site.js are skipped).
   sameAs: Object.values(PROFILE_URLS).filter(Boolean),
-  hasMap: PROFILE_URLS.googleBusinessProfile || MAP_LINK_URL,
+  hasMap: PROFILE_URLS.googleMaps,
   ...(GEO.latitude && GEO.longitude ? { geo: { '@type': 'GeoCoordinates', latitude: GEO.latitude, longitude: GEO.longitude } } : {}),
   openingHours: 'Mo-Su 00:00-23:59',
   knowsAbout: [

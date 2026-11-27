@@ -21,6 +21,7 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/estipack/';
 // Official profile URLs for schema "sameAs" (only real, existing profiles).
 export const PROFILE_URLS = {
   googleBusinessProfile: 'https://share.google/yJvKH38TpJJHkJ9d0', // Google Business Profile share link
+  googleMaps: 'https://www.google.com/maps/search/?api=1&query=ESTI+Packaging+Industry+Arkose+Industrial+Estate+Khopoli', // permanent Google Maps link
   indiamart: '', // [LINK]
   globallinker: 'https://www.globallinker.com/seller/esti-packaging-industry',
   linkedin: LINKEDIN_URL, // existing LinkedIn link on the site
@@ -43,8 +44,8 @@ const ADDRESS_Q = encodeURIComponent(ADDRESS_TEXT);
 export const MAP_EMBED_URL = `https://www.google.com/maps?q=${ADDRESS_Q}&output=embed`;
 export const MAP_LINK_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS_Q}`;
 export const DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${ADDRESS_Q}`;
-// Google profile link: the Business Profile once filled, otherwise a Maps search for the address.
-export const GOOGLE_PROFILE_URL = PROFILE_URLS.googleBusinessProfile || MAP_LINK_URL;
+// Link for "View on Google Maps", "Find us on Google" and schema hasMap.
+export const GOOGLE_PROFILE_URL = PROFILE_URLS.googleMaps;
 
 // Manufacturing units exactly as listed in the existing footer.
 export const UNITS = [
