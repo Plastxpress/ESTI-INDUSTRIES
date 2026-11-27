@@ -20,23 +20,22 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/in/estipack/';
 
 // Official profile URLs for schema "sameAs" (only real, existing profiles).
 export const PROFILE_URLS = {
-  googleBusinessProfile: '', // [PASTE GBP SHARE LINK] — Google Business Profile > Share
+  googleBusinessProfile: 'https://share.google/yJvKH38TpJJHkJ9d0', // Google Business Profile share link
   indiamart: '', // [LINK]
   globallinker: 'https://www.globallinker.com/seller/esti-packaging-industry',
   linkedin: LINKEDIN_URL, // existing LinkedIn link on the site
-  youtube: '', // [LINK]
+  youtube: 'https://www.youtube.com/channel/UCAqwiQ5eVHPpS9GEJVCC_cw',
   linkerStore: 'https://estipackaging.linker.store',
 };
 
-// Google Analytics 4 measurement ID. Placeholder until the owner creates the GA4 property;
-// while it is the placeholder, no analytics script is loaded.
-export const GA_MEASUREMENT_ID = 'G-XXXXXXX';
+// Google Analytics 4 measurement ID (loaded after the page; see src/analytics.js).
+export const GA_MEASUREMENT_ID = 'G-RK86SE3FRD';
 
 // Khopoli plant coordinates (Google Maps: right-click the pin → copy the two numbers).
 export const GEO = { latitude: null, longitude: null };
 
 // Google Search Console → HTML tag method → paste ONLY the content="..." value here.
-export const GOOGLE_SITE_VERIFICATION = '';
+export const GOOGLE_SITE_VERIFICATION = '5ANy9YiWXm6lgW4bjKvIyt-K0r_nhh3VmWMCeKYCnAo';
 
 // ---------------------------------------------------------------------------
 
