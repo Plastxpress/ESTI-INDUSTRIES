@@ -99,7 +99,7 @@ export default function BoardSpec({ step }) {
               <Row term="Flutes / metre">
                 <span className="nums">{flutes.map((f) => f.perMetre).join(' · ')}</span>
               </Row>
-              <Row term="Typical use" className="col-span-2">{APPLICATION[combo]}</Row>
+              {APPLICATION[combo] && <Row term="Typical use" className="col-span-2">{APPLICATION[combo]}</Row>}
             </dl>
 
             <p className="mt-5 text-[12px] leading-relaxed text-slate">

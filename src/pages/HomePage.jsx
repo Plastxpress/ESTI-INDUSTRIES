@@ -14,11 +14,13 @@ import { EMAIL, whatsappLink } from '../data/site';
 import { PLANT_PHOTOS, altFor } from '../data/plant';
 import Img from '../components/Img';
 import Faq from '../components/Faq';
-import { HOME_FAQS } from '../data/faqs';
+import OneRoof from '../components/OneRoof';
+import CoaNote from '../components/CoaNote';
+import { HOME_FAQS, HOME_FAQS_MORE } from '../data/faqs';
 
 // Machinery highlights (existing text from the Factory section).
 const MACHINERY = [
-  { title: 'Imported 5-Ply Board Plant (2200 mm)', description: 'Fully automatic high-speed corrugating line producing 3-ply, 5-ply, and 7-ply heavy boards in A, B, C, and E flutes with steam-controlled moisture retention.' },
+  { title: 'Imported 5-Ply Board Plant (2200 mm)', description: 'Fully automatic high-speed corrugating line producing 3-ply, 5-ply, and 7-ply heavy boards in A, B, and C flutes with steam-controlled moisture retention.' },
   { title: '1800 x 3500 mm Printer Slotter', description: 'Fully automatic 2-color printer slotter—one of the largest in the market—delivering precision scoring, slotting, and crisp flexo printing.' },
   { title: 'Automated Stitchers & Gluers', description: 'Equipped with automatic single and two-piece heavy-duty stitchers and automated gluing lines for rapid case assembly.' },
   { title: 'Quality Testing Laboratory', description: 'Fully equipped in-house testing lab monitoring Bursting Strength (BF), Edge Crush Test (ECT), Ring Crush Test (RCT), and Cobb moisture absorption.' },
@@ -68,7 +70,7 @@ function Capability() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         <div className="lg:col-span-6 reveal">
           <SectionHead
-            index="02"
+            index="03"
             eyebrow="Manufacturing"
             title={<>Engineered for strength. <span className="text-kraft-700">Designed for performance.</span> Built for your industry.</>}
             lead="We offer end-to-end packaging solutions (along with packaging design and contract packaging) for all industries, backed by 30+ years of manufacturing pedigree."
@@ -162,7 +164,7 @@ function IndustriesTeaser() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
           <SectionHead
-            index="04"
+            index="05"
             eyebrow="Industries"
             title="Packaging Solutions Built for Every Industry"
             lead="Every product has different packaging requirements."
@@ -193,11 +195,12 @@ export default function HomePage() {
 
       <div className="readable">
         <Catalogue />
+        <OneRoof index="02" />
         <Capability />
-        <PackagingWithPurpose index="03" />
+        <PackagingWithPurpose index="04" />
         <IndustriesTeaser />
-        <Certifications index="05" />
-        <Faq items={HOME_FAQS} index="06" eyebrow="FAQ" title="Frequently Asked Questions" />
+        <Certifications index="06" />
+        <Faq items={HOME_FAQS} moreItems={HOME_FAQS_MORE} index="07" eyebrow="FAQ" title="Frequently Asked Questions" />
         <ContactCta />
       </div>
     </>
@@ -236,6 +239,7 @@ export function Certifications({ index }) {
             );
           })}
         </div>
+        <CoaNote className="mt-4 reveal" />
       </div>
     </section>
   );

@@ -1,7 +1,8 @@
 // Visible FAQ content (also emitted as FAQPage JSON-LD from the same data).
-// Every answer restates facts that already appear on the site — no new claims.
+// Answers restate facts already on the site, plus the owner-provided FAQs in ownerFaqs.js.
 import { PRODUCTS, productById } from './products';
-import { ADDRESS_TEXT, PHONE_DISPLAY, HOURS_TEXT, EMAIL, UNITS } from './site';
+import { ADDRESS_TEXT, UNITS } from './site';
+import { OWNER_FAQS, ownerFaq } from './ownerFaqs';
 
 const spec = (id, label) => productById(id).specs.find((s) => s.label === label)?.value;
 const sectors = (id) => productById(id).applications;
@@ -12,13 +13,16 @@ const sectorsQ = (id) => ({
 
 export const PRODUCT_FAQS = {
   'corrugated-boxes': [
-    { q: 'What ply options are available for ESTI corrugated boxes?', a: `${spec('corrugated-boxes', 'Constructions')}.` },
-    { q: 'What board thickness and flute combinations can ESTI Packaging produce?', a: `Boards from 3 mm to 15 mm in thickness, in flute combinations ${spec('corrugated-boxes', 'Flute Combinations')}.` },
+    ownerFaq('plies'),
+    ownerFaq('flutes'),
+    ownerFaq('gsm-bf'),
     { q: 'What is the maximum corrugated sheet size?', a: 'Maximum sheet size of 5000 mm in length and 2500 mm in width, enabling extra-large jumbo box manufacturing.' },
     { q: 'What bursting strength and edge crush grades are available?', a: `Bursting strength of ${spec('corrugated-boxes', 'Bursting Strength')}, and Edge Crush Test grades from ${spec('corrugated-boxes', 'Edge Crush Test')}.` },
     sectorsQ('corrugated-boxes'),
   ],
   'heavy-duty-pallet': [
+    ownerFaq('export'),
+    ownerFaq('stacking'),
     { q: 'How much load can an ESTI corrugated pallet box carry?', a: `${spec('heavy-duty-pallet', 'Load Capacity')}.` },
     { q: 'How do corrugated pallet boxes compare with wooden crates?', a: 'They are up to 50% lighter than traditional wooden crates, 100% recyclable, and eliminate ISPM-15 wooden fumigation certificates and border delays.' },
     { q: 'Which pallet sizes are the pallet boxes compatible with?', a: `${spec('heavy-duty-pallet', 'Pallet Integration')}.` },
@@ -26,6 +30,8 @@ export const PRODUCT_FAQS = {
     sectorsQ('heavy-duty-pallet'),
   ],
   'un-certified-boxes': [
+    ownerFaq('strength'),
+    ownerFaq('coa'),
     { q: 'What are UN 1266 certified boxes used for?', a: `${spec('un-certified-boxes', 'Certification')} — for the domestic transit and international export of hazardous and flammable liquid products.` },
     { q: 'Which transport regulations do ESTI UN boxes comply with?', a: 'IMDG (Sea), ICAO/IATA (Air), and ADR (Road) regulations.' },
     { q: 'How are ESTI UN certified boxes tested?', a: `${spec('un-certified-boxes', 'Drop Test Standard')}, with bursting strength that ${spec('un-certified-boxes', 'Bursting Strength').toLowerCase()}.` },
@@ -47,6 +53,7 @@ export const PRODUCT_FAQS = {
     sectorsQ('tall-industrial-carton-esti'),
   ],
   'die-cut-boxes': [
+    ownerFaq('custom'),
     { q: 'How precise are ESTI die-cut boxes?', a: `${spec('die-cut-boxes', 'Dimensional Tolerance')}, using ${spec('die-cut-boxes', 'Cutting Process').toLowerCase()}.` },
     { q: 'Which locking styles are available for die-cut boxes?', a: `${spec('die-cut-boxes', 'Locking Types')}.` },
     { q: 'What handle and ventilation options are available?', a: `${spec('die-cut-boxes', 'Handle Options')}.` },
@@ -74,7 +81,11 @@ export const PRODUCT_FAQS = {
   ],
 };
 
-export const HOME_FAQS = [
+// Home page: the owner's 11 FAQs, then existing answers that add information the
+// owner FAQs don't cover (shown under "See more questions").
+export const HOME_FAQS = OWNER_FAQS;
+
+export const HOME_FAQS_MORE = [
   {
     q: 'What does ESTI Packaging Industry manufacture?',
     a: `${PRODUCTS.map((p) => p.title).join('; ')}.`,
@@ -95,14 +106,8 @@ export const HOME_FAQS = [
     q: 'What is ESTI Packaging’s production capacity?',
     a: 'A total production capacity of 1,200 tons per month, including a spare capacity of approximately 500 tons, on a fully automatic, imported 5-ply board plant (2200 mm).',
   },
-  {
-    q: 'Which corrugated board grades can ESTI Packaging produce?',
-    a: '3-ply, 5-ply and 7-ply corrugated boards in A, B, C and E flutes, with wall thickness from 3 mm up to 15 mm.',
-  },
-  {
-    q: 'How can I request a quote from ESTI Packaging?',
-    a: `Use the quote form on the website, message on WhatsApp, call ${PHONE_DISPLAY} (${HOURS_TEXT.toLowerCase()}) or email ${EMAIL}.`,
-  },
 ];
+
+export const ALL_HOME_FAQS = [...HOME_FAQS, ...HOME_FAQS_MORE];
 
 export const faqsForProduct = (id) => PRODUCT_FAQS[id] || [];

@@ -39,7 +39,7 @@ export const SOLUTIONS_DATA = [
     summary: 'Custom slotted partition cells, corrugated layer pads, and cushioning corner guards engineered for fragile and precision components.',
     specs: [
       'Slotted interlocking cell grids & custom fitments',
-      'Flute Choices: B-Flute, E-Flute, Double Wall',
+      'Flute Choices: B-Flute, Double Wall',
       'Anti-Scuff & moisture-resistant barrier liners',
       'Drop-impact dampening and vibration protection'
     ],

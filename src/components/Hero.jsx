@@ -6,7 +6,7 @@ const METRICS = [
   { value: '30+ Years', label: 'Experience (Since 1995)' },
   { value: '1,200 MT', label: 'Monthly Board Capacity' },
   { value: 'Up to 40%', label: 'Cost Savings from India' },
-  { value: '3, 5 & 7-Ply', label: 'A, B, C & E Flutes' },
+  { value: '3, 5 & 7-Ply', label: 'A, B & C Flutes' },
 ];
 
 export default function Hero() {

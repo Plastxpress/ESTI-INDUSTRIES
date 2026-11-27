@@ -18,7 +18,7 @@ export default function ValueProp({ onOpenQuote }) {
       title: 'Customized Board Strength',
       subtitle: 'GSM & Flute Profile Optimization',
       description:
-        'We engineer exact grammage (GSM) combinations from 120 to 350+ GSM kraft paper and match precise flute geometry (A, B, C, E, BC, AAA) to achieve maximum stacking strength without paying for excess paper weight.',
+        'We engineer exact grammage (GSM) combinations from 120 to 350+ GSM kraft paper and match precise flute geometry (A, B, C, BC, AAA) to achieve maximum stacking strength without paying for excess paper weight.',
       points: [
         'Single Wall (3-Ply), Double Wall (5-Ply), Triple Wall (7-Ply)',
         'Edge Crush Test (ECT) ratings from 32 to 110+ lbs/inch',

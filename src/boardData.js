@@ -5,26 +5,26 @@ export const FLUTES = {
   A: { height: 4.7, perMetre: 110, use: 'Cushioning and stacking strength' },
   B: { height: 2.5, perMetre: 154, use: 'Crush resistance and a flat print face' },
   C: { height: 3.6, perMetre: 128, use: 'The general-purpose shipping board' },
-  E: { height: 1.5, perMetre: 295, use: 'Thin wall with a premium print surface' },
 };
 
+// Owner-confirmed final flute combinations.
 export const PLIES = [
   {
     ply: 3,
     wall: 'Single wall',
-    combos: ['C', 'B', 'A', 'E'],
+    combos: ['B', 'C', 'A'],
     note: 'One fluted layer between two liners. The everyday shipper.',
   },
   {
     ply: 5,
     wall: 'Double wall',
-    combos: ['BC', 'AC', 'BB', 'EB'],
+    combos: ['BB', 'BC', 'BA', 'CA', 'AA'],
     note: 'Two fluted layers. Heavier loads, longer transit, export.',
   },
   {
     ply: 7,
     wall: 'Triple wall',
-    combos: ['BCA', 'AAA', 'BAA'],
+    combos: ['BCA', 'ACA', 'AAA'],
     note: 'Three fluted layers. Jumbo boxes and near-crate strength.',
   },
 ];
@@ -33,16 +33,13 @@ export const caliper = (combo) =>
   [...combo].reduce((t, f) => t + FLUTES[f].height, 0) +
   (combo.length + 1) * LINER_MM;
 
+// "Typical use" lines — only the existing ones; combinations without one show none.
 export const APPLICATION = {
   C: 'General freight, e-commerce, FMCG outers',
   B: 'Retail-ready outers, canned and bottled goods',
   A: 'Light but bulky goods needing cushioning',
-  E: 'Printed retail packs and slim product boxes',
   BC: 'Export cartons, appliances, engineering parts',
-  AC: 'Tall stacked loads and heavy consumer durables',
   BB: 'Dense loads where board thickness is capped',
-  EB: 'Printed export packs needing a fine outer face',
   BCA: 'Jumbo and pallet boxes to 500 kg',
   AAA: 'Maximum cushioning for fragile heavy plant',
-  BAA: 'Bulk chemical and rubber bale packaging',
 };

@@ -33,10 +33,10 @@ const CATALOG = [
     ],
     category: 'Corrugated & Pallet Boxes',
     badge: 'Since 1995',
-    description: 'We produce boards ranging from 3mm to 15mm in thickness in custom flute combinations of E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, and AAA. Maximum sheet size of 5000mm in length and 2500mm in width, enabling unmatched structural integrity and efficiency for extra-large jumbo box manufacturing.',
+    description: 'We produce boards ranging from 3mm to 15mm in thickness in custom flute combinations of B, C, A, BB, BC, BA, CA, AA, BCA, ACA, and AAA. Maximum sheet size of 5000mm in length and 2500mm in width, enabling unmatched structural integrity and efficiency for extra-large jumbo box manufacturing.',
     specs: [
       { label: 'Board Thickness', value: '3 mm to 15 mm custom thickness range' },
-      { label: 'Flute Combinations', value: 'E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, AAA' },
+      { label: 'Flute Combinations', value: 'B, C, A, BB, BC, BA, CA, AA, BCA, ACA, AAA' },
       { label: 'Max Sheet Size', value: '5000 mm length × 2500 mm width (Jumbo Box capacity)' },
       { label: 'Constructions', value: '3-Ply (Single Wall), 5-Ply (Double Wall), 7-Ply (Triple Wall)' },
       { label: 'Bursting Strength', value: '18 to 35+ kg/cm² (customized to client payload)' },
@@ -45,7 +45,7 @@ const CATALOG = [
       { label: 'Eco Profile', value: '100% Recyclable high-grade virgin & semi-chemical kraft' }
     ],
     features: [
-      'Custom flute combinations (E, B, C, A, EB, EC, EA, BC, BA, CA, AA, BCA, ACA, AAA) for precision load engineering',
+      'Custom flute combinations (B, C, A, BB, BC, BA, CA, AA, BCA, ACA, AAA) for precision load engineering',
       'Massive sheet processing up to 5000 mm × 2500 mm for seamless, ultra-strong jumbo carton conversion',
       'Engineered for automated packing lines and manual rapid taping with high vertical stacking endurance',
       'High moisture-resistant kraft liners suitable for export sea cargo and heavy-duty supply chains'
@@ -227,7 +227,7 @@ const CATALOG = [
     description: 'Engineered interlocking corrugated partition sets that create individual isolated cells inside master shipping cartons, ensuring zero product-to-product contact and maximum inner column stacking reinforcement.',
     specs: [
       { label: 'Cell Arrangements', value: '2x2, 3x4, 4x6 up to 48-cell custom matrix configurations' },
-      { label: 'Board Options', value: '3-ply micro-flute (E-flute) or heavy B-flute corrugated' },
+      { label: 'Board Options', value: 'Heavy B-flute corrugated' },
       { label: 'Assembly', value: 'Pre-assembled collapsible sets or flat-slot knocked down' },
       { label: 'Surface Contact', value: 'Anti-scuff virgin kraft liner prevents component abrasion' }
     ],
@@ -265,7 +265,7 @@ const CATALOG = [
     description: 'Custom-designed corrugated document storage and archival boxes manufactured by ESTI Packaging for the safe, organized, and long-term storage of files, records, documents, and valuable paper collections. Designed for corporate offices, law firms, healthcare facilities, warehouses, and record-management vaults, combining high stacking strength with dedicated labeling areas, locking/hinged lids, and integrated hand-holes for easy handling.',
     specs: [
       { label: 'Typical Dimensions', value: '400 × 300 × 250 mm (A4 / Legal / Box Files, fully customizable L × W × H)' },
-      { label: 'Board Strength', value: '3-Ply or Heavy-Duty 5-Ply (BC / EB Flute) for high-density warehouse storage' },
+      { label: 'Board Strength', value: '3-Ply or Heavy-Duty 5-Ply (BC Flute) for high-density warehouse storage' },
       { label: 'Lid Construction', value: 'Locking-tab design, one-piece hinged lid, or separate lift-off telescoping lid' },
       { label: 'Easy Handling', value: 'Integrated die-cut hand-holes for ergonomic lifting, carrying & shelf retrieval' },
       { label: 'Indexing Panels', value: 'Pre-printed label panels (File No., Department, Year, Contents, Destroy Date)' },
@@ -326,7 +326,7 @@ const PAGES = {
     slug: 'corrugated-boxes',
     navLabel: 'Corrugated Boxes',
     seoTitle: '3, 5 & 7 Ply Corrugated Box Manufacturer | ESTI Packaging',
-    seoDescription: '3-ply, 5-ply and 7-ply corrugated boxes and master cartons: 3 mm to 15 mm board, flutes E to AAA, sheets up to 5000 × 2500 mm. Request a quote.',
+    seoDescription: '3-ply, 5-ply and 7-ply corrugated boxes and master cartons: 3 mm to 15 mm board, B, C, A to AAA flute combinations, sheets up to 5000 × 2500 mm.',
     related: ['heavy-duty-pallet', 'die-cut-boxes', 'tall-industrial-carton-esti'],
   },
   'heavy-duty-pallet': {

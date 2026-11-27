@@ -2,7 +2,8 @@
 // as the HTML (so facts stay in parity). Written at build time by scripts/prerender.mjs:
 //   /index.md, /<page>.md, /sitemap.md, /llms.txt
 import { PRODUCTS, productById } from './data/products';
-import { HOME_FAQS, faqsForProduct } from './data/faqs';
+import { ALL_HOME_FAQS, faqsForProduct } from './data/faqs';
+import { faqAnswerMd, FLUTE_COMBOS, BOARD_THICKNESS, MAX_SHEET_SIZE, CUSTOM_LINE } from './data/ownerFaqs';
 import { productsForIndustry } from './data/catalogue';
 import { INDUSTRIES_DATA } from './components/IndustriesSection';
 import { machineryHighlights, coreValues } from './components/Factory';
@@ -28,7 +29,7 @@ const contactBlock = () => `## Contact
 `;
 
 const faqBlock = (items) =>
-  items.length ? `## Frequently Asked Questions\n\n${items.map((f) => `### ${f.q}\n\n${f.a}\n`).join('\n')}` : '';
+  items.length ? `## Frequently Asked Questions\n\n${items.map((f) => `### ${f.q}\n\n${faqAnswerMd(f)}\n`).join('\n')}` : '';
 
 const header = (r) => `---
 title: "${r.title.replace(/"/g, '\\"')}"
@@ -91,13 +92,28 @@ Your trusted partner in custom corrugated packaging solutions. With over three d
 - Over 30 Years of Box Manufacturing (Since 1995)
 - 1,200 MT Monthly Board Capacity
 - Up to 40% Cost Savings from India
-- 3, 5 & 7-Ply — A, B, C & E Flutes
+- 3, 5 & 7-Ply — A, B & C Flutes
 
 ## Comprehensive Product Portfolio
 
 Engineered for strength, cost efficiency, and export compliance.
 
 ${PRODUCTS.map((p) => `- [${p.title}](${url(mdPath(p.path))}) — ${p.subtitle}`).join('\n')}
+
+## All Essential Packaging Under One Roof
+
+From regular corrugated boxes to heavy-duty export packaging, we provide customised solutions focused on product safety, strength and cost efficiency.
+
+| Construction | Flute combinations |
+| --- | --- |
+${FLUTE_COMBOS.map((f) => `| ${f.ply} | ${f.combos.join(', ')} |`).join('\n')}
+
+- Board thickness: ${BOARD_THICKNESS}
+- Max sheet size: ${MAX_SHEET_SIZE}
+
+${CUSTOM_LINE}
+
+Engineered for extreme compression, moisture resistance, UN hazardous cargo standards, and seamless logistics.
 
 ## Manufacturing
 
@@ -121,7 +137,9 @@ More: ${url(mdPath('/industries'))}
 
 ${CERTIFICATIONS.map((c) => `- ${c.name}${c.detail ? ` — ${c.detail}` : ''}`).join('\n')}
 
-${faqBlock(HOME_FAQS)}
+Certificate of Analysis (COA) with every shipment: GSM, BF, moisture, board thickness, ECT and carton weight.
+
+${faqBlock(ALL_HOME_FAQS)}
 ${contactBlock()}`;
 }
 
@@ -170,11 +188,13 @@ ${PLANT_PHOTOS.map((p) => `- Photo — ${p.caption}: ${url(p.src)}`).join('\n')}
 
 We offer end-to-end packaging solutions (along with packaging design and contract packaging) for all industries, backed by 30+ years of manufacturing pedigree.
 
-Our manufacturing facility is equipped with a fully automatic, imported 5-ply board plant (2200 mm) capable of producing 3-ply, 5-ply, and 7-ply corrugated boards in A, B, C, and E flutes, with a total production capacity of 1,200 tons per month, including a spare capacity of approximately 500 tons ready for immediate client onboarding.
+Our manufacturing facility is equipped with a fully automatic, imported 5-ply board plant (2200 mm) capable of producing 3-ply, 5-ply, and 7-ply corrugated boards in A, B, and C flutes, with a total production capacity of 1,200 tons per month, including a spare capacity of approximately 500 tons ready for immediate client onboarding.
 
 ${machineryHighlights.map((m) => `- **${m.title}** — ${m.description}`).join('\n')}
 
 Our in-house design team specializes in innovative packaging concepts and value engineering to ensure optimal performance and cost-efficiency.
+
+Certificate of Analysis (COA) with every shipment: GSM, BF, moisture, board thickness, ECT and carton weight.
 
 ## Export Capability & Free Trade Agreement (FTA) Advantage
 

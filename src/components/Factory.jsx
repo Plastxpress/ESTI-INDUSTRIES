@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Img from './Img';
 import LazyVideo, { AV1_TYPE } from './LazyVideo';
 import More from './More';
+import CoaNote from './CoaNote';
 import SectionHead from './SectionHead';
 import {
   Factory as FactoryIcon,
@@ -22,7 +23,7 @@ import {
 export const machineryHighlights = [
   {
     title: 'Imported 5-Ply Board Plant (2200 mm)',
-    description: 'Fully automatic high-speed corrugating line producing 3-ply, 5-ply, and 7-ply heavy boards in A, B, C, and E flutes with steam-controlled moisture retention.',
+    description: 'Fully automatic high-speed corrugating line producing 3-ply, 5-ply, and 7-ply heavy boards in A, B, and C flutes with steam-controlled moisture retention.',
   },
   {
     title: '1800 x 3500 mm Printer Slotter',
@@ -78,7 +79,7 @@ export default function Factory() {
           <div className="lg:col-span-6 reveal">
             <h3 className="font-grotesk text-2xl font-bold text-ink">Advanced Automated Machinery & In-House Testing</h3>
             <p className="mt-4 text-ink-soft leading-relaxed">
-              Our manufacturing facility is equipped with a fully automatic, imported 5-ply board plant (2200 mm) capable of producing 3-ply, 5-ply, and 7-ply corrugated boards in A, B, C, and E flutes, with a total production capacity of <strong className="text-ink">1,200 tons per month</strong>, including a spare capacity of approximately <strong className="text-ink">500 tons</strong> ready for immediate client onboarding.
+              Our manufacturing facility is equipped with a fully automatic, imported 5-ply board plant (2200 mm) capable of producing 3-ply, 5-ply, and 7-ply corrugated boards in A, B, and C flutes, with a total production capacity of <strong className="text-ink">1,200 tons per month</strong>, including a spare capacity of approximately <strong className="text-ink">500 tons</strong> ready for immediate client onboarding.
             </p>
             <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
               {machineryHighlights.map((m) => (
@@ -102,6 +103,7 @@ export default function Factory() {
               <FlaskConical className="w-5 h-5 text-kraft-700 shrink-0" />
               Our in-house design team specializes in innovative packaging concepts and value engineering to ensure optimal performance and cost-efficiency.
             </p>
+            <CoaNote className="mt-3" />
           </div>
 
           <div className="lg:col-span-6 space-y-3 reveal">

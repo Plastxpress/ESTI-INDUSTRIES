@@ -1,7 +1,8 @@
 // Route table + per-page SEO (title, description, canonical, JSON-LD).
 // Shared by the client (App.jsx) and the build-time prerenderer (entry-server.jsx).
 import { PRODUCTS } from './data/products';
-import { HOME_FAQS, faqsForProduct } from './data/faqs';
+import { ALL_HOME_FAQS, faqsForProduct } from './data/faqs';
+import { faqAnswerHtml } from './data/ownerFaqs';
 import { COMPANY_INFO_READY } from './data/companyInfo';
 import { webp } from './components/Img';
 import {
@@ -145,7 +146,7 @@ const faqSchema = (r, items) => ({
   mainEntity: items.map((f) => ({
     '@type': 'Question',
     name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
+    acceptedAnswer: { '@type': 'Answer', text: faqAnswerHtml(f) },
   })),
 });
 
@@ -262,7 +263,7 @@ export function jsonLdFor(r) {
     const faqs = faqsForProduct(r.product.id);
     if (faqs.length) blocks.push(faqSchema(r, faqs));
   }
-  if (r.page === 'home') blocks.push(productList, faqSchema(r, HOME_FAQS));
+  if (r.page === 'home') blocks.push(productList, faqSchema(r, ALL_HOME_FAQS));
   return blocks;
 }
 
